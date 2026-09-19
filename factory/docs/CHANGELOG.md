@@ -12,3 +12,4 @@
 - Decision A approved: research CRE offering-memorandum template, CRE deal-analyzer template, TMC exam study guide.
 - Migration `0003_load_research` (Researcher JSON → claims + business_models, stage → researched) applied to the brain.
 - Research, verification, Devil's Advocate and Financial passes on the three approved opportunities; Opportunity Reports (45 rows); Gate 1 decisions opened (rows 413–415); 2027 RT Examination pivot opportunity created; 4 lessons filed. Run artifacts in `factory/runs/2026-09-19/`.
+- Scout run 2 (visible-sales-count rule, no-audience rule): 22 opportunities, 8 with sales-count comps; 2027 RT Examination pivot researched (blueprint published; first movers exist). Etsy sales figures re-labelled shop-level; lessons on evidence and shop clustering filed. Sequencing decision opened (row 419).
