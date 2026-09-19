@@ -1,0 +1,182 @@
+{
+  "lane": "mom_digital",
+  "opportunities": [
+    {
+      "name": "Vertical Claude/GPT skill-and-prompt bundle for one profession",
+      "category": "info_product",
+      "summary": "Solo creators package Claude/ChatGPT skills and prompts for one profession (finance, marketing, consulting, coaching) and sell them $27-$197 on Gumroad; buyers leave verified-purchase reviews in the hundreds, showing repeat willingness to pay. Dustan already owns 40 skills he could re-cut into vertical bundles and sell to the same buyer type (Claude/Claude Code power users) via his existing Gumroad store, X account, and email list.",
+      "source_urls": [
+        "https://brockster6202.gumroad.com/l/xbcfrf",
+        "https://nicolasboucher.gumroad.com/l/ChatGPT-For-Finance",
+        "https://kumail.gumroad.com/l/Cguide",
+        "https://ismailsaleem.gumroad.com/l/ChatGPT-Prompts-for-Trainers-and-Coaches"
+      ],
+      "claims": [
+        {"statement": "Gumroad's 'Complete Claude Marketing Course for Non-Techies' shows creator rating 4.9 from 218 verified reviews.", "kind": "fact", "topic": "sales", "source_url": "https://brockster6202.gumroad.com/l/xbcfrf", "source_excerpt": "Creator rating: 4.9 from 218 verified reviews", "confidence": 0.75},
+        {"statement": "'ChatGPT for Finance' (450 prompts + course) sells for $197 with 4.9 rating from 124 verified reviews.", "kind": "fact", "topic": "sales", "source_url": "https://nicolasboucher.gumroad.com/l/ChatGPT-For-Finance", "source_excerpt": "Price: $197 ... Creator rating: 4.9 from 124 verified reviews", "confidence": 0.75},
+        {"statement": "'The Consultant's Guide To Claude' sells 21 McKinsey-style Claude skills for strategy/growth as a paid Gumroad listing.", "kind": "fact", "topic": "offer", "source_url": "https://kumail.gumroad.com/l/Cguide", "source_excerpt": "21 McKinsey-Style Claude Skills for Strategy, Growth & Business Transformation", "confidence": 0.6},
+        {"statement": "A dedicated 'ChatGPT/Claude/Gemini/Grok prompts for coaches & trainers' product exists on Gumroad, confirming per-profession demand.", "kind": "fact", "topic": "offer", "source_url": "https://ismailsaleem.gumroad.com/l/ChatGPT-Prompts-for-Trainers-and-Coaches", "source_excerpt": "ChatGPT, Claude, DeepSeek, Gemini, Claude, Grok & Perplexity Prompts for Coaches & Trainers", "confidence": 0.6},
+        {"statement": "Verified-review counts in the hundreds on two unrelated profession-specific Claude/GPT products suggest this is a repeatable pattern, not one outlier.", "kind": "inference", "topic": "customer", "source_url": "https://brockster6202.gumroad.com/l/xbcfrf", "source_excerpt": "two independent sellers each show 100+ verified reviews on profession-targeted Claude/GPT content", "confidence": 0.5},
+        {"statement": "Reusing Dustan's own 40 skills into a vertical bundle avoids redistributing Anthropic-authored or third-party skill content.", "kind": "assumption", "topic": "legal", "source_url": "https://mindsovermatters.gumroad.com", "source_excerpt": "n/a - internal product, no external source; flagged because comparable sellers market skills as 'Claude Skills' without stating original authorship", "confidence": 0.4}
+      ],
+      "owned_channel": "Gumroad store (direct comparable category), X (@MindsOverMatters already reaches Claude power users), Gmail list to existing 10-product buyers",
+      "fulfillment": "Curate 10-15 of the existing 40 skills plus a handful of new prompts into a themed PDF/SKILL.md bundle; no new infrastructure, same delivery as current Gumroad products.",
+      "price_point_usd": 47,
+      "first_dollar_path": "Pick one vertical already represented among MOM buyers (e.g. solo consultants or coaches), repackage existing skills under that theme, list on Gumroad within days, announce to email list and X.",
+      "graveyard_matches": [],
+      "why_it_might_fail": [
+        "Category is crowded: dozens of sellers offer similar profession-specific Claude/GPT bundles at similar prices.",
+        "Verified-review counts are cumulative since listing, not a current run-rate, so they overstate near-term velocity.",
+        "Legal/licensing risk if any vertical skill leans on Anthropic's own published example skills rather than original content."
+      ]
+    },
+    {
+      "name": "Cursor / IDE-agent rules packs (.cursorrules, AGENTS.md)",
+      "category": "info_product",
+      "summary": "Sellers charge $27-$49 for packs of .cursorrules / AGENTS.md config files that make Cursor and other AI coding agents follow project conventions. It is the same buyer archetype as Claude Code users (AI-coding power users) but on a different tool, reachable through the same technical-X audience MOM already has.",
+      "source_urls": [
+        "https://oliviacraftlat.gumroad.com/l/wyaeil",
+        "https://survivoragent.gumroad.com/l/nvxof",
+        "https://survivoragent.gumroad.com/l/lydtly",
+        "https://buildtolaunch.gumroad.com/l/cursor-setup-guide"
+      ],
+      "claims": [
+        {"statement": "'50 Production-Tested .cursorrules — Stop Fighting Cursor' is priced at $27 on Gumroad.", "kind": "fact", "topic": "offer", "source_url": "https://oliviacraftlat.gumroad.com/l/wyaeil", "source_excerpt": "50 Production-Tested .cursorrules Pack for $27", "confidence": 0.7},
+        {"statement": "'Custom Cursor Rules & AI Workflow Setup' is a $49 one-time custom-build offer on Gumroad.", "kind": "fact", "topic": "offer", "source_url": "https://survivoragent.gumroad.com/l/nvxof", "source_excerpt": "Custom .cursorrules file ... $49 one-time", "confidence": 0.7},
+        {"statement": "The same seller also lists a '53 Professional .cursorrules Files' mega pack covering 16+ frameworks, showing repeat-seller investment in the niche.", "kind": "fact", "topic": "competition", "source_url": "https://survivoragent.gumroad.com/l/lydtly", "source_excerpt": "Cursor Rules Mega Pack — 53 Professional .cursorrules Files ... 16+ frameworks and languages", "confidence": 0.6},
+        {"statement": "No public sales-count or review-count was found for these specific cursor-rules listings.", "kind": "unverified", "topic": "sales", "source_url": "https://oliviacraftlat.gumroad.com/l/wyaeil", "source_excerpt": "search snippet did not show a rating or review count for this listing", "confidence": 0.3}
+      ],
+      "owned_channel": "X (dev/AI-coding audience overlaps with Claude Code followers), Gumroad store",
+      "fulfillment": "Adapt existing Claude Code skill/workflow content into .cursorrules and AGENTS.md format; text files only.",
+      "price_point_usd": 27,
+      "first_dollar_path": "Convert 2-3 of the strongest existing Claude Code skills into a small Cursor/AGENTS.md pack, post on Gumroad and cross-post on X same week.",
+      "graveyard_matches": [],
+      "why_it_might_fail": [
+        "Cursor users are not confirmed to be MOM's actual buyers; audience overlap with Claude Code is an assumption, not measured.",
+        "No visible sales/review counts for the specific comps found, so paying-demand strength here is weaker than the other opportunities.",
+        "Several free competing guides exist (e.g. buildtolaunch's cursor setup guide), pressuring price."
+      ]
+    },
+    {
+      "name": "AI-agent automation template packs (n8n / workflow JSON)",
+      "category": "productized",
+      "summary": "Creators sell (and give away as lead magnets) n8n workflow JSON templates that wire Claude/GPT into automations (research agents, support agents, accountants). One seller's free/pay-what-you-want AI agent template creator has 2,489 downloads and a 4.9 rating from 779 verified reviews across their other 87 products, showing durable buyer trust in this format. This lines up with MOM's own 'workflow automation' positioning for the Brain dashboard.",
+      "source_urls": [
+        "https://jonocatliff.gumroad.com/l/tkmnwp",
+        "https://aianytime5.gumroad.com/l/tnwyfl",
+        "https://sulynajim.gumroad.com/l/n8n-templates"
+      ],
+      "claims": [
+        {"statement": "A free/PWYW n8n RAG AI-agent template has 2,489 downloads and the creator holds 4.9 from 779 verified reviews across 87 products.", "kind": "fact", "topic": "sales", "source_url": "https://jonocatliff.gumroad.com/l/tkmnwp", "source_excerpt": "Creator has a 4.9 rating from 779 verified reviews across 87 other products. 2,489 downloads", "confidence": 0.75},
+        {"statement": "A 150+ n8n workflow templates bundle is priced at $15 with 2 ratings visible.", "kind": "fact", "topic": "offer", "source_url": "https://aianytime5.gumroad.com/l/tnwyfl", "source_excerpt": "n8n Workflow Templates Bundle ... $15 with 2 ratings", "confidence": 0.6},
+        {"statement": "A '2000+ production-ready n8n workflows' AI-agent guide is discounted from $99.99 to $39.99 as an end-of-year offer.", "kind": "fact", "topic": "offer", "source_url": "https://sulynajim.gumroad.com/l/n8n-templates", "source_excerpt": "End-of-year deal: $99.99 → $39.99", "confidence": 0.6},
+        {"statement": "High download/review counts on free or PWYW automation templates suggest the funnel (free template -> paid bundle) works better here than cold-selling a paid pack outright.", "kind": "inference", "topic": "acquisition", "source_url": "https://jonocatliff.gumroad.com/l/tkmnwp", "source_excerpt": "n/a - inferred from the free template's high download/review count relative to paid comps", "confidence": 0.45}
+      ],
+      "owned_channel": "X and Pinterest (automation demo visuals), Gumroad store, cross-sell to existing Brain dashboard buyers",
+      "fulfillment": "Export the automation patterns already built for MOM's Supabase brain (goal tracking, session lifecycle) as importable n8n/Make JSON files plus a setup PDF.",
+      "price_point_usd": 29,
+      "first_dollar_path": "Publish one free n8n template that mirrors a piece of the Brain dashboard's automation (e.g. a session-log-to-goal workflow) to build the funnel, then sell a paid bundle of the rest to the resulting list.",
+      "graveyard_matches": [],
+      "why_it_might_fail": [
+        "n8n's audience is largely non-Claude-specific automation builders; overlap with MOM's current buyers is an assumption.",
+        "Many strong free templates already exist, which could cap willingness to pay for a paid version.",
+        "Requires n8n/Make platform fluency that is not yet demonstrated in Dustan's current product line."
+      ]
+    },
+    {
+      "name": "Notion 'second brain' template for AI/Claude power users",
+      "category": "info_product",
+      "summary": "Notion productivity/second-brain templates sell at very high review volumes ($9-$60 typical, hundreds of verified reviews) and are the category where solo creators have documented the largest organic-social revenue outcomes on record, using exactly the channels Dustan already owns (Gumroad, X, Pinterest, YouTube-style organic). A 'second brain for Claude users' template (goals, memory log, prompt library) would directly cross-sell to MOM's existing Brain dashboard buyers.",
+      "source_urls": [
+        "https://productivesetups.gumroad.com/l/headquarters",
+        "https://notionforadhd.gumroad.com/l/youradhdmynd",
+        "https://www.etsy.com/market/second_brain_notion?page=3",
+        "https://medium.com/read-or-die/how-this-guy-earned-1-million-selling-notion-template-4661fe5bd87e",
+        "https://medium.com/@hey.musli/case-study-1-easlo-21-years-old-earned-over-500k-from-selling-notion-templates-bdf5f086ab43"
+      ],
+      "claims": [
+        {"statement": "'Headquarters Notion Productivity Template' shows creator rating 4.9 from 640 verified reviews.", "kind": "fact", "topic": "sales", "source_url": "https://productivesetups.gumroad.com/l/headquarters", "source_excerpt": "Creator rating: 4.9 from 640 verified reviews", "confidence": 0.75},
+        {"statement": "'Your ADHD Mynd' Notion template shows creator rating 4.9 from 314 verified reviews.", "kind": "fact", "topic": "sales", "source_url": "https://notionforadhd.gumroad.com/l/youradhdmynd", "source_excerpt": "Creator rating: 4.9 from 314 verified reviews", "confidence": 0.75},
+        {"statement": "An Etsy 'Ultimate Life System' Notion life organizer listing shows (100) reviews at a $4.18 sale price, on a seller rated 4.5 with roughly 1.2K total ratings.", "kind": "fact", "topic": "sales", "source_url": "https://www.etsy.com/market/second_brain_notion?page=3", "source_excerpt": "4.51.2K Ultimate Life System | A Notion Life Organizer for Daily Flow and Yearly Reflection. (100). $4.18.", "confidence": 0.65},
+        {"statement": "Multiple secondary case-study articles report the Notion-template creator 'Easlo' earned between $500K and $1M selling templates via Gumroad promoted on X/Instagram/TikTok/YouTube.", "kind": "unverified", "topic": "history", "source_url": "https://medium.com/read-or-die/how-this-guy-earned-1-million-selling-notion-template-4661fe5bd87e", "source_excerpt": "How this Guy Earned $1 Million Selling Notion Template", "confidence": 0.35},
+        {"statement": "A second, differently-authored case study on the same creator states 'over $500K' rather than $1M, so the exact revenue figure is not consistent across sources.", "kind": "unverified", "topic": "history", "source_url": "https://medium.com/@hey.musli/case-study-1-easlo-21-years-old-earned-over-500k-from-selling-notion-templates-bdf5f086ab43", "source_excerpt": "Easlo 21 Years Old, Earned over $500K from Selling Notion Templates", "confidence": 0.35}
+      ],
+      "owned_channel": "Pinterest (this exact template category performs strongly there), X, Gumroad store, Gmail list",
+      "fulfillment": "Build once in Notion, sell as a duplicate-link/template, zero marginal delivery cost.",
+      "price_point_usd": 19,
+      "first_dollar_path": "Build a 'Second Brain for Claude/Claude Code Users' Notion template (goal tracker, memory log, prompt library mirroring the Supabase brain) and email it to existing buyers plus pin it on Pinterest and post on X in week one.",
+      "graveyard_matches": [],
+      "why_it_might_fail": [
+        "Category is price-anchored very low on Etsy (many items $2-$5), which could compress margins if Dustan competes on that surface instead of direct-to-list.",
+        "Notion has no backend, so it cannot showcase MOM's actual technical differentiator (the Supabase brain); risks feeling like a downgrade to existing buyers.",
+        "The headline revenue case (Easlo) is inconsistently reported across sources and took years of organic posting, not 30 days."
+      ]
+    },
+    {
+      "name": "Standalone niche prompt packs sold direct (own storefront, PromptBase-style)",
+      "category": "info_product",
+      "summary": "Individual and small prompt packs sell for $6-$20 with review counts in the low hundreds, and the dedicated marketplace PromptBase prices single prompts $1.99-$19.99 (median reported $5.99). Reusing prompt-only excerpts from Dustan's existing skill library as a cheap, easy add-on SKU fits the near-zero-fulfillment / first-30-days bar better than a new content category.",
+      "source_urls": [
+        "https://lekside.gumroad.com/l/eivnc",
+        "https://helpfulprofessor.gumroad.com/l/ai-prompts",
+        "https://cartmango.com/sell-ai-prompts/",
+        "https://softhubtools.com/promptbase-review-2026-buy-sell-make-money-ai-prompts/"
+      ],
+      "claims": [
+        {"statement": "'Prompt Jedi: 40,000+ Premium ChatGPT Prompts V3' is priced at $6 with creator rating 4.6 from 132 verified reviews.", "kind": "fact", "topic": "sales", "source_url": "https://lekside.gumroad.com/l/eivnc", "source_excerpt": "Price: $6 ... Creator rating: 4.6 from 132 verified reviews", "confidence": 0.7},
+        {"statement": "'The Ultimate AI Prompts Pack for Students' (55 prompts) sells at $19.75 after a 75% discount from $79.", "kind": "fact", "topic": "offer", "source_url": "https://helpfulprofessor.gumroad.com/l/ai-prompts", "source_excerpt": "Price: $19.75 (75% off, originally $79)", "confidence": 0.65},
+        {"statement": "A third-party guide's title states the median sale price for AI prompts is $5.99.", "kind": "fact", "topic": "economics", "source_url": "https://cartmango.com/sell-ai-prompts/", "source_excerpt": "How to Sell AI Prompts in 2026 (Median Price: $5.99)", "confidence": 0.5},
+        {"statement": "PromptBase reportedly prices prompts $1.99-$19.99 and requires a $30 pending balance (about 7 median-priced sales) before Stripe pays out.", "kind": "unverified", "topic": "economics", "source_url": "https://softhubtools.com/promptbase-review-2026-buy-sell-make-money-ai-prompts/", "source_excerpt": "prices range $1.99-$19.99; $30 balance needed before payout, ~7 sales at median price", "confidence": 0.4},
+        {"statement": "Claimed top-seller earnings of $500-$5,000/month on PromptBase come from a secondary review site, not from PromptBase's own disclosed data or an audited source.", "kind": "unverified", "topic": "economics", "source_url": "https://softhubtools.com/promptbase-review-2026-buy-sell-make-money-ai-prompts/", "source_excerpt": "active top sellers report $500 to $5,000 or more per month", "confidence": 0.3}
+      ],
+      "owned_channel": "Gumroad store, X (thread showing prompt outputs as the ad)",
+      "fulfillment": "Text/PDF file of prompts extracted from the existing skill library; no new content required.",
+      "price_point_usd": 12,
+      "first_dollar_path": "Cut a $9-15 'best prompts from the skill pack' mini-product as an upsell/downsell on the existing Gumroad storefront, promote with an X thread of before/after prompt outputs.",
+      "graveyard_matches": [],
+      "why_it_might_fail": [
+        "Etsy/Gumroad have a flood of extremely cheap ($1-3) PLR prompt-pack resellers, which could anchor buyer price expectations very low.",
+        "Prompt-only products are the easiest of all these to copy, so differentiation and repeat purchase are both hard.",
+        "PromptBase earnings figures found are from marketing/review sites, not verifiable seller-disclosed data."
+      ]
+    },
+    {
+      "name": "Curated 'best Claude/agent skills' directory as a lead-magnet funnel",
+      "category": "leadgen",
+      "summary": "Product Hunt has hosted multiple 2026 launches of Claude/agent 'skills' discovery products (Claude Skills Hub, Agent Skills, AI Skills Manager, Skills for Agents, MindPal Skills Marketplace), showing sustained interest in finding good skills. Building a full marketplace is out of scope for near-zero fulfillment, but a curated, vetted written directory/report sold as a cheap add-on (and used as a free lead magnet) fits Dustan's existing funnel model.",
+      "source_urls": [
+        "https://www.producthunt.com/products/claude-skills-hub",
+        "https://www.producthunt.com/products/agent-skills-3",
+        "https://www.producthunt.com/products/ai-skills-manager",
+        "https://www.producthunt.com/products/skills-for-agents"
+      ],
+      "claims": [
+        {"statement": "'Claude Skills Hub' launched on Product Hunt as a curated directory to browse, discover, and download Claude Code skills.", "kind": "fact", "topic": "competition", "source_url": "https://www.producthunt.com/products/claude-skills-hub", "source_excerpt": "Claude Skills Hub: Discover and download Claude skills", "confidence": 0.6},
+        {"statement": "'Agent Skills' launched on Product Hunt as a directory for finding skills for Claude Code, Cursor, and Copilot, citing that good skills were previously scattered across thousands of GitHub repos.", "kind": "fact", "topic": "competition", "source_url": "https://www.producthunt.com/products/agent-skills-3", "source_excerpt": "Agent Skills: Find skills for Claude Code, Cursor, Copilot & more", "confidence": 0.55},
+        {"statement": "At least four separate skills-discovery products launched on Product Hunt in the same period, indicating the discovery problem is recognized by multiple builders at once.", "kind": "inference", "topic": "competition", "source_url": "https://www.producthunt.com/products/ai-skills-manager", "source_excerpt": "n/a - inferred from count of distinct skills-discovery launches found in one search pass", "confidence": 0.45},
+        {"statement": "No public sales, revenue, or paying-user counts were found for any of these Product Hunt skills-discovery launches.", "kind": "unverified", "topic": "sales", "source_url": "https://www.producthunt.com/products/skills-for-agents", "source_excerpt": "listing shows product description and upvote page only; no sales/revenue figures surfaced", "confidence": 0.3}
+      ],
+      "owned_channel": "X, mindsovermatters.co landing page, Gmail list",
+      "fulfillment": "A written/curated PDF or Notion database of vetted skills with short usage notes; no software build required for the minimal version.",
+      "price_point_usd": 15,
+      "first_dollar_path": "Publish a free 'best 25 Claude skills' list on the landing page and X to capture emails, then sell a paid deeper version (50-100 vetted skills with setup notes) to that list and existing buyers.",
+      "graveyard_matches": [],
+      "why_it_might_fail": [
+        "Several competitors offer free discovery tools/directories, which undercuts a paid version unless it is meaningfully more curated.",
+        "No paying-demand evidence exists yet for this exact format (directory-as-product); it is the weakest-evidenced opportunity in this set.",
+        "Risks becoming a software project (marketplace) rather than a near-zero-fulfillment info product if scope creeps."
+      ]
+    }
+  ],
+  "disagreements": [
+    "Two secondary case-study articles on the Notion-template creator 'Easlo' disagree on cumulative earnings: one Medium post's title says '$1 Million', another says 'over $500K' - both are unverified secondary reporting, not a primary financial disclosure.",
+    "PromptBase-related sources disagree on typical seller economics: one describes a modest payout threshold (~$30, ~7 sales) implying most sellers move slowly, while another claims top sellers earn $500-$5,000+/month; both come from marketing/review sites rather than PromptBase's own disclosed data, so the true typical outcome is unclear."
+  ],
+  "not_public": [
+    "Actual unit-sales counts for almost all Gumroad products: Gumroad does not publicly display sales counts, only star ratings and a 'verified reviews' count, which is the closest available proxy for completed purchases used throughout this report.",
+    "Confirmed, audited revenue figures for any named Notion-template or Claude-skills creator (e.g. Easlo, Prompt Jedi, Headquarters template) - only secondary case-study/marketing articles were found.",
+    "Direct page verification: this sandbox's egress policy blocked live WebFetch/curl access to gumroad.com, etsy.com, reddit.com, producthunt.com, promptbase.com, x.com, youtube.com, and indiehackers.com (EGRESS_BLOCKED / proxy 403 on every attempt). All facts above are drawn from search-engine indexed snippets returned by the WebSearch and Firecrawl search tools, which reflect real scraped page text (titles, meta descriptions, review counts) but were not opened and rendered directly by this agent.",
+    "PromptBase per-prompt sales counts and any individual seller's actual monthly income - only third-party review-site estimates were found, no seller-disclosed or marketplace-disclosed figures.",
+    "Reddit thread-level evidence of buyers explicitly stating a dollar amount they paid for a Claude skill/prompt product - searches for this did not surface a directly relevant, readable Reddit thread (Reddit itself was also egress-blocked)."
+  ]
+}

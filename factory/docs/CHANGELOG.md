@@ -11,3 +11,4 @@
 - Scout run 1 re-ranked after owner-reported channel sizes (MOM buyers 0, X 0, RT 0; referral_contacts 212). Lesson filed.
 - Decision A approved: research CRE offering-memorandum template, CRE deal-analyzer template, TMC exam study guide.
 - Migration `0003_load_research` (Researcher JSON → claims + business_models, stage → researched) applied to the brain.
+- Research, verification, Devil's Advocate and Financial passes on the three approved opportunities; Opportunity Reports (45 rows); Gate 1 decisions opened (rows 413–415); 2027 RT Examination pivot opportunity created; 4 lessons filed. Run artifacts in `factory/runs/2026-09-19/`.
