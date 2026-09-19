@@ -1,0 +1,41 @@
+@page { size: 8.5in 11in; margin: 0; }
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:'Inter','Helvetica Neue',Arial,sans-serif;color:#1f2430;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.sheet{width:8.5in;height:11in;padding:0.55in 0.6in;position:relative;page-break-after:always;display:flex;flex-direction:column}
+.sheet:last-child{page-break-after:auto}
+.brandbar{height:8px;background:var(--accent);margin:-0.55in -0.6in 0.34in;}
+h1{font-size:25pt;margin:0 0 4px;letter-spacing:-0.4px;font-weight:800}
+.sub{font-size:10.5pt;color:#5a6172;margin:0 0 16px}
+.agentline{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1.5px solid #1f2430;padding-bottom:7px;margin-bottom:14px}
+.agentline .who{font-size:12pt;font-weight:700}
+.agentline .meta{font-size:9.5pt;color:#5a6172;text-align:right;line-height:1.45}
+table{width:100%;border-collapse:collapse;table-layout:fixed}
+th{background:var(--accent);color:#fff;font-size:8.6pt;font-weight:700;letter-spacing:.055em;text-transform:uppercase;padding:8px 7px;text-align:left;border:1px solid var(--accent)}
+td{border:1px solid #c9cfda;height:0.44in;padding:3px 7px;font-size:9.5pt;vertical-align:middle}
+tbody tr:nth-child(even) td{background:#f6f7fa}
+.tick{text-align:center;font-size:12pt;color:#aeb6c4}
+.foot{margin-top:auto;padding-top:12px;border-top:1px solid #d8dde6;display:flex;justify-content:space-between;font-size:8.5pt;color:#7c8395}
+.note{background:#f6f7fa;border-left:3px solid var(--accent);padding:10px 13px;font-size:9.5pt;line-height:1.55;margin-bottom:14px}
+.lines div{border-bottom:1px solid #c9cfda;height:0.42in}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 26px}
+.field{margin-bottom:13px}
+.field label{display:block;font-size:8.4pt;font-weight:700;letter-spacing:.055em;text-transform:uppercase;color:#5a6172;margin-bottom:4px}
+.field .box{border:1px solid #c9cfda;height:0.4in;border-radius:3px}
+.field .box.tall{height:0.95in}
+.opts{display:flex;gap:16px;flex-wrap:wrap;font-size:9.5pt;padding-top:5px}
+.opts span::before{content:"";display:inline-block;width:11px;height:11px;border:1.5px solid #8b93a4;margin-right:6px;vertical-align:-1px;border-radius:2px}
+.scale{display:flex;gap:7px;padding-top:4px}
+.scale i{flex:1;border:1px solid #c9cfda;border-radius:3px;text-align:center;font-style:normal;font-size:9pt;padding:6px 0;color:#5a6172}
+h2{font-size:12.5pt;margin:16px 0 8px;letter-spacing:-.2px}
+h2:first-of-type{margin-top:0}
+/* inline fill-in fields (replaces underscore runs, which wrap badly) */
+.hdr{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;border-bottom:1.5px solid #1f2430;padding-bottom:9px;margin-bottom:15px}
+.hdr .left{flex:1 1 auto;min-width:0}
+.hdr .right{flex:0 0 auto;display:flex;gap:16px}
+.ff{display:flex;align-items:baseline;gap:7px}
+.ff label{font-size:8.4pt;font-weight:700;letter-spacing:.055em;text-transform:uppercase;color:#5a6172;white-space:nowrap}
+.ff .rule{border-bottom:1px solid #8b93a4;flex:1 1 auto;min-width:1in;height:0.2in}
+.ff .rule.sm{min-width:0.85in;flex:0 0 0.85in}
+.sig{display:flex;gap:22px;flex:1 1 auto}
+.sig .ff{flex:1 1 auto}
