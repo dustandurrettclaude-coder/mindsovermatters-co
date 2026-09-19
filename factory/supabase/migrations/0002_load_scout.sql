@@ -29,6 +29,7 @@ begin
       case when o->>'owned_channel' is not null then 'OWNED CHANNEL: ' || (o->>'owned_channel') end,
       case when o->>'fulfillment' is not null then 'FULFILLMENT: ' || (o->>'fulfillment') end,
       case when o->>'first_dollar_path' is not null then 'FIRST DOLLAR PATH: ' || (o->>'first_dollar_path') end,
+      case when o->>'presell_experiment' is not null then 'PRE-SELL EXPERIMENT: ' || (o->>'presell_experiment') end,
       case when jsonb_typeof(o->'why_it_might_fail') = 'array'
            then 'WHY IT MIGHT FAIL: ' || (select string_agg(x, ' | ') from jsonb_array_elements_text(o->'why_it_might_fail') x) end);
     summary := left(coalesce(o->>'summary','') || case when extra <> '' then E'\n\n' || extra else '' end, 4000);
@@ -37,14 +38,17 @@ begin
     values (oid, left(o->>'name', 200), cat, p_lane, summary,
             coalesce((select array_agg(left(x,500)) from jsonb_array_elements_text(coalesce(o->'source_urls','[]'::jsonb)) x), '{}'),
             'scouted', now(),
-            jsonb_build_object(
+            jsonb_strip_nulls(jsonb_build_object(
               'price_point_usd', o->'price_point_usd',
               'owned_channel', o->'owned_channel',
               'fulfillment', o->'fulfillment',
               'first_dollar_path', o->'first_dollar_path',
+              'visible_sales_count', o->'visible_sales_count',
+              'presell_experiment', o->'presell_experiment',
+              'demand_flag', o->'demand',
               'graveyard_matches', coalesce(o->'graveyard_matches','[]'::jsonb),
               'scout_disagreements', coalesce(p_payload->'disagreements','[]'::jsonb),
-              'not_public', coalesce(p_payload->'not_public','[]'::jsonb)),
+              'not_public', coalesce(p_payload->'not_public','[]'::jsonb))),
             p_session_id);
 
     n_claims := 0; n_facts := 0; n_down := 0;
