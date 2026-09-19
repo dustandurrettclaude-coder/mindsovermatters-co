@@ -1,6 +1,6 @@
 # Autonomous Business Creation Loop — Architecture & Implementation Report
 
-**Status:** DRAFT — awaiting approval before any architectural commitment.
+**Status:** APPROVED IN PRINCIPLE 2026-09-19 (§19). Schema apply to the brain awaits an explicit yes.
 **Date:** 2026-09-19
 **Branch:** `claude/autonomous-business-creation-ah7dfm`
 **Author:** Claude Code (orchestrator), for Dustan Durrett
@@ -10,7 +10,7 @@ Every statement below is tagged the way the factory itself will tag research:
 **ESTIMATE** (a number with a range), **ASSUMPTION** (needs your confirmation),
 **UNVERIFIED** (could not check from here).
 
-Nothing has been built. No schema was created, no code written, no money spent.
+Update 2026-09-19: the Slice 1 schema migration (`factory/supabase/migrations/0001_factory_schema.sql`) and its gate tests (`factory/sim/lifecycle_test.sql`, 12 checks) exist in the repo and pass on a local Postgres 16. Nothing has been applied to the brain, no money spent.
 
 ---
 
@@ -366,3 +366,23 @@ Nothing in Slice 1 spends money, sends anything, or touches existing brain table
 ---
 
 *Approval needed on §17 before any of §18 is built. Reply with numbers (e.g. "1 yes, 2 yes, 6 no").*
+
+---
+
+## 19. Decisions recorded 2026-09-19 (Dustan: "do all recommended")
+
+Approved design constraints, now binding on Slice 1 and later:
+
+1. **Scout lanes are constrained to unfair-advantage territory:** (a) cost-seg / commercial real estate owners and their advisors, (b) respiratory therapy, (c) the Minds Over Matters digital-product audience. Other categories require an explicit decision row.
+2. **Gate 2 requires first-dollar evidence:** a pre-sale, paid pilot or paid trial. Waitlists and clicks never satisfy it. Any business not able to take money within 30 days of Gate 1 is killed automatically at day 30 with a failure report.
+3. **Preferred models: near-zero fulfillment cost** — digital products, templates, calculators, niche guides, fixed-scope productized micro-services. Many small bets over one large one.
+4. **Shared distribution assets are portfolio infrastructure:** email list, Pinterest, X, directory sites get their own `businesses` rows (state `maintaining`, kind `asset`) and metrics; every new business launches into them.
+5. **Kill cap:** a validation may not exceed $50 or 5 human hours; exceeding either opens a decision row. Headline factory KPI stays profit per human hour.
+6. **Devil's Advocate mandate** includes an explicit attack on owner-time feasibility ("will Dustan actually have time for the manual steps this needs?").
+7. **Validation budget: $100/month standing cap** across all businesses. Every experiment with spend is still pre-approved by decision row, every dollar logged in `experiments.spent_cents`, and the system never holds a card or payment credential (Rule 2). The cap only removes the per-dollar decision below it after the experiment itself is approved.
+8. **Ranking dimension added:** `P(first $100 within 30 days)` as a labelled ESTIMATE on every Opportunity Report, with its five inputs shown (paying-demand facts, owned channel, fulfillment cost, price under $100, no graveyard/lessons match). Used to order the list, never to decide alone.
+9. **Connectors:** connect Similarweb, Parallel Search, Firecrawl, HubSpot; check n8n; toggle Vibe Prospecting and Zapier on per chat. Semrush, Apollo, Cloudflare, Notion not added. G2 deferred with the SaaS lane. Connectors are connected once at org level and enabled per chat; `public.mcp_routing` gets a `factory-research` row once they are observed connected.
+10. **§17 open questions:** recommended answers taken as approved (1 yes for MVP, 2 yes, 3 yes, 4 yes, 5 yes, 6 yes, 7 yes, 8 defer, 9 superseded by item 1 above). Pending-confirmation row 404 stays open until Dustan confirms this reading.
+
+*Slice 1 (§18) proceeds on these. The `factory` schema migration lives at `factory/supabase/migrations/0001_factory_schema.sql` and is applied to the brain only on an explicit yes.*
+
