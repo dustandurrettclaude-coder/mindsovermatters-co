@@ -16,6 +16,23 @@ within 30 days. Never score; describe evidence.
    if the lesson names a different failure point.
 2. Read existing `factory.opportunities` for the lane; do not duplicate.
 
+## Hard rules added after run 1 (2026-09-19, lessons 1-4)
+1. **At least one comp with a VISIBLE sales count** (Etsy "N sales" on the listing, a
+   "Sold" counter, a marketplace units figure) or the opportunity is marked
+   `demand: unproven` and ranked below every one that has it. Review counts are a
+   weak proxy; the run-1 verifier found a listing at ~100 sales per review.
+2. **No audience required.** Dustan has zero followers anywhere. Buyers must arrive
+   through marketplace search (Etsy, Gumroad discover, Amazon KDP) or through the
+   one owned list (212 CSSI referral contacts, and only as a value-add, never a cold
+   pitch). Reject anything whose first-dollar path is "post on social".
+3. **Check the governing body's calendar** for any exam, license, tax or regulatory
+   product before proposing it (the TMC guide died on nbrc.org's 2027 change).
+4. **Validation must be pre-sell-then-build.** State the pre-sell experiment
+   (mockup + pre-order link, or one question to 10-20 buyers) that fits $0 and
+   2 hours. If none exists, say so.
+5. **Nothing that competes with CSSI, reads as tax advice, or uses CSSI's prospect
+   lists as a channel.**
+
 ## Evidence standards
 - A `fact` needs a URL you actually opened and a short excerpt.
 - Prices from pricing pages, marketplaces (Gumroad, Etsy, Amazon) or public
