@@ -19,8 +19,14 @@ begin
   end if;
 
   for c in select * from jsonb_array_elements(coalesce(p_payload->'claims','[]'::jsonb)) loop
-    begin kind := (c->>'kind')::factory.claim_kind; exception when others then kind := 'unverified'; end;
     topic := lower(coalesce(c->>'topic',''));
+    -- agents sometimes tag legal findings as kind='legal': that is a topic, not an evidence kind
+    if lower(coalesce(c->>'kind','')) = 'legal' then
+      topic := 'legal';
+      kind := case when nullif(c->>'source_url','') is not null then 'fact' else 'unverified' end;
+    else
+      begin kind := (c->>'kind')::factory.claim_kind; exception when others then kind := 'unverified'; end;
+    end if;
     topic := case topic
       when 'pricing' then 'economics' when 'pricing_and_demand' then 'economics'
       when 'demand' then 'customer' when 'audience' then 'customer' when 'market_context' then 'customer'
