@@ -1,0 +1,358 @@
+{
+  "lane": "respiratory_therapy",
+  "opportunities": [
+    {
+      "name": "TMC Exam Digital Study Guide / Practice-Question PDF",
+      "category": "info_product",
+      "summary": "RT students preparing for the NBRC TMC exam already pay $7-30 on Etsy for PDF study guides and 100+ question packs with rationales. Multiple independent sellers have double-digit review counts, showing repeat, ongoing willingness to pay for exam-specific PDFs. Dustan's RRT credential and TMC/CSE first-hand experience could differentiate a new entrant from anonymous sellers.",
+      "source_urls": [
+        "https://www.etsy.com/market/tmc_study_guides",
+        "https://www.etsy.com/listing/4389343775/tmc-exam-study-guide-101-test-questions",
+        "https://www.etsy.com/listing/1866952286/tmc-exam-study-guide-nbrc-based-prep",
+        "https://www.nbrc.org/examinations/rrt/"
+      ],
+      "claims": [
+        {
+          "statement": "Etsy 'TMC Exam Study Guide, 101 Test Questions' listing shows 23 reviews, priced $9.99, sale $7.49.",
+          "kind": "fact",
+          "topic": "pricing_and_demand",
+          "source_url": "https://www.etsy.com/market/tmc_study_guides",
+          "source_excerpt": "TMC Exam Study Guide, 101 Test Questions (Digital Download) (23) Sale Price $7.49 $9.99 (25% off)",
+          "confidence": "high"
+        },
+        {
+          "statement": "A second, separate Etsy TMC study guide listing (73-page NBRC-based prep) has 4 reviews at 4.4 stars.",
+          "kind": "fact",
+          "topic": "pricing_and_demand",
+          "source_url": "https://www.etsy.com/listing/1866952286/tmc-exam-study-guide-nbrc-based-prep",
+          "source_excerpt": "Rating 4.4(4) ... This detailed 73-page study guide is designed to be the only resource you need to pass the TMC Exam.",
+          "confidence": "high"
+        },
+        {
+          "statement": "NBRC TMC exam fee is $190 for new applicants, $150 for repeat applicants, a real cost that motivates paid prep purchases.",
+          "kind": "fact",
+          "topic": "market_context",
+          "source_url": "https://www.nbrc.org/examinations/rrt/",
+          "source_excerpt": "The TMC Examination costs $190 for new applicants and $150 for repeat applicants.",
+          "confidence": "high"
+        },
+        {
+          "statement": "Several independently-run Etsy shops target the same 'TMC exam study guide' keyword cluster, suggesting a validated recurring search niche.",
+          "kind": "inference",
+          "topic": "competition",
+          "source_url": "https://www.etsy.com/market/tmc_study_guides",
+          "source_excerpt": "Multiple distinct listings (73-page guide, 101-question guide, 85-page guide) all ranking for 'TMC exam study guide'.",
+          "confidence": "medium"
+        }
+      ],
+      "owned_channel": "Dustan's RT social accounts (organic), Gumroad store; can cross-list to Etsy",
+      "fulfillment": "One-time PDF written and formatted once; delivered as an automatic digital download. Zero marginal cost per sale.",
+      "price_point_usd": 12,
+      "first_dollar_path": "Write a differentiated TMC PDF guide leveraging RRT credential, list on Gumroad, post a free-sample excerpt to r/respiratorytherapy and RT TikTok within 30 days.",
+      "graveyard_matches": [],
+      "why_it_might_fail": [
+        "Crowded niche with many similarly-titled Etsy competitors already holding reviews and SEO position.",
+        "Students often default to free alternatives (Quizlet, Studystack) before paying.",
+        "No brand recognition yet vs. established sellers with review history."
+      ]
+    },
+    {
+      "name": "Ventilator Modes / Mechanical Ventilation Cheat Sheet",
+      "category": "info_product",
+      "summary": "One-page vent-mode and settings cheat sheets sell on Etsy for roughly $5-12, marketed jointly to nurses and respiratory therapists. This matches the RT + adjacent-clinician (ICU nursing) audience Dustan can reach, and his RRT background lends clinical authority over generic sellers.",
+      "source_urls": [
+        "https://www.etsy.com/listing/1530956289/ventilator-modes-study-guide-vent-cheat",
+        "https://www.etsy.com/listing/1877521329/mechanical-ventilator-cheat-sheet",
+        "https://www.etsy.com/listing/1526046864/mechanical-ventilation-study-guide"
+      ],
+      "claims": [
+        {
+          "statement": "Etsy listing 'Ventilator Modes Study Guide | Vent Cheat Sheet for Respiratory Therapists and Nurses' sells as an instant digital download.",
+          "kind": "fact",
+          "topic": "pricing_and_demand",
+          "source_url": "https://www.etsy.com/listing/1530956289/ventilator-modes-study-guide-vent-cheat",
+          "source_excerpt": "Ventilator Modes Study Guide | Vent Cheat Sheet for Respiratory Therapists and Nurses | Study Notes - Etsy",
+          "confidence": "medium"
+        },
+        {
+          "statement": "'Mechanical Ventilator Cheat Sheet' is explicitly marketed to nurses, doctors, and respiratory therapists together, not RTs alone.",
+          "kind": "fact",
+          "topic": "audience",
+          "source_url": "https://www.etsy.com/listing/1877521329/mechanical-ventilator-cheat-sheet",
+          "source_excerpt": "This includes troubleshooting and maintenance tips, and is ideal for medical professionals including nurses, doctors, and respiratory therapists.",
+          "confidence": "medium"
+        },
+        {
+          "statement": "Multiple sellers cross-market vent cheat sheets to both nursing and RT buyers, indicating demand extends to adjacent clinicians as the brief expects.",
+          "kind": "inference",
+          "topic": "audience",
+          "source_url": "https://www.etsy.com/listing/1526046864/mechanical-ventilation-study-guide",
+          "source_excerpt": "Mechanical Ventilation Study Guide | Respiratory Therapy Cheat Sheet ... Volume Control Mode - Etsy",
+          "confidence": "medium"
+        }
+      ],
+      "owned_channel": "Dustan's RT social accounts, Gumroad store, Etsy cross-listing",
+      "fulfillment": "Single-page PDF (and optional laminated print via Etsy print-on-demand); near-zero marginal cost.",
+      "price_point_usd": 8,
+      "first_dollar_path": "Publish an RRT-authored vent cheat sheet on Gumroad/Etsy, promote via short-form TikTok/Reels showing real vent settings explained.",
+      "graveyard_matches": [],
+      "why_it_might_fail": [
+        "legal: a vent settings/troubleshooting reference can be read as clinical guidance and needs an explicit 'educational reference only, not a clinical protocol' disclaimer.",
+        "Saturated sub-niche; many nurse-authored competitors already have review history."
+      ]
+    },
+    {
+      "name": "ABG Interpretation Pocket Reference Card",
+      "category": "info_product",
+      "summary": "ABG interpretation cheat sheets are one of the most repeated study-aid categories on Etsy, mostly authored by nurses for CCRN prep, priced roughly $4-15. RTs own ABG interpretation clinically, so an RRT-branded version credibly differentiates from the nurse-authored majority and reaches nursing students learning it too.",
+      "source_urls": [
+        "https://www.etsy.com/listing/1426205360/abg-interpretation-treatment-nursing",
+        "https://www.etsy.com/listing/1525275293/abg-interpretation-cheat-sheet-ccrn",
+        "https://www.etsy.com/listing/1402015092/abg-bundle-abg-interpretation-arterial"
+      ],
+      "claims": [
+        {
+          "statement": "At least 8 distinct Etsy listings for ABG interpretation cheat sheets/bundles were found, most branded for nursing/CCRN prep rather than RT.",
+          "kind": "fact",
+          "topic": "competition",
+          "source_url": "https://www.etsy.com/listing/1525275293/abg-interpretation-cheat-sheet-ccrn",
+          "source_excerpt": "ABG Interpretation Cheat Sheet | CCRN Study Guide, ICU Notes, Arterial Blood Gas | Instant Download - Etsy",
+          "confidence": "high"
+        },
+        {
+          "statement": "One ABG listing bundles 'causes and treatments' with interpretation steps, moving closer to clinical-advice territory than pure reference material.",
+          "kind": "fact",
+          "topic": "legal",
+          "source_url": "https://www.etsy.com/listing/1426205360/abg-interpretation-treatment-nursing",
+          "source_excerpt": "This is a downloadable PDF ... includes a method for quick interpretation, compensation, and causes and treatments.",
+          "confidence": "medium"
+        },
+        {
+          "statement": "Nursing-branded ABG products outnumber RT-branded ones on Etsy, suggesting room for an NBRC/RRT-aligned version.",
+          "kind": "inference",
+          "topic": "differentiation",
+          "source_url": "https://www.etsy.com/listing/1402015092/abg-bundle-abg-interpretation-arterial",
+          "source_excerpt": "ABG Bundle, ABG Interpretation, Arterial Blood Gas Study Guide, ABG Practice Questions, Cheat Sheet, Nursing Notes - Etsy",
+          "confidence": "medium"
+        }
+      ],
+      "owned_channel": "Dustan's RT social accounts, Gumroad store, Etsy cross-listing",
+      "fulfillment": "Single-page PDF, zero marginal cost.",
+      "price_point_usd": 7,
+      "first_dollar_path": "Publish an RRT-authored, NBRC-content-outline-aligned ABG card, explicitly labeled 'educational reference, not treatment guidance,' sell via Gumroad within 30 days.",
+      "graveyard_matches": [],
+      "why_it_might_fail": [
+        "legal: any version implying treatment recommendations (not just interpretation) needs a clear non-clinical-advice disclaimer.",
+        "Very crowded, low-price niche where buyers may already own a nursing-branded equivalent."
+      ]
+    },
+    {
+      "name": "Low-Cost TMC/CSE Mini Prep Bundle",
+      "category": "productized",
+      "summary": "Established competitors charge $49-$375 for TMC/CSE prep bundles (video courses, test banks, practice exams), and RT students on Reddit name several of these as products they actually bought. A smaller, RRT-authored $49-79 mini-bundle (PDF workbook + short video walkthroughs) undercuts the incumbents while still monetizing proven willingness to pay well above flashcard/cheat-sheet prices.",
+      "source_urls": [
+        "https://products.respiratorytherapyzone.com/tmc-exam-bundle",
+        "https://products.respiratorytherapyzone.com/",
+        "https://www.reddit.com/r/respiratorytherapy/comments/1lxo6o9/advice_on_best_study_material_for_tmc/",
+        "https://www.facebook.com/groups/648642936050158/posts/1991137771800661/"
+      ],
+      "claims": [
+        {
+          "statement": "Respiratory Therapy Zone's 'TMC Exam Bundle' (4 items) is priced $147, or 3 monthly payments of $59.",
+          "kind": "fact",
+          "topic": "pricing",
+          "source_url": "https://products.respiratorytherapyzone.com/tmc-exam-bundle",
+          "source_excerpt": "$147 or 3 monthly payments of $59. TMC Exam Bundle. Bundle; 4 Items",
+          "confidence": "high"
+        },
+        {
+          "statement": "Respiratory Therapy Zone's combined 'TMC/CSE Bundle' for both NBRC exams is priced $197, or 3 monthly payments of $75.",
+          "kind": "fact",
+          "topic": "pricing",
+          "source_url": "https://products.respiratorytherapyzone.com/",
+          "source_excerpt": "30-day returns TMC/CSE Exams. $197 or 3 monthly payments of $75. TMC/CSE Bundle.",
+          "confidence": "high"
+        },
+        {
+          "statement": "RT Board Review's standalone TMC course is $70 (70-day access); its CSE course is $120 (120-day access).",
+          "kind": "fact",
+          "topic": "pricing",
+          "source_url": "https://rtboardreview.net/course/index.php?categoryid=2",
+          "source_excerpt": "RT Board Review's TMC course fee is $70.00, with 70 days of enrollment. ... CSE course, the course fee is $120",
+          "confidence": "medium"
+        },
+        {
+          "statement": "A Facebook group comment references a promoted intro price of $99 for a 'TMC Boot Camp' program, evidence buyers are shown and respond to sub-$100 offers.",
+          "kind": "fact",
+          "topic": "pricing",
+          "source_url": "https://www.facebook.com/groups/648642936050158/posts/1991137771800661/",
+          "source_excerpt": "Get access to the entire TMC Boot Camp program for the low introductory price of only $99 - the best value available.",
+          "confidence": "medium"
+        },
+        {
+          "statement": "In a Reddit thread asking for TMC study advice, respondents name paid resources (Kettering, Lindsey Jones, RC TMC Bootcamp) they personally used.",
+          "kind": "fact",
+          "topic": "demand",
+          "source_url": "https://www.reddit.com/r/respiratorytherapy/comments/1lxo6o9/advice_on_best_study_material_for_tmc/",
+          "source_excerpt": "I've used Egan's, Kettering, Lindsey jones, RC TMC Bootcamp, etc. They all have helped me understand basics and fundamentals thoroughly.",
+          "confidence": "high"
+        },
+        {
+          "statement": "Lindsey Jones' full NBRC exam-prep package (review manual, flashcards, apps, seminar) retails at roughly $375 direct from the publisher.",
+          "kind": "fact",
+          "topic": "pricing",
+          "source_url": "https://www.lindsey-jones.com/bookstore/",
+          "source_excerpt": "The retail cost of Lindsey Jones material when purchased directly from LindseyJones is about $375.",
+          "confidence": "medium"
+        }
+      ],
+      "owned_channel": "Dustan's RT social accounts, Gumroad store, Reddit/Facebook RT communities",
+      "fulfillment": "Pre-recorded short videos + PDF workbook, built once, sold repeatedly; higher build effort than a single PDF but still no per-unit fulfillment cost.",
+      "price_point_usd": 59,
+      "first_dollar_path": "Build a scoped-down mini-bundle (fewer modules than incumbents) at $49-59, sell via Gumroad, post value-add clips in the Reddit thread pattern where students already ask what to buy.",
+      "graveyard_matches": [],
+      "why_it_might_fail": [
+        "Competes directly with an incumbent (Respiratory Therapy Zone) with a 1.2M-subscriber YouTube audience and years of reviews.",
+        "Higher production effort breaks the 'near-zero fulfillment, first dollar in 30 days' bar unless scope is kept very small.",
+        "Buyers already loyal to named brands (Lindsey Jones, Kettering, RC Bootcamp) per the Reddit thread."
+      ]
+    },
+    {
+      "name": "New-Grad RT Interview Prep Guide",
+      "category": "info_product",
+      "summary": "A generic 'Respiratory Therapist Interview Questions and Answers' ebook already exists on Gumroad, evidence the format sells, but it is not RT-specific or written by a credentialed clinician. Dustan's RRT background and real interview experience could support an authentic, differentiated version aimed at new grads job-hunting.",
+      "source_urls": [
+        "https://tubeclone360.gumroad.com/l/lrmww",
+        "https://www.aarc.org/your-rt-career/career-advice/interviewing-advice/questions-every-rt-should-consider-asking-in-an-interview/"
+      ],
+      "claims": [
+        {
+          "statement": "A Gumroad ebook titled around 'Respiratory Therapist Interview Questions and Answers' is listed for sale at tubeclone360.gumroad.com/l/lrmww.",
+          "kind": "fact",
+          "topic": "competition",
+          "source_url": "https://tubeclone360.gumroad.com/l/lrmww",
+          "source_excerpt": "ebook available on Gumroad specifically about respiratory therapist interview questions and answers ... ace a respiratory therapist interview",
+          "confidence": "low"
+        },
+        {
+          "statement": "AARC (the RT professional association) publishes a free article on RT interview questions, meaning some competing content is free, not paid.",
+          "kind": "fact",
+          "topic": "competition",
+          "source_url": "https://www.aarc.org/your-rt-career/career-advice/interviewing-advice/questions-every-rt-should-consider-asking-in-an-interview/",
+          "source_excerpt": "Questions Every RT Should Consider Asking in an Interview - AARC",
+          "confidence": "medium"
+        },
+        {
+          "statement": "The existing Gumroad seller name suggests a generic multi-niche interview-guide operation rather than an RT clinician, leaving room for an authentic RRT-authored version.",
+          "kind": "inference",
+          "topic": "differentiation",
+          "source_url": "https://tubeclone360.gumroad.com/l/lrmww",
+          "source_excerpt": "seller storefront name 'tubeclone360' does not reference respiratory therapy or clinical credentials",
+          "confidence": "low"
+        }
+      ],
+      "owned_channel": "Dustan's RT social accounts, Gumroad store",
+      "fulfillment": "Short PDF ebook, zero marginal cost.",
+      "price_point_usd": 10,
+      "first_dollar_path": "Write a short RRT-authored interview guide with real clinical scenario questions, publish on Gumroad, share in 'I got a job offer, what now' threads on r/respiratorytherapy.",
+      "graveyard_matches": [],
+      "why_it_might_fail": [
+        "Free equivalents already exist from AARC, staffing agencies (Sunbelt, Host Healthcare, Trusted Health) and job boards.",
+        "One-time purchase with little repeat-buy potential per customer, limiting revenue per buyer."
+      ]
+    },
+    {
+      "name": "Respiratory Pharmacology / NBRC Formula Cheat Sheet Bundle",
+      "category": "info_product",
+      "summary": "Etsy sellers already offer a respiratory pharmacology study guide and a separate NBRC formula cheat-sheet bundle (oxygenation, ventilation/lung mechanics, cardiopulmonary formulas) as digital downloads, showing demand for exam-outline-aligned reference bundles distinct from general TMC guides.",
+      "source_urls": [
+        "https://www.etsy.com/listing/1796358919/respiratory-pharmacology-study-guide-for",
+        "https://www.etsy.com/listing/1880013765/respiratory-therapy-formula-cheat-sheet"
+      ],
+      "claims": [
+        {
+          "statement": "A 45-page 'Respiratory Pharmacology Study Guide for Students' is sold as a digital download on Etsy by a Respiratory Therapist/ECMO Specialist.",
+          "kind": "fact",
+          "topic": "pricing_and_demand",
+          "source_url": "https://www.etsy.com/listing/1796358919/respiratory-pharmacology-study-guide-for",
+          "source_excerpt": "a 45-page respiratory pharmacology study guide designed specifically for RTs created by a Respiratory Therapist/ECMO Specialist",
+          "confidence": "medium"
+        },
+        {
+          "statement": "'Respiratory Therapy Formula Cheat Sheet Bundle' packages 3 guides covering oxygenation/gas-exchange, ventilation/lung-mechanics, and cardiopulmonary/hemodynamics formulas as one digital download.",
+          "kind": "fact",
+          "topic": "pricing_and_demand",
+          "source_url": "https://www.etsy.com/listing/1880013765/respiratory-therapy-formula-cheat-sheet",
+          "source_excerpt": "This includes three study guides covering oxygenation and gas exchange formulas, ventilation and lung mechanics formulas, and cardiopulmonary and hemodynamics formulas.",
+          "confidence": "high"
+        }
+      ],
+      "owned_channel": "Dustan's RT social accounts, Gumroad store, Etsy cross-listing",
+      "fulfillment": "Multi-page PDF bundle, zero marginal cost.",
+      "price_point_usd": 12,
+      "first_dollar_path": "Bundle an NBRC-content-outline-aligned pharmacology + formula PDF, sell on Gumroad, promote as 'built by an RRT who took the boards' for credibility.",
+      "graveyard_matches": [],
+      "why_it_might_fail": [
+        "Same formulas/pharmacology content is freely covered in textbooks (Egan's) and free Quizlet decks.",
+        "Existing sellers already hold review history and Etsy SEO ranking for these exact keyword clusters."
+      ]
+    },
+    {
+      "name": "RRT/TMC Digital Flashcard Deck (Anki-style)",
+      "category": "info_product",
+      "summary": "Mometrix sells at least three distinct physical 'RRT/CRT Exam Flashcard Study System' card decks on Amazon, an established publisher's evidence that flashcard-format RT exam prep is a proven paid category. Separately, RT students discuss Anki decks as a study format on TikTok. A cheaper, digital-only Anki/PDF flashcard deck could undercut the physical-card incumbents.",
+      "source_urls": [
+        "https://www.amazon.com/RRT-Exam-Flashcard-Study-System/dp/161072836X",
+        "https://www.amazon.com/CRT-Exam-Flashcard-Study-System/dp/1609715381",
+        "https://www.amazon.com/Exam-Flashcard-Study-System-Multiple-Choice/dp/1516709551"
+      ],
+      "claims": [
+        {
+          "statement": "At least three separate Mometrix 'RRT/CRT Exam Flashcard Study System' physical card products are listed for sale on Amazon.",
+          "kind": "fact",
+          "topic": "competition",
+          "source_url": "https://www.amazon.com/RRT-Exam-Flashcard-Study-System/dp/161072836X",
+          "source_excerpt": "RRT Exam Flashcard Study System: RRT Test Practice Questions & Review for the Registered Respiratory Therapist Exam (Cards)",
+          "confidence": "high"
+        },
+        {
+          "statement": "TikTok's discovery/tag system surfaces 'Respiratory Therapy Student Anki' as a distinct content topic, indicating students search for Anki-format RT study material.",
+          "kind": "fact",
+          "topic": "demand",
+          "source_url": "https://www.tiktok.com/discover/respiratory-therapy-student-anki",
+          "source_excerpt": "Respiratory Therapy Student Anki | TikTok",
+          "confidence": "low"
+        },
+        {
+          "statement": "Exact Amazon price and review counts for the Mometrix flashcard decks could not be confirmed (page fetch blocked in this environment).",
+          "kind": "unverified",
+          "topic": "pricing",
+          "source_url": "https://www.amazon.com/RRT-Exam-Flashcard-Study-System/dp/161072836X",
+          "source_excerpt": "product page price/review data not retrievable via available tools in this session",
+          "confidence": "low"
+        }
+      ],
+      "owned_channel": "Dustan's RT social accounts, Gumroad store",
+      "fulfillment": "Digital Anki deck (.apkg) plus a print-ready PDF, zero marginal cost per sale.",
+      "price_point_usd": 15,
+      "first_dollar_path": "Build an RRT-authored Anki deck covering the NBRC TMC content outline, give a free 20-card sample on r/respiratorytherapy, sell the full deck on Gumroad.",
+      "graveyard_matches": [],
+      "why_it_might_fail": [
+        "Free, community-shared Anki decks for licensing exams are common on AnkiWeb and could undercut a paid version.",
+        "Established publisher (Mometrix) already owns the 'flashcard study system' positioning for this exam."
+      ]
+    }
+  ],
+  "disagreements": [
+    "Respiratory Therapy Zone's bundle page lists the TMC Test Bank component at $72, while another RTZ page describing the same-category test bank cites a '$97 value' as its standalone worth -- the two figures are an actual sale price vs. a marketing anchor price, not independently confirmed as the same thing.",
+    "The 'TMC Exam Study Guide, 101 Test Questions' Etsy listing shows slightly different review counts (23, 24, 25) across different country-specific Etsy domains (US/CA/UK/Norway/Ireland) for what appears to be the same underlying listing, likely due to search-index caching lag rather than genuinely different products."
+  ],
+  "not_public": [
+    "NBRC publishes an aggregate 'nearly 30,000 candidates' per year across all its credentialing exams (nbrc.org/educators/), but a breakdown specifically for TMC-only or CSE-only candidate volume was not found on a public page.",
+    "A current (2026) CoARC accredited-program count could not be directly confirmed; only a 2022-dated figure (348 programs) surfaced via search indexing of a Wikipedia list page, and the CoARC site's own live search tool could not be fetched in this environment.",
+    "Facebook group membership sizes for respiratory-therapy-focused groups were not retrievable without logging in.",
+    "r/respiratorytherapy subscriber count was not retrievable via the tools available in this session.",
+    "Exact Amazon price and current review/rating counts for the Mometrix RRT/CRT flashcard card decks and for Johnny Lung's 'Hacking the TMC Exam' Kindle book could not be confirmed; only fragmentary search-snippet data (e.g., an overall 3.7-star figure for one book) was available.",
+    "Direct page fetches to etsy.com, amazon.com, gumroad.com (non-subdomain), wikipedia.org, rtboardreview.net, and the respiratorytherapyzone products subdomain were blocked by this environment's network egress proxy; all Etsy/Amazon/Gumroad facts above rely on search-engine-indexed excerpts of those exact URLs rather than a full page fetch."
+  ]
+}

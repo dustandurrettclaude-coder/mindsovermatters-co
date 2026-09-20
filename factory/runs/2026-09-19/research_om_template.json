@@ -1,0 +1,345 @@
+{
+  "opportunity_id": "f5626232-4424-4a61-97a3-581874d8ffad",
+  "claims": [
+    {
+      "statement": "IntellCRE estimates template-based OM production costs a 20-deal/yr broker ~2 work weeks annually, implying solo/small brokers are the time-pressed buyer segment.",
+      "kind": "fact",
+      "topic": "customer",
+      "source_url": "https://intellcre.com/resources/best/om-templates-cre",
+      "source_excerpt": "If you close 20 deals a year, template-based OMs cost you roughly two full work weeks annually",
+      "confidence": 0.7
+    },
+    {
+      "statement": "CREBuilder positions itself vs Buildout specifically for 'individual brokers and small teams,' implying enterprise CRE software underserves solo brokers who then turn to templates.",
+      "kind": "fact",
+      "topic": "customer",
+      "source_url": "https://www.crebuilder.com/compare-buildout",
+      "source_excerpt": "Created For | Individual brokers and small teams",
+      "confidence": 0.7
+    },
+    {
+      "statement": "IntellCRE says Canva Pro (~$13/mo) is 'a defensible spend' for a solo broker doing 5-8 deals/yr but 'not a production tool for a high-volume team,' segmenting buyers by deal volume.",
+      "kind": "fact",
+      "topic": "customer",
+      "source_url": "https://intellcre.com/resources/best/om-templates-cre",
+      "source_excerpt": "For a solo broker doing five to eight deals a year, it is a defensible spend if design is your main gap",
+      "confidence": 0.75
+    },
+    {
+      "statement": "A broker posted on r/CommercialRealEstate asking what software others use to make OMs (Buildout? CRE Builder? IntellCRE?), evidencing a real recurring pain point among leasing/sales brokers.",
+      "kind": "fact",
+      "topic": "customer",
+      "source_url": "https://www.reddit.com/r/CommercialRealEstate/comments/1tmr2n7/whats_the_best_software_to_create_offering",
+      "source_excerpt": "what are you using to make your OMs? buildout? CRE builder? Intel CRE?",
+      "confidence": 0.75
+    },
+    {
+      "statement": "Etsy/Canva CRE-OM buyers are likely solo brokers or small brokerages without in-house marketing, since template prices ($10-$80) sit far below Buildout's $125-500/user/mo enterprise pricing.",
+      "kind": "inference",
+      "topic": "customer",
+      "source_url": "https://www.buildout.com/pricing",
+      "source_excerpt": "buildout has solutions starting at $125 /user/month",
+      "confidence": 0.55
+    },
+    {
+      "statement": "Etsy listing 'Commercial Real Estate Offering Memorandum | 20+ Page Canva Template | Marketing Brochure' by seller StructuredCreativeCo has a 5.0-star rating.",
+      "kind": "fact",
+      "topic": "offer",
+      "source_url": "https://www.etsy.com/listing/1556749136/commercial-real-estate-offering",
+      "source_excerpt": "Commercial Real Estate Offering Memorandum | 20+ Page Canva Template... 5 out of 5 stars",
+      "confidence": 0.8
+    },
+    {
+      "statement": "Etsy shop StructuredCreativeCo ('Premium Real Estate Marketing Templates, Fully Customizable in Canva') has a 5.0 rating across 76 reviews as of Dec 2025.",
+      "kind": "fact",
+      "topic": "offer",
+      "source_url": "https://www.etsy.com/shop/StructuredCreativeCo",
+      "source_excerpt": "Rating 5.0(76)Dec 2, 2025 · Premium Real Estate Marketing Templates, Fully Customizable in Canva",
+      "confidence": 0.75
+    },
+    {
+      "statement": "vip.graphics' PPT CRE OM template (44+ slides) breaks into 11 modular sections: covers/dividers/disclaimer, TOC, exec summary, property overview, amenities/map, demographics, competitive set, floorplan/photos, rent roll, pro forma financials, contact.",
+      "kind": "fact",
+      "topic": "offer",
+      "source_url": "https://vip.graphics/shop/cre-offering-memorandum-template/",
+      "source_excerpt": "Covers, Dividers, & Disclaimer – 5 templates ... Pro Forma Financials – 3 templates ... Contact / CTA – 1 template",
+      "confidence": 0.85
+    },
+    {
+      "statement": "BTS Brands' agency-built 72-page OM template covers: exec summary, investment highlights, property overview, photos, maps, aerial imagery, demographics, tenant profiles, financials, comparables; delivered in InDesign or PowerPoint.",
+      "kind": "fact",
+      "topic": "offer",
+      "source_url": "https://btsbrands.com/templates/marketing/offering-memorandum",
+      "source_excerpt": "This offering memorandum template includes 72 fully customizable pages... Executive summary; Investment highlights; Property overview",
+      "confidence": 0.85
+    },
+    {
+      "statement": "Etsy seller PortfolioStudio's 'CIM Portfolio Template, Confidential Information Memorandum' is a 49-page Canva template with 91 reviews, priced $79.99.",
+      "kind": "fact",
+      "topic": "offer",
+      "source_url": "https://www.etsy.com/market/offering_memorandum_template",
+      "source_excerpt": "The template is designed for marketing to potential buyers and includes 49 pages... PortfolioStudio (91) $ 79.99",
+      "confidence": 0.75
+    },
+    {
+      "statement": "Etsy seller BrandForms sells a '2026 Real Estate Offering Memorandum Template for Canva ... Booklet Digital Template Bundle' with 18 reviews at $17.99.",
+      "kind": "fact",
+      "topic": "offer",
+      "source_url": "https://www.etsy.com/market/offering_memorandum_template",
+      "source_excerpt": "2026 Real Estate Offering Memorandum Template for Canva, 100% Customizable... BrandForms (18) $ 17.99",
+      "confidence": 0.75
+    },
+    {
+      "statement": "Across price points from $18 to $295, best-selling/featured CRE OM templates converge on the same ~6-10 core sections: cover, exec summary, property overview, financials/rent roll, demographics/map, tenant/comps, contact.",
+      "kind": "inference",
+      "topic": "offer",
+      "source_url": "https://vip.graphics/shop/cre-offering-memorandum-template/",
+      "source_excerpt": "Covers... Executive Summary... Property Overview... Demographics... Rent Roll... Pro Forma Financials... Contact",
+      "confidence": 0.7
+    },
+    {
+      "statement": "Etsy's search results page for 'offering memorandum template' is dominated by paid 'ad vertisement' listings from BrandForms, PortfolioStudio and StructuredCreativeCo, showing sellers pay for Etsy Ads on this exact term.",
+      "kind": "fact",
+      "topic": "acquisition",
+      "source_url": "https://www.etsy.com/market/offering_memorandum_template",
+      "source_excerpt": "ad vertisement by Etsy seller Ad vertisement from Etsy seller BrandForms",
+      "confidence": 0.75
+    },
+    {
+      "statement": "Pinterest hosts multiple dedicated 'idea' pages and boards (e.g. 54-pin, 15-pin boards) curating 'offering memorandum' and 'commercial real estate offering memorandum' designs, indicating active organic discovery on Pinterest for this niche.",
+      "kind": "fact",
+      "topic": "acquisition",
+      "source_url": "https://www.pinterest.com/amustacchio2/offering-memorandum-ideas/",
+      "source_excerpt": "54 Offering Memorandum Ideas - Pinterest ... Commercial real estate marketing design",
+      "confidence": 0.6
+    },
+    {
+      "statement": "StructuredCreativeCo promotes its real-estate template shop via a dedicated Instagram account (@structuredcreativestudio), showing social media as a secondary acquisition channel alongside Etsy SEO/ads.",
+      "kind": "fact",
+      "topic": "acquisition",
+      "source_url": "https://www.instagram.com/structuredcreativestudio/",
+      "source_excerpt": "Real Estate Marketing Templates (@structuredcreativestudio)... Visit our Template Shop",
+      "confidence": 0.6
+    },
+    {
+      "statement": "Review counts on CRE-OM-specific Etsy listings (18-91) are far lower than generic real-estate-template listings (1,000-2,000+ reviews), suggesting the CRE-OM sub-niche has much lower search/purchase volume than general realtor templates.",
+      "kind": "inference",
+      "topic": "acquisition",
+      "source_url": "https://www.etsy.com/market/real_estate_canva_templates",
+      "source_excerpt": "30,000+ Real Estate Templates... Ad from Etsy seller (2k)",
+      "confidence": 0.55
+    },
+    {
+      "statement": "No CRE-OM-specific listings surfaced on Creative Market or the official Canva template marketplace in searches; general 'real estate brochure' templates exist there but not OM-labeled ones, unlike on Etsy.",
+      "kind": "inference",
+      "topic": "acquisition",
+      "source_url": "https://web03.creativemarket.com/templates-themes/print/brochures",
+      "source_excerpt": "Portrait Real Estate Brochure by mario_kojic_design ... Luxury Real Estate Brochure by mario_kojic_design",
+      "confidence": 0.5
+    },
+    {
+      "statement": "Etsy CRE OM: BrandForms Canva booklet bundle sells at $17.99 with 18 reviews.",
+      "kind": "fact",
+      "topic": "sales",
+      "source_url": "https://www.etsy.com/market/offering_memorandum_template",
+      "source_excerpt": "BrandForms From shop BrandForms (18) $ 17.99 Digital Download",
+      "confidence": 0.75
+    },
+    {
+      "statement": "Etsy CRE OM: StructuredCreativeCo's 20+ page Canva template sells at $47.00.",
+      "kind": "fact",
+      "topic": "sales",
+      "source_url": "https://www.etsy.com/market/offering_memorandum_template",
+      "source_excerpt": "Commercial Real Estate Offering Memorandum | 20+ Page Canva Template... StructuredCreativeCo (69) $ 47.00",
+      "confidence": 0.75
+    },
+    {
+      "statement": "Etsy CRE OM: PortfolioStudio's 49-page CIM template sells at $79.99, the highest Etsy price point found.",
+      "kind": "fact",
+      "topic": "sales",
+      "source_url": "https://www.etsy.com/market/offering_memorandum_template",
+      "source_excerpt": "PortfolioStudio From shop PortfolioStudio (91) $ 79.99 Digital Download",
+      "confidence": 0.75
+    },
+    {
+      "statement": "vip.graphics prices the same 44+ slide PPT OM template on a license ladder: $99 Commercial (1 project, no resale) vs $249 Extended (unlimited projects, still no resale).",
+      "kind": "fact",
+      "topic": "sales",
+      "source_url": "https://vip.graphics/shop/cre-offering-memorandum-template/",
+      "source_excerpt": "Commercial License $99 Limited to only one commercial project... Extended License $249 Unlimited commercial projects, but no re-sale",
+      "confidence": 0.85
+    },
+    {
+      "statement": "offeringmemos.com (a vip.graphics-linked lead-gen site) resells the same core PPT template for $36, a lower price than vip.graphics' own $99 direct listing for what appears to be the same asset.",
+      "kind": "fact",
+      "topic": "sales",
+      "source_url": "https://offeringmemos.com/memos/cbre-marketplace",
+      "source_excerpt": "Get the Template ($36)... Offering Memorandum PowerPoint Template",
+      "confidence": 0.7
+    },
+    {
+      "statement": "BTS Brands sells a fully agency-designed 72-page OM template as a one-time $295 purchase, the top of the observed price ladder, with paid retainer hours offered for done-for-you population.",
+      "kind": "fact",
+      "topic": "sales",
+      "source_url": "https://btsbrands.com/templates/marketing/offering-memorandum",
+      "source_excerpt": "Marketing template · one-time $ 295.00... Rather have us do the drop-in? Point a block of retainer hours at it",
+      "confidence": 0.8
+    },
+    {
+      "statement": "The observed CRE-OM price ladder clusters into 4 tiers: $10-20 (Etsy, low page count, DIY Canva), $40-80 (Etsy, 20-49 pages, more polish), $99-249 (PowerPoint, license tiers for reuse/scale), $295+ (agency-built, fully custom, add-on services).",
+      "kind": "inference",
+      "topic": "sales",
+      "source_url": "https://vip.graphics/shop/cre-offering-memorandum-template/",
+      "source_excerpt": "Commercial License $99... Extended License $249",
+      "confidence": 0.6
+    },
+    {
+      "statement": "BTS Brands' $295 OM template explicitly excludes property photography ('Photography shown is placeholder and isn't included'), meaning fulfillment for any CRE OM template must plan around buyers sourcing their own photos.",
+      "kind": "fact",
+      "topic": "fulfillment",
+      "source_url": "https://btsbrands.com/templates/marketing/offering-memorandum",
+      "source_excerpt": "Photography shown is placeholder and isn't included.",
+      "confidence": 0.8
+    },
+    {
+      "statement": "Canva's Content License Agreement grants only a non-transferable license to use Pro Content/Templates in a single Canva Design transferable to a single client, and forbids sub-licensing content on a standalone basis.",
+      "kind": "legal",
+      "topic": "fulfillment",
+      "source_url": "https://www.canva.com/policies/content-license-agreement-2023-03-06",
+      "source_excerpt": "a Canva Design incorporating Content can only be transferred to a single client... does not entitle you to transfer or sub-license Content",
+      "confidence": 0.85
+    },
+    {
+      "statement": "Third-party guidance on selling Canva designs on Etsy states the free license forbids reselling Canva's stock photos/videos as standalone files or selling designs that primarily consist of Canva's built-in stock elements with minimal modification.",
+      "kind": "legal",
+      "topic": "fulfillment",
+      "source_url": "https://www.insightagent.app/guides/selling-canva-designs-on-etsy",
+      "source_excerpt": "Reselling Canva's stock photos, videos, or audio as standalone files... Creating designs that primarily consist of Canva's built-in stock elements",
+      "confidence": 0.65
+    },
+    {
+      "statement": "vip.graphics' own commercial-use license for its OM template forbids resale/distribution even at the $249 'unlimited projects' tier, meaning a competitor cannot legally build a resellable product by reselling that file as-is.",
+      "kind": "legal",
+      "topic": "fulfillment",
+      "source_url": "https://vip.graphics/shop/cre-offering-memorandum-template/",
+      "source_excerpt": "Commercial use (1×) No re-sale or distribution... Extended License... Unlimited commercial projects, but no re-sale",
+      "confidence": 0.8
+    },
+    {
+      "statement": "offeringmemos.com's marketing claims its template is 'Used by 200+ brokers and syndicators like JLL, KW, and RE/MAX' -- an unverified vendor claim that also names trademarked brokerage brands in third-party marketing copy.",
+      "kind": "legal",
+      "topic": "fulfillment",
+      "source_url": "https://offeringmemos.com/memos/cbre-marketplace",
+      "source_excerpt": "Used by 200+ brokers and syndicators like JLL, KW, and RE/MAX",
+      "confidence": 0.5
+    },
+    {
+      "statement": "Estimate: using visible Etsy review counts (18-91) as a proxy and a commonly assumed ~8-10 completed sales per review, sampled CRE-OM Etsy listings likely represent roughly 150-900 lifetime sales each.",
+      "kind": "estimate",
+      "topic": "economics",
+      "source_url": "https://www.etsy.com/market/offering_memorandum_template",
+      "source_excerpt": "BrandForms (18)... StructuredCreativeCo (69)... PortfolioStudio (91)",
+      "confidence": 0.4
+    },
+    {
+      "statement": "Estimate: applying the review-to-sale assumption to observed prices ($17.99-$79.99), sampled listings likely generated roughly $2,500-$70,000 in lifetime gross revenue each before Etsy's ~6.5% transaction/payment fees.",
+      "kind": "estimate",
+      "topic": "economics",
+      "source_url": "https://www.etsy.com/market/offering_memorandum_template",
+      "source_excerpt": "BrandForms (18) $ 17.99... PortfolioStudio (91) $ 79.99",
+      "confidence": 0.35
+    },
+    {
+      "statement": "The same underlying vip.graphics PPT asset is resold across at least 2 storefronts (vip.graphics direct, offeringmemos.com) at 3 different price points ($36/$99/$249), showing one well-built template can be multi-channel repackaged rather than resold at one fixed price.",
+      "kind": "inference",
+      "topic": "economics",
+      "source_url": "https://offeringmemos.com/memos/cbre-marketplace",
+      "source_excerpt": "Get the Template ($36)... [vs] Commercial License $99",
+      "confidence": 0.55
+    },
+    {
+      "statement": "Assumption: exact Etsy review-to-sale conversion ratios, total units sold per listing, and Pinterest board follower/click-through counts for this niche are not publicly disclosed by Etsy or Pinterest.",
+      "kind": "assumption",
+      "topic": "economics",
+      "source_url": null,
+      "source_excerpt": null,
+      "confidence": 0.9
+    },
+    {
+      "statement": "A generic Etsy Canva-template seller case study describes launching a first digital template listing at $12.97 and getting a first sale within 24 hours, illustrating the low-cost/low-effort entry pattern typical of Canva-template Etsy shops (not CRE-specific).",
+      "kind": "inference",
+      "topic": "history",
+      "source_url": "https://medium.com/@ethancreates/12-50-day-for-60-days-how-i-turned-canva-into-my-side-income-c8c837243db8",
+      "source_excerpt": "Title: '20 Instagram Post Templates | Canva Editable | Social Media Bundle' Price: $12.97",
+      "confidence": 0.4
+    },
+    {
+      "statement": "StructuredCreativeCo appears to operate as a CRE/real-estate-template-only Canva design studio (per its Instagram bio and Etsy shop description), suggesting a real, niche-focused competitor began and stayed narrowly scoped rather than diversifying products.",
+      "kind": "inference",
+      "topic": "history",
+      "source_url": "https://www.instagram.com/structuredcreativestudio/",
+      "source_excerpt": "We help real estate professionals elevate their marketing and take their brand to new heights",
+      "confidence": 0.5
+    },
+    {
+      "statement": "BTS Brands (an agency, not a template marketplace seller) says it has served 'National brokerages and investment firms since 2013,' evidence that the high end of this market has existed and been served by design agencies for over a decade before self-serve template shops appeared.",
+      "kind": "fact",
+      "topic": "history",
+      "source_url": "https://btsbrands.com/templates/marketing/offering-memorandum",
+      "source_excerpt": "Creative infrastructure for commercial real estate. National brokerages and investment firms since 2013. Tampa, FL.",
+      "confidence": 0.6
+    }
+  ],
+  "blocks": {
+    "customer": {
+      "primary_segment": "Solo commercial brokers and small brokerage teams without in-house marketing/design staff, doing roughly 5-20 deals/year [0,1,2,4]",
+      "secondary_segment": "New/independent agents and small syndicators priced out of enterprise CRE marketing software (Buildout $125-500+/user/mo) [1,4]",
+      "pain_point": "OM production is time-consuming (~2 work weeks/yr at 20 deals) and brokers actively ask peers what tool to use [0,3]"
+    },
+    "offer": {
+      "page_count_range": "15-72 pages/slides depending on tier; ~20-49 pages is the common mid-market band [5,7,8,9]",
+      "core_sections": "Cover/TOC, executive summary, property overview, photos/maps, demographics/market, rent roll & pro forma financials, tenant/comparables, contact/CTA [6,10]",
+      "formats": "Editable Canva (Etsy low/mid tier), PowerPoint (vip.graphics, offeringmemos.com), Adobe InDesign or PowerPoint (BTS Brands agency tier) [5,6,7]",
+      "bonuses": "Fill-in guides on Etsy listings; 1-click font/color rebranding themes on the PPT tier; done-for-you retainer add-on at the agency tier [6,21]"
+    },
+    "acquisition": {
+      "channels": "Etsy organic search + paid Etsy Ads on exact-match terms; Pinterest idea/board pages; shop-linked Instagram [11,12,13]",
+      "search_terms": "'offering memorandum template', 'commercial offering memorandum', 'CIM template', 'commercial real estate offering memorandum'",
+      "niche_size_signal": "Review counts (18-91) on CRE-OM listings are an order of magnitude lower than generic real-estate-template listings (1k-2k+ reviews), implying a small but real underserved niche [15]",
+      "marketplace_gap": "Creative Market and Canva's own marketplace show little/no CRE-OM-specific inventory, leaving Etsy plus a few standalone shops (vip.graphics, BTS Brands, offeringmemos.com) as the main venues [16]"
+    },
+    "sales": {
+      "price_ladder": "$10-20 DIY Canva (existing claims) -> $17.99-$79.99 Etsy mid-tier -> $99/$249 PowerPoint license tiers -> $295 agency-built [17,18,19,20,22,23]",
+      "ladder_logic": "Price scales with page count, format flexibility (Canva vs PPT/InDesign), and license breadth (1 project vs unlimited vs done-for-you) [23]",
+      "license_model": "Higher tiers sell reuse rights (unlimited own projects) rather than resale rights; resale is contractually excluded at every tier observed [20,27]"
+    },
+    "fulfillment": {
+      "build_effort": "Must design 15-70+ pages/slides across ~8-10 recurring OM sections; property photography is explicitly excluded/placeholder at the premium agency tier and must be sourced separately [8,24]",
+      "licensing_constraints": "Canva Pro/stock elements cannot be resold standalone or with only minimal modification; templates must add substantial original design work, and are typically distributed as duplicable template links rather than raw asset files [25,26]",
+      "resale_constraint": "Even paid premium templates (vip.graphics) explicitly forbid resale/distribution by the buyer, confirming template creators must build original layouts rather than relicense a purchased template [27]"
+    },
+    "economics": {
+      "estimate_basis": "Etsy review count x assumed ~8-10 sales-per-review ratio (assumption, not disclosed by Etsy) [29,30]",
+      "estimated_lifetime_sales_per_listing": "~150-900 units across sampled $17.99-$79.99 listings [29]",
+      "estimated_lifetime_revenue_per_listing": "~$2,500-$70,000 gross before ~6.5% Etsy fees [30]",
+      "multi_channel_leverage": "One built asset (vip.graphics PPT) is resold across 2+ storefronts at 3 price points, suggesting a single well-built template can be repackaged for more revenue than one listing alone [31]",
+      "caveat": "All figures here are estimates with an explicit, unverifiable assumption about review-to-sale ratio [32]"
+    },
+    "history": {
+      "generic_entry_pattern": "Template Etsy sellers typically launch a single low-priced ($10-20) listing first and expand only after initial sales validate demand, per a generic (non-CRE) seller case study [33]",
+      "niche_focused_competitor": "At least one real CRE-specific competitor (StructuredCreativeCo) appears to have stayed narrowly focused on real-estate templates rather than diversifying [34]",
+      "agency_precedent": "Full-service OM design agencies (BTS Brands) have served brokerages since 2013, i.e. the $295+ done-for-you tier predates today's $10-80 self-serve Etsy/Canva tier [35]"
+    }
+  },
+  "smallest_viable_version": "A single Etsy listing: one 15-20 page editable Canva template (distributed as a shareable Canva template link, not a resold file, to respect Canva's licensing terms) covering the 6 core OM sections -- cover, executive summary, property overview, financials/rent roll, demographics/map, contact/CTA -- priced around $15-25 to match the lowest-friction competitor tier, with the owner's own commercial-broker contact list (60 brokers, 56 CRE CPAs) used for initial direct outreach/testimonials rather than paid ads. Photos and market data are the buyer's responsibility (own listing photos), keeping the seller's fulfillment burden to design-and-list only, matching how the cheapest real competitors already operate.",
+  "disagreements": [
+    "vip.graphics' own site prices the 44+ slide PPT template at $99 (commercial)/$249 (extended), while its own referral funnel offeringmemos.com sells what appears to be the same core template for $36 -- a 2.75x-6.9x price spread for the same asset across channels.",
+    "IntellCRE's content (a competing SaaS vendor) argues templates only 'solve the design problem, not the content problem' and are inadequate for serious brokers -- this is vendor content marketing for a competing paid tool and should be weighted as biased, not neutral, evidence about template demand."
+  ],
+  "not_public": [
+    "Actual unit sales or revenue for any specific Etsy/vip.graphics/BTS Brands listing (Etsy shows only review counts, not sales counts, publicly)",
+    "Pinterest board follower counts, pin save counts, or click-through rates for 'offering memorandum' boards",
+    "Canva Marketplace/Canva Creators program revenue-share figures for real-estate template creators",
+    "Owner's own Pinterest follower count (stated in brief as unknown)"
+  ]
+}

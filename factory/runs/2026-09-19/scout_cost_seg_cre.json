@@ -1,0 +1,175 @@
+{
+  "lane": "cost_seg_cre",
+  "opportunities": [
+    {
+      "name": "CRE Underwriting / Deal Analyzer Excel Template",
+      "category": "info_product",
+      "summary": "Real estate investors and analysts pay $29-$119 on Etsy/Gumroad-style marketplaces for Excel underwriting models (NOI, DSCR, cap rate, IRR). Dustan could build one once and sell via Gumroad, offering it free/discounted to his Supabase broker and CPA referral contacts and posting it on X/Pinterest, with zero marginal fulfillment cost per sale.",
+      "source_urls": [
+        "https://www.etsy.com/market/commercial_real_estate_underwriting",
+        "https://www.etsy.com/sg-en/market/multi_family_pro_forma_real_estate",
+        "https://www.biggerpockets.com/forums/517/topics/1290124-mdn-advanced-cre-underwriting-model-cre-underwriting-spreadsheet",
+        "https://www.biggerpockets.com/forums/88/topics/769272-syndication-roi-analyzer-template"
+      ],
+      "claims": [
+        {"statement": "Etsy listing: 'Commercial Real Estate Underwriting Model Excel | Multifamily Pro Forma Template... $119.00'", "kind": "fact", "topic": "pricing", "source_url": "https://www.etsy.com/market/commercial_real_estate_underwriting", "source_excerpt": "Commercial Real Estate Underwriting Model Excel | Multifamily Pro Forma Template | IRR DSCR Deal Score Cash Flow Analyzer. $119.00.", "confidence": "high"},
+        {"statement": "Etsy listing: 'CRE Deal Analyzer Spreadsheet | Commercial Real Estate Underwriting | NOI Cap Rate. SGD 99.63'", "kind": "fact", "topic": "pricing", "source_url": "https://www.etsy.com/sg-en/market/multi_family_pro_forma_real_estate", "source_excerpt": "CRE Deal Analyzer Spreadsheet | Commercial Real Estate Underwriting | NOI Cap Rate. SGD 99.63. Digital Download.", "confidence": "high"},
+        {"statement": "BiggerPockets forum thread promotes a paid 'MDN Advanced CRE Underwriting Model' analyzing NOI, DSCR, loan sizing, cap rates", "kind": "fact", "topic": "demand", "source_url": "https://www.biggerpockets.com/forums/517/topics/1290124-mdn-advanced-cre-underwriting-model-cre-underwriting-spreadsheet", "source_excerpt": "A true commercial real estate underwriting model should analyze: NOI; DSCR; Loan sizing; cap rates.", "confidence": "medium"},
+        {"statement": "Forum reply says an investor bought Michael Blank's 'Syndicated Deal Analyzer' course bundle for about $12/product", "kind": "fact", "topic": "pricing", "source_url": "https://www.biggerpockets.com/forums/88/topics/769272-syndication-roi-analyzer-template", "source_excerpt": "Michael Blank's Syndicated Deal Analyzer is one of the more popular options... bought two of his courses for like $12 per.", "confidence": "medium"},
+        {"statement": "Multiple separate BiggerPockets threads over time ask for pro forma/underwriting templates, suggesting recurring unmet demand", "kind": "inference", "topic": "demand", "source_url": "https://www.biggerpockets.com/forums/44/topics/1115674-single-family-land-development-pro-forma-templates", "source_excerpt": "Single Family Land Development Pro Forma Templates - BiggerPockets forum thread.", "confidence": "low"}
+      ],
+      "owned_channel": "Supabase referral contacts (CPAs/brokers/advisors) via HubSpot+Gmail; organic X/Pinterest; free county CRE/multifamily owner leads as distribution list",
+      "fulfillment": "Build once in Excel/Google Sheets (est. 10-20 hrs), sell as a Gumroad digital download; zero marginal cost per unit",
+      "price_point_usd": 49,
+      "first_dollar_path": "List on Gumroad, post a sample screenshot on X/Pinterest, and email it to 5-10 Supabase broker/CPA contacts as a value-add resource with a buy link; plausible first sale within 1-2 weeks",
+      "graveyard_matches": [],
+      "why_it_might_fail": [
+        "Crowded market with established sellers (Etsy shop, Michael Blank, Adventures in CRE) already serving this need",
+        "BiggerPockets Pro membership ($32.50-$39/mo, per forum pricing snippets) bundles similar calculators for a recurring fee, competing on convenience"
+      ]
+    },
+    {
+      "name": "1031 Exchange Tracker / Deadline Checklist",
+      "category": "info_product",
+      "summary": "CRE and multifamily owners doing 1031 exchanges pay $29-$47 for deadline-tracking spreadsheets and checklists on Etsy. Dustan's county owner lists and CPA/attorney referral contacts already reach likely 1031 candidates and referrers, giving a direct distribution path for a low-cost digital tracker.",
+      "source_urls": [
+        "https://www.etsy.com/market/1031_exchange_spreadsheet",
+        "https://www.etsy.com/ie/listing/4482568640/1031-exchange-checklist-tax-deferred",
+        "https://www.etsy.com/dk-en/listing/4533978139/1031-exchange-planner-excel-capital-gains"
+      ],
+      "claims": [
+        {"statement": "Etsy listing: '1031 Exchange Tracker Spreadsheet | 45 Day 180 Day Deadlines | Boot Calculator... $29.00', shows a 4.5 rating", "kind": "fact", "topic": "pricing", "source_url": "https://www.etsy.com/market/1031_exchange_spreadsheet", "source_excerpt": "4.5 1031 Exchange Tracker Spreadsheet | 45 Day 180 Day Deadlines | Boot Calculator | Capital Gains Deferral | Excel Google Sheets. $29.00.", "confidence": "high"},
+        {"statement": "Etsy listing: '1031 Exchange Checklist | Tax Deferred Real Estate Guide' priced at 43.47 EUR (~$47), marked 'Low in stock, only 1 left'", "kind": "fact", "topic": "pricing", "source_url": "https://www.etsy.com/ie/listing/4482568640/1031-exchange-checklist-tax-deferred", "source_excerpt": "Low in stock, only 1 left. Price: 43.47. 1031 Exchange Checklist | Tax Deferred Real Estate Guide | Like Kind Exchange PDF.", "confidence": "high"},
+        {"statement": "'Only 1 left' on a digital PDF listing is a common scarcity marketing tactic and may not reflect genuine limited supply", "kind": "assumption", "topic": "demand", "source_url": "https://www.etsy.com/ie/listing/4482568640/1031-exchange-checklist-tax-deferred", "source_excerpt": "Low in stock, only 1 left.", "confidence": "low"},
+        {"statement": "Etsy listing: '1031 Exchange Planner Excel | Capital Gains Tax Deferral Calculator... $39.99' with 1 visible review", "kind": "fact", "topic": "pricing", "source_url": "https://www.etsy.com/dk-en/listing/4533978139/1031-exchange-planner-excel-capital-gains", "source_excerpt": "1031 Exchange Planner Excel | Capital Gains Tax Deferral Calculator (Digital Download). (1). $39.99.", "confidence": "high"},
+        {"statement": "A boot/capital-gains deferral calculator sold to consumers risks being read as unlicensed tax advice rather than a scheduling tool", "kind": "assumption", "topic": "legal", "source_url": "https://www.etsy.com/market/1031_exchange_spreadsheet", "source_excerpt": "1031 Exchange Tracker Spreadsheet ... Boot Calculator | Capital Gains Deferral | Excel Google Sheets.", "confidence": "medium"}
+      ],
+      "owned_channel": "CPA/real-estate-attorney contacts in Supabase (co-branded distribution to their clients); Gmail outreach to county CRE/multifamily owner leads; organic X/Pinterest",
+      "fulfillment": "PDF + Excel deadline tracker built once; zero marginal cost per download",
+      "price_point_usd": 29,
+      "first_dollar_path": "Publish on Gumroad/Etsy, give free copies to 2-3 CPA/attorney referral contacts to hand to clients, and post to X/Pinterest for direct sales",
+      "graveyard_matches": [],
+      "why_it_might_fail": [
+        "Framing as tax/boot calculator rather than pure deadline tracker creates unlicensed-tax-advice exposure",
+        "Qualified intermediaries (QIs) often give similar deadline trackers away free as client onboarding material"
+      ]
+    },
+    {
+      "name": "Commercial Real Estate Offering Memorandum (OM) Template",
+      "category": "info_product",
+      "summary": "Commercial brokers pay $9.99-$99 for editable Canva/PowerPoint offering-memorandum templates to package listings for investors. This targets brokers directly, a persona already in Dustan's Supabase referral list, with a low-effort, non-tax-adjacent product.",
+      "source_urls": [
+        "https://www.etsy.com/market/offering_memorandum_templates",
+        "https://www.etsy.com/market/commercial_offering_memorandum",
+        "https://vip.graphics/real-estate-templates/"
+      ],
+      "claims": [
+        {"statement": "Etsy listing: 'Commercial Real Estate Offering Memorandum Template, CRE OM Canva Template... Sale Price $9.99'", "kind": "fact", "topic": "pricing", "source_url": "https://www.etsy.com/market/offering_memorandum_templates", "source_excerpt": "Commercial Real Estate Offering Memorandum Template, CRE OM Canva Template, Property Brochure, Investor Package. Sale Price $9.99.", "confidence": "high"},
+        {"statement": "Etsy listing: '14 Page Commercial Real Estate Offering Memorandum Template | Editable Canva' with 1 review, on sale $14.99 from $19.99", "kind": "fact", "topic": "pricing", "source_url": "https://www.etsy.com/market/commercial_offering_memorandum", "source_excerpt": "14 Page Commercial Real Estate Offering Memorandum Template | Editable Canva Property Investment Brochure. (1). Sale Price $14.99. $19.99 Original Price.", "confidence": "high"},
+        {"statement": "vip.graphics sells a 'Commercial Real Estate Offering Memorandum Template (PPT)' starting at $99+ for PowerPoint", "kind": "fact", "topic": "pricing", "source_url": "https://vip.graphics/real-estate-templates/", "source_excerpt": "Commercial Real Estate Offering Memorandum Template (PPT) - $99+ for PowerPoint (.PPTX).", "confidence": "high"},
+        {"statement": "Independent sellers across Etsy and boutique template shops each offer CRE OM templates, indicating a small but recurring buyer base among brokers", "kind": "inference", "topic": "demand", "source_url": "https://www.etsy.com/market/offering_memorandum_templates", "source_excerpt": "Commercial Real Estate Offering Memorandum Template, CRE OM Canva Template, Property Brochure, Investor Package.", "confidence": "low"}
+      ],
+      "owned_channel": "Supabase commercial-broker referral contacts (direct buyer persona) via HubSpot/Gmail; organic X/Pinterest",
+      "fulfillment": "Canva or PowerPoint template built once; zero marginal cost per sale",
+      "price_point_usd": 29,
+      "first_dollar_path": "Build one OM template, email it directly to commercial brokers already in the Supabase referral list with a Gumroad purchase link, and post a preview on X/Pinterest",
+      "graveyard_matches": [],
+      "why_it_might_fail": [
+        "Many brokerages already have in-house branded OM templates, reducing purchase need",
+        "Comparable listings price as low as $9.99-$14.99, limiting revenue per sale"
+      ]
+    },
+    {
+      "name": "Curated Off-Market Commercial Property Owner Lead Lists",
+      "category": "leadgen",
+      "summary": "Commercial brokers and investors pay $99-$599/month to Reonomy and PropertyRadar for owner/contact data on commercial properties. Dustan already generates free county-record owner lists (parcels over $800k) for his own CSSI outreach and could repackage county- or asset-class-specific slices as low-cost one-time lists for brokers/investors who cannot afford enterprise subscriptions.",
+      "source_urls": [
+        "https://www.reonomy.com/pricing/",
+        "https://www.propertyradar.com/pricing"
+      ],
+      "claims": [
+        {"statement": "Reonomy pricing page: 'Review and analyze 53M+ US properties starting at $400/month on annual subscription'", "kind": "fact", "topic": "pricing", "source_url": "https://www.reonomy.com/", "source_excerpt": "Review and analyze 53M+ US properties starting at $400/month on annual subscription.", "confidence": "high"},
+        {"statement": "PropertyRadar pricing: Solo plan $119/month for 10,000 monitored properties, up to $599/month for 50,000 properties", "kind": "fact", "topic": "pricing", "source_url": "https://www.propertyradar.com/pricing", "source_excerpt": "$119/month, 10,000 Monitored Properties ... $599/month, 50,000 Monitored Properties.", "confidence": "high"},
+        {"statement": "Reonomy advertises '30M+ owners and contact records' as its core paid product value", "kind": "fact", "topic": "demand", "source_url": "https://www.reonomy.com/pricing/", "source_excerpt": "53M+ commercial properties. 30M+ owners and contact records.", "confidence": "high"},
+        {"statement": "Dustan's existing free county ArcGIS owner lists could be resold as cheaper one-time slices to brokers/investors priced well under $400/mo enterprise tools", "kind": "assumption", "topic": "demand", "source_url": "https://www.propertyradar.com/built-for/commercial-agents", "source_excerpt": "Get instant access to property and owner information to level up your commercial real estate marketing today.", "confidence": "low"},
+        {"statement": "Reselling county open-record/ArcGIS data commercially may be restricted by individual counties' terms of use", "kind": "assumption", "topic": "legal", "source_url": "https://www.reonomy.com/resources/commercial-real-estate-database/", "source_excerpt": "Sourcing off-market deals and reaching owners.", "confidence": "low"}
+      ],
+      "owned_channel": "Existing free county cost-seg lead pipeline as raw data source; Supabase commercial-broker referral contacts as first buyers; HubSpot/Gmail",
+      "fulfillment": "Export an existing spreadsheet slice by county/asset class; zero marginal cost since data is already collected for CSSI purposes",
+      "price_point_usd": 79,
+      "first_dollar_path": "Offer one free sample county list to 2-3 Supabase broker contacts, then charge for additional counties or refreshed pulls",
+      "graveyard_matches": [],
+      "why_it_might_fail": [
+        "Per-county resale terms of the ArcGIS/open-records sources used for CSSI leads have not been individually verified",
+        "Brokers may already get comparable owner data free through their MLS/CRM",
+        "Uses the same underlying data Dustan pulls for CSSI cost-seg outreach; needs a clearly separate list/use to avoid any appearance of competing with or diluting the employer's own lead pipeline"
+      ]
+    },
+    {
+      "name": "Cost Segregation Savings Calculator / Pre-Qualification Tool",
+      "category": "niche_software",
+      "summary": "Every major cost-segregation firm, including CSSI itself, already gives away a free savings calculator as a lead-generation tool. Building an independent version would duplicate CSSI's own funnel and is not recommended; documented here only because the brief asked for cost-seg-adjacent products to be checked and flagged.",
+      "source_urls": [
+        "https://cssiservices.com/cost-segregation-calculator/",
+        "https://www.kbkg.com/costsegregation/calculator",
+        "https://www.bdo.com/cost-segregation-calculator",
+        "https://corporatetaxadvisors.com/how-much-does-cost-segregation-cost-complete-2026-pricing-guide/"
+      ],
+      "claims": [
+        {"statement": "CSSI's own site hosts a 'Free Online Cost Segregation Savings Calculator' as a public lead-gen tool", "kind": "fact", "topic": "competition", "source_url": "https://cssiservices.com/cost-segregation-calculator/", "source_excerpt": "Free Online Cost Segregation Savings Calculator | CSSI. The calculator displays Standard vs Enhanced Depreciation Tax Deductions.", "confidence": "high"},
+        {"statement": "KBKG offers a 'FREE Cost Segregation Savings Calculator' estimating federal tax savings", "kind": "fact", "topic": "competition", "source_url": "https://www.kbkg.com/costsegregation/calculator", "source_excerpt": "Our FREE Cost Segregation Savings Calculator estimates your federal income tax savings.", "confidence": "high"},
+        {"statement": "BDO also offers a 'Free Online Cost Segregation Calculator' with the same input fields (property cost, land %, ROI, bonus depreciation)", "kind": "fact", "topic": "competition", "source_url": "https://www.bdo.com/cost-segregation-calculator", "source_excerpt": "Free Online Cost Segregation Calculator - BDO USA. Total Property Cost, Land Allocation, ROI, Bonus Depreciation Percentage.", "confidence": "high"},
+        {"statement": "Corporate Tax Advisors: cost segregation studies typically range $5,000-$60,000, most owners pay $8,000-$15,000", "kind": "fact", "topic": "pricing", "source_url": "https://corporatetaxadvisors.com/how-much-does-cost-segregation-cost-complete-2026-pricing-guide/", "source_excerpt": "Cost segregation studies typically range from $5,000 to $60,000, with most commercial property owners paying between $8,000 and $15,000.", "confidence": "high"},
+        {"statement": "Because every major competitor including CSSI already gives this calculator away free as a funnel tool, a paid or independent version has no clear monetization path", "kind": "inference", "topic": "competition", "source_url": "https://cssiservices.com/cost-segregation-calculator/", "source_excerpt": "The calculator displays Standard Depreciation Tax Deductions versus Enhanced Depreciation Tax Deductions.", "confidence": "medium"}
+      ],
+      "owned_channel": "none recommended",
+      "fulfillment": "not applicable — not recommended",
+      "price_point_usd": null,
+      "first_dollar_path": "Not recommended: duplicates CSSI's own free lead-gen tool and every major competitor's; no independent monetization path identified",
+      "graveyard_matches": [],
+      "why_it_might_fail": [
+        "COMPETITION FLAG: directly duplicates CSSI's own free lead-generation calculator, creating a conflict-of-interest / competing-with-employer risk",
+        "LEGAL FLAG: calculator output is effectively a tax-savings estimate, bordering on unlicensed tax advice",
+        "Free from every major competitor already; no price umbrella to charge into"
+      ]
+    },
+    {
+      "name": "CPA CE/CPE Course on Cost Segregation & Depreciation Strategy",
+      "category": "info_product",
+      "summary": "Accredited providers (Western CPE, LumiQ, Barbri, CPA Academy) sell or give away CPE courses on cost segregation and depreciation to CPAs, showing a real market of CPAs paying for this content. Dustan lacks NASBA CPE-provider accreditation, so he cannot easily issue credit himself within 30 days; flagged here as cost-seg-adjacent per the brief, but not a fast first-dollar path as-is.",
+      "source_urls": [
+        "https://www.westerncpe.com/products/webcast/cost-segregation-itc-overview/",
+        "https://lumiqlearn.com/topic/real-estate-cpe",
+        "https://www.barbri.com/course/professional-development/cpe/combining-cost-segregation-with-section-1031-exchanges-a-sig_2026-01-27",
+        "https://www.kbkg.com/webinars/cost-segregation-intro-webinar"
+      ],
+      "claims": [
+        {"statement": "Western CPE sells a 'Cost Segregation & ITC Overview' as a paid CPE webcast product", "kind": "fact", "topic": "pricing", "source_url": "https://www.westerncpe.com/products/webcast/cost-segregation-itc-overview/", "source_excerpt": "This CPE course focuses on cost segregation and Investment Tax Credit strategies, including bonus depreciation and Sec 179 deductions.", "confidence": "medium"},
+        {"statement": "LumiQ lists 'Tax Planning with Cost Segregation Studies' among CPE courses it says 'CPAs Love'", "kind": "fact", "topic": "demand", "source_url": "https://lumiqlearn.com/topic/real-estate-cpe", "source_excerpt": "Explore LumiQ's best-in-class real estate accounting continuing education courses ... Tax Planning with Cost Segregation Studies.", "confidence": "medium"},
+        {"statement": "Barbri lists a paid CPE course 'Combining Cost Segregation With Section 1031 Exchanges'", "kind": "fact", "topic": "pricing", "source_url": "https://www.barbri.com/course/professional-development/cpe/combining-cost-segregation-with-section-1031-exchanges-a-sig_2026-01-27", "source_excerpt": "Cost segregation is an extremely popular approach for real estate investors to amplify depreciation deductions, particularly after OBBBA.", "confidence": "medium"},
+        {"statement": "KBKG and CPA Academy both run free 'Introduction to Cost Segregation' webinars aimed at CPAs, the same referral-generation model CSSI itself could use", "kind": "fact", "topic": "competition", "source_url": "https://www.kbkg.com/webinars/cost-segregation-intro-webinar", "source_excerpt": "This one-hour introductory course will provide background information, depreciation rules, and how a cost segregation study is performed.", "confidence": "medium"},
+        {"statement": "Dustan is not a CPA and no evidence was found of NASBA CPE-provider registration, which is required to issue CPE credit", "kind": "assumption", "topic": "legal", "source_url": "https://www.westerncpe.com/products/webcast/cost-segregation-itc-overview/", "source_excerpt": "This CPE course focuses on cost segregation and Investment Tax Credit strategies.", "confidence": "medium"}
+      ],
+      "owned_channel": "Supabase CPA referral contacts (direct target audience) — but issuing accredited CPE requires infrastructure Dustan does not own",
+      "fulfillment": "Would require partnering with an accredited CPE platform; not a pure zero-cost digital download as-is",
+      "price_point_usd": null,
+      "first_dollar_path": "Not clearly achievable in 30 days without CPE accreditation or a platform partner; an unaccredited referral-partner briefing webinar is a weaker fallback with no CE credit to sell",
+      "graveyard_matches": [],
+      "why_it_might_fail": [
+        "LEGAL FLAG: course content on depreciation/tax strategy risks unlicensed tax advice if written without a licensed CPA co-author",
+        "COMPETITION FLAG: overlaps with free CPE webinars other cost-seg firms (including CSSI-style firms) already run as referral generation",
+        "No NASBA CPE-provider accreditation in hand, and none of the specific per-course prices for Western CPE/LumiQ/Barbri were shown in search results"
+      ]
+    }
+  ],
+  "disagreements": [
+    "Sources disagree on typical cost-segregation study price: CSSI's own FAQ says studies 'typically start around $2,500+', while corporatetaxadvisors.com puts the typical range at $8,000-$15,000 (up to $60,000). Both are tagged as facts from their respective source pages but conflict with each other.",
+    "The 'Low in stock, only 1 left' label on the Etsy 1031 Exchange Checklist listing could indicate genuine scarcity or could be a marketing tactic common on digital-download listings; treated as an assumption, not a demand fact."
+  ],
+  "not_public": [
+    "Exact unit-sales counts for any specific Etsy/Gumroad CRE template, OM template, or 1031 tracker listing (marketplaces do not consistently display sales counts in search results)",
+    "Total revenue earned by any single named CRE template seller (e.g., a specific Etsy shop or Gumroad creator) beyond the one unrelated Medium anecdote about real estate Instagram templates ($13,000)",
+    "Per-course list prices for the Western CPE, LumiQ, and Barbri cost-segregation CPE courses (pages described the courses but did not surface a price in the fetched content)",
+    "Whether any specific county's open-records/ArcGIS terms of use permit commercial resale of parcel owner data"
+  ]
+}

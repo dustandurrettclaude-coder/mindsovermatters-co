@@ -1,0 +1,359 @@
+{
+  "opportunity_id": "b2cb423d-f544-4e60-96d6-66c2caf02f46",
+  "claims": [
+    {
+      "statement": "NBRC's 'Respiratory Therapy Examination Detailed Content Outline' (effective Jan 2027) is already published as a PDF on nbrc.org, dated Oct 10, 2025, laying out task/cognitive-level specs for a Breadth of Knowledge portion (100 items) and a Depth of Clinical Judgment portion (60 items).",
+      "kind": "fact",
+      "topic": "history",
+      "source_url": "https://www.nbrc.org/wp-content/uploads/2025/10/NBRC-RT-Detailed-Content-Outline-January-2027.pdf",
+      "source_excerpt": "The Examination contains 160 items divided into two portions... Breadth of Knowledge portion contains 100 items... Depth of Clinical Judgement portion contains 60 items.",
+      "confidence": "high"
+    },
+    {
+      "statement": "The new RTE is 185 total multiple-choice items (160 scored + 25 pretest) over 4 hours, vs the old TMC's 160 items (140 scored + 20 pretest) over 3 hours -- 25 more total items and 1 more hour of seat time than TMC.",
+      "kind": "fact",
+      "topic": "differentiation",
+      "source_url": "https://www.nbrc.org/wp-content/uploads/2025/10/NBRC-RT-Detailed-Content-Outline-January-2027.pdf",
+      "source_excerpt": "The Respiratory Therapy Examination consists of 185 multiple-choice items (160 scored and 25 pretest) taken over a 4-hour period.",
+      "confidence": "high"
+    },
+    {
+      "statement": "Inside the RTE's 60-item Depth of Clinical Judgment portion, items split into two named types with fixed counts: Information Gathering (20 items, 'choose what to assess or interpret') and Decision Making (40 items, 'decide what to add, modify, continue, or discontinue'); items also carry Setting quotas (46 in-hospital / 14 outside-hospital) and a Patient Age quota (15-18 min/max neonatal-or-pediatric items) -- none of this granular quota structure exists in the old TMC outline.",
+      "kind": "fact",
+      "topic": "differentiation",
+      "source_url": "https://www.nbrc.org/wp-content/uploads/2025/10/NBRC-RT-Detailed-Content-Outline-January-2027.pdf",
+      "source_excerpt": "Information Gathering _Choose what to assess or interpret information_ 20 / Decision Making _Decide what to add, modify, continue, or discontinue_ 40 / Total 60 ... In a hospital 46 / Outside a hospital 14",
+      "confidence": "high"
+    },
+    {
+      "statement": "The NBRC has stated the RTE is built entirely from independent multiple-choice items -- the branching CSE simulation format is fully retired, and there is no public indication of select-all-that-apply items; clinical reasoning is instead assessed through longer, scenario-based MCQ stems.",
+      "kind": "fact",
+      "topic": "differentiation",
+      "source_url": "https://blog.respiratorycram.com/rte-question-types/",
+      "source_excerpt": "Are all RTE questions multiple choice? Yes... Will the RTE have CSE-style simulations? No. The branching CSE format is retired.",
+      "confidence": "medium"
+    },
+    {
+      "statement": "Per Lindsey Jones' own analysis of the released NBRC content outline, the RTE blueprint added roughly 100 new topics and dropped about 40 topics that existed on the TMC outline -- a concrete content delta, not just a structural one.",
+      "kind": "fact",
+      "topic": "differentiation",
+      "source_url": "https://lindsey-jones.com/nbrc2027/",
+      "source_excerpt": "Our initial evaluation of the NBRC Respiratory Therapy Examination (RTE) detailed content outline (the matrix) shows 100 new topics that have been added and 40 topics that have disappeared.",
+      "confidence": "medium"
+    },
+    {
+      "statement": "Per Lindsey Jones' notes from the NBRC's AARC Summer Forum presentation, test-takers should expect more reading load on the RTE because clinical-judgment items will use longer, more simulation-like scenario stems leading into the question, versus TMC's shorter stems.",
+      "kind": "fact",
+      "topic": "differentiation",
+      "source_url": "https://lindsey-jones.com/nbrc2027/",
+      "source_excerpt": "The NBRC says that test takers will be doing more reading on the new 2027 Respiratory Therapy Examination (RTE)... critical thinking questions will become more simulation-like in their scenario descriptions.",
+      "confidence": "medium"
+    },
+    {
+      "statement": "Respiratory Cram already sells a live, priced course explicitly built for the new format: 'Respiratory Therapy Exam Prep... Aligned to 2027 exam blueprint' at $49/month (vs $39/month for its TMC-only course), positioned as the default choice for anyone 'Graduating Jan 2027 or later.'",
+      "kind": "fact",
+      "topic": "competition",
+      "source_url": "https://respiratorycram.com/",
+      "source_excerpt": "Respiratory Therapy Exam Prep / Targeted prep for the new NBRC Respiratory Therapy Exam launching in 2027 / Aligned to 2027 exam blueprint ... $49 /Month",
+      "confidence": "high"
+    },
+    {
+      "statement": "Lindsey Jones has not shipped a fully separate RTE-only product as of its own page (dated Jul 31, 2026); instead it sells a 'Special Edition RTE + TMC Course' bridging both exams, marketed with the claim 'Ready Now - Earliest to Market,' with prep content and videos dated back to April-September 2025.",
+      "kind": "fact",
+      "topic": "competition",
+      "source_url": "https://lindsey-jones.com/nbrc2027/",
+      "source_excerpt": "Special Edition RTE + TMC Course... Ready Now - Earliest to Market... Students get the new RTE but, which can be used for both exams, and access to both TMC and RTE portals online simultanously.",
+      "confidence": "medium"
+    },
+    {
+      "statement": "OneVisionRC's public RTE page (dated Jun 26, 2026) is informational/FAQ only -- it describes internal work-in-progress ('Development of the 2027 Capstone Classroom,' 'Alignment of video-based resources with the new Detailed Content Outline') but shows no priced, publicly purchasable RTE-specific SKU.",
+      "kind": "fact",
+      "topic": "competition",
+      "source_url": "https://onevisionrc.com/blog/are-you-rte-ready/",
+      "source_excerpt": "How OneVision is Preparing / OneVision is actively aligning resources with the 2027 Respiratory Therapy Examination... Development of the 2027 Capstone Classroom",
+      "confidence": "medium"
+    },
+    {
+      "statement": "Respiratory Therapy Zone's RTE page (dated May 15, 2026) is informational only and funnels readers to its existing free 'RRT Course and Quiz Bundle' and its still-TMC-branded paid products (TMC Test Bank, TMC Exam Hacks, TMC/CSE Bundle) -- no RTE-named or RTE-specific paid SKU was found.",
+      "kind": "fact",
+      "topic": "competition",
+      "source_url": "https://www.respiratorytherapyzone.com/respiratory-therapy-examination/",
+      "source_excerpt": "Free Access / RRT Course and Quiz Bundle (Free)... Products / TMC/CSE Bundle / TMC Test Bank / TMC Exam Hacks / Daily Practice Questions",
+      "confidence": "medium"
+    },
+    {
+      "statement": "RRTNOW's RTE blog post (dated Jul 27, 2026) is titled with future-tense framing ('...RRTNOW Will Be Ready') and its detailed prep guide is still organized primarily around 'the TMC and CSE Exams,' with an added RTE explainer section -- no confirmed dedicated paid RTE product is shown on the page itself.",
+      "kind": "fact",
+      "topic": "competition",
+      "source_url": "https://rrtnow.com/blogs/news/what-is-the-nbrc-rte-exam-everything-respiratory-therapy-students-need-to-know",
+      "source_excerpt": "The New NBRC RTE Exam Is Coming in 2027 and RRTNOW Will Be Ready... NBRC Exam Preparation: Complete Guide to Passing the TMC and CSE Exams",
+      "confidence": "medium"
+    },
+    {
+      "statement": "Kettering Seminars' current public product catalog still names its flagship offering the 'Respiratory Therapist Multiple Choice (TMC(R)) and CSE(R) Comprehensive' course; no RTE-specific rebrand or product was located on ketteringseminars.com.",
+      "kind": "fact",
+      "topic": "competition",
+      "source_url": "https://www.ketteringseminars.com/shoppingCart/catalog.aspx?pid=96",
+      "source_excerpt": "Respiratory Therapist Multiple Choice (TMC(R)) and ...",
+      "confidence": "low"
+    },
+    {
+      "statement": "No public evidence of RTE-2027 content on rtboardreview.net was found via search; this is an absence-of-evidence gap, not a confirmed absence, since the domain itself could not be directly fetched in this session.",
+      "kind": "unverified",
+      "topic": "competition",
+      "source_url": null,
+      "source_excerpt": null,
+      "confidence": "low"
+    },
+    {
+      "statement": "Mometrix's current CRT/RRT study guide branding (mometrix.com/studyguides/rrt/) remains 'CRT & RRT Study Guide & Practice Test' with no RTE renaming found in available search results.",
+      "kind": "fact",
+      "topic": "competition",
+      "source_url": "https://www.mometrix.com/studyguides/rrt/",
+      "source_excerpt": "CRT & RRT Study Guide & Practice Test [Prepare for the CRT & RRT Test]",
+      "confidence": "low"
+    },
+    {
+      "statement": "Etsy already has RTE-2027-keyword-targeted listings from at least 3 independent sellers as of Sep 18, 2026, surfacing on page one of both 'RT exam 2027' and 'respiratory therapy examination 2027' searches: FocusExamPrep, ClinicalResourceLab, and 100ickystore.",
+      "kind": "fact",
+      "topic": "sales",
+      "source_url": "https://www.etsy.com/search?q=RT%20exam%202027",
+      "source_excerpt": "NBRC RT Exam Prep Bundle 2027... By ClinicalResourceLab... NBRC RT Exam Study Guide 2027... By 100ickystore... NBRC Study Guide 2026-2027... By FocusExamPrep",
+      "confidence": "high"
+    },
+    {
+      "statement": "ClinicalResourceLab already runs a 5-SKU RTE-2027 product ladder that mirrors the NBRC blueprint's own vocabulary: 'NBRC RT Exam Prep Bundle 2027' ($49), 'NBRC RTE Clinical Judgment Drills 2027' (60 depth items, $14.99), 'NBRC RTE Flashcards 2027' (102 cards, $14.99), 'NBRC RTE Practice Exam 2027' (160 items, $19.99), and 'NBRC RTE Study Guide & Workbook 2027' (57pg, $24.99) -- the 60-item 'Clinical Judgment Drills' SKU count exactly matches the NBRC outline's Depth of Clinical Judgment portion size.",
+      "kind": "fact",
+      "topic": "competition",
+      "source_url": "https://www.etsy.com/search?q=RT%20exam%202027",
+      "source_excerpt": "NBRC RTE Clinical Judgment Drills 2027 | 60 Respiratory Therapy Examination Depth Items... NBRC RTE Practice Exam 2027, 160 Respiratory Therapy Examination-Style Questions... NBRC RTE Study Guide & Workbook 2027, ...57-Page Printable PDF",
+      "confidence": "high"
+    },
+    {
+      "statement": "The FocusExamPrep Etsy listing 'NBRC Study Guide 2026-2027' ($12.99, listed Aug 18, 2026) itself has 0 reviews and no visible sales counter yet, but the shop overall shows 616 total sales, 59 reviews (4.6 avg), and Star Seller status after 1 year on Etsy -- an established seller extending into the transition keyword, not a brand-new entrant.",
+      "kind": "fact",
+      "topic": "sales",
+      "source_url": "https://www.etsy.com/listing/4507503635/nbrc-study-guide-2026-2027-respiratory",
+      "source_excerpt": "Price: $12.99 ... Star Seller ... 4.6 (59) ... 616 sales ... 1 year on Etsy ... Listed on Aug 18, 2026",
+      "confidence": "high"
+    },
+    {
+      "statement": "Individual sales and review counts for the ClinicalResourceLab and 100ickystore RTE-2027 Etsy listings could not be retrieved in this session (the fetch tool hit its free-tier rate limit mid-session) -- only listing existence, titles, and prices were confirmed.",
+      "kind": "unverified",
+      "topic": "sales",
+      "source_url": null,
+      "source_excerpt": null,
+      "confidence": "low"
+    },
+    {
+      "statement": "A third-party Amazon publisher ('Syllabrium') sells an NBRC Study Guide 2026-2027 (Kindle + paperback) explicitly marketed as 'Blueprint-Mapped Review... to Pass the TMC, CSE, and... Respiratory Therapy Board [exam]' -- a non-Etsy, non-named-incumbent competitor already spanning the transition on a second marketplace.",
+      "kind": "fact",
+      "topic": "competition",
+      "source_url": "https://www.amazon.com/NBRC-Study-Guide-2026-2027-Blueprint-Mapped/dp/B0GZK1C9YC",
+      "source_excerpt": "NBRC Study Guide 2026-2027: Blueprint-Mapped Review with Study Plans, 1280+ Practice Questions, 8 Full-Length Exams, Detailed Answers and Strategies... the TMC, CSE, and and Respiratory Therapy Board Success",
+      "confidence": "medium"
+    },
+    {
+      "statement": "A second Amazon listing, 'RRT EXAM STUDY GUIDE 2026-2027' (750 practice questions), also targets the transition-year keyword window, showing Amazon KDP guides are a second live acquisition channel already crowding the 'NBRC 2026-2027' search term beyond Etsy.",
+      "kind": "fact",
+      "topic": "acquisition",
+      "source_url": "https://www.amazon.com/EXAM-STUDY-GUIDE-2026-2027-Depth/dp/B0GJLJTG6K",
+      "source_excerpt": "RRT EXAM STUDY GUIDE 2026-2027: Ace Your Test with 750 Practice Questions and In-Depth Content Review for Mastery the Registered Respiratory Therapist Exam",
+      "confidence": "medium"
+    },
+    {
+      "statement": "Respiratory Cram's RTE pricing model is a cancel-anytime monthly subscription ($39-49/mo) rather than a one-time PDF purchase -- a materially different unit-economics structure than the $5-25 one-time-purchase norm seen across Etsy TMC guides.",
+      "kind": "fact",
+      "topic": "sales",
+      "source_url": "https://respiratorycram.com/",
+      "source_excerpt": "$49 /Month / Cancel Anytime ... $39 /Month / Cancel Anytime",
+      "confidence": "high"
+    },
+    {
+      "statement": "NBRC's credential trademarks (CRT(R), RRT(R), etc.) are federally registered, and only individuals who have passed the respective NBRC exam are legally authorized to use the credential acronyms; NBRC's Judicial and Ethics Committee works with trademark attorneys to pursue infringement.",
+      "kind": "fact",
+      "topic": "legal",
+      "source_url": "https://www.nbrc.org/use-of-credentials-how-to-properly-use-your-nbrc-credentials/",
+      "source_excerpt": "The NBRC's credential designations are federally registered (trademarked) and accordingly, must be used in the manner in which they were registered... only those individuals who have passed the respective examinations are authorized to use the credential acronyms.",
+      "confidence": "medium"
+    },
+    {
+      "statement": "No NBRC-published guidance specifically addressing third-party prep-company use of the words 'NBRC' or 'Respiratory Therapy Examination' in product titles was found; the closest available safe-naming precedent remains the incumbent pattern already logged for the parent TMC research (Mometrix's 'trademarks of their respective owners' footer; the 'independent, not affiliated with or endorsed by' disclaimer pattern), which should be applied to any RTE-branded product exactly as it was for TMC.",
+      "kind": "inference",
+      "topic": "legal",
+      "source_url": null,
+      "source_excerpt": null,
+      "confidence": "medium"
+    },
+    {
+      "statement": "The NBRC's current Candidate Handbook (dated Apr 24, 2026, on nbrc.org) is the live document that will govern RTE candidates and still carries the same 'Copyrighted Examination Questions' prohibition and exam-security language already logged for TMC/CSE -- the security policy is exam-agnostic and applies unchanged to the RTE.",
+      "kind": "fact",
+      "topic": "legal",
+      "source_url": "https://www.nbrc.org/wp-content/uploads/2026/04/NBRC-Candidate-Handbook-FINAL-04.24.26.pdf",
+      "source_excerpt": "Copyrighted Examination Questions ... attempt to record examination questions or make notes",
+      "confidence": "high"
+    },
+    {
+      "statement": "There is a live source disagreement on whether the NBRC's free RTE practice exam is already available or only announced: RRTNOW's guide states an 'RT Practice Examination for the January 2027 format' already exists as a free official resource, while OneVisionRC's FAQ (dated Jun 26, 2026) says the NBRC 'has announced that a free practice examination... will be available before the launch' (future tense, not yet live).",
+      "kind": "unverified",
+      "topic": "economics",
+      "source_url": "https://onevisionrc.com/blog/are-you-rte-ready/",
+      "source_excerpt": "Are practice examinations available for the new Respiratory Therapy Examination? Yes. The NBRC has announced that a free practice examination and self-assessment examinations will be available before the launch of the new examination.",
+      "confidence": "low"
+    },
+    {
+      "statement": "348 CoARC-accredited RRT programs existed as of August 2022 per third-party aggregation; no more recent (2024-2026) published national program count or graduate-count figure was located in this session -- the most recent public graduate figure found (8,132 CoARC-program graduates) is dated 2012.",
+      "kind": "fact",
+      "topic": "economics",
+      "source_url": "https://en.wikipedia.org/wiki/List_of_accredited_respiratory_therapist_programs",
+      "source_excerpt": "as of August 2022, there are 348 registered respiratory therapist (RRT) programs currently accredited by the CoARC",
+      "confidence": "low"
+    },
+    {
+      "statement": "CoARC states its next report incorporating 2026 program-survey data will not publish until early 2027 -- meaning no fresh CoARC cohort-size data will exist before the RTE's own launch window, so any H1-2027 candidate-volume estimate must be built from NBRC's existing annual totals (23,302 total NBRC exams / 13,065 new credentials in 2024, already logged in the parent claims) rather than a program-level bottom-up count.",
+      "kind": "inference",
+      "topic": "economics",
+      "source_url": "https://coarc.com/",
+      "source_excerpt": "next Report based on the 2026 RCS, will be published in early 2027",
+      "confidence": "medium"
+    },
+    {
+      "statement": "No NBRC-published quarterly or monthly breakdown of candidate volume by exam window was found; a rough planning estimate that a few thousand candidates (a fraction of the ~23,302 annual NBRC-wide exam total) will sit the RTE specifically between its Jan 4, 2027 launch and mid-2027 is an unsourced assumption, not a fact, and should be labeled as such in any downstream business model.",
+      "kind": "assumption",
+      "topic": "economics",
+      "source_url": null,
+      "source_excerpt": null,
+      "confidence": "low"
+    },
+    {
+      "statement": "Free/low-cost keyword-volume signal for 'RT exam 2027,' 'respiratory therapy exam 2027,' and 'NBRC exam study guide' could not be pulled from eRank or Marmalead in this session -- both tools require an interactive dashboard login/session (eRank's free tier is capped at 5 keyword searches/day inside its own app) that is not reachable through search-engine or static-fetch tooling; this is a genuine data gap, not a negative result.",
+      "kind": "unverified",
+      "topic": "acquisition",
+      "source_url": "https://erank.com/keyword-research",
+      "source_excerpt": "The free plan limits you to 5 keyword searches per day. eRank doesn't show exact search volume numbers the way Google Keyword Planner does.",
+      "confidence": "low"
+    },
+    {
+      "statement": "Google Trends interest-over-time data comparing 'RT exam 2027' vs 'TMC exam' could not be retrieved -- trends.google.com is not reachable via this session's fetch tooling and no cached/indexed numeric chart data surfaced through search; this is an unresolved data gap.",
+      "kind": "unverified",
+      "topic": "acquisition",
+      "source_url": null,
+      "source_excerpt": null,
+      "confidence": "low"
+    },
+    {
+      "statement": "The RTE fee structure ($360 new / $300 repeat, already logged) replaces the combined TMC+CSE cost of $390 new / $350 repeat -- a modest $30-50 saving per candidate versus the old two-exam total, which slightly tempers (but does not reverse) the prior claim that higher per-attempt stakes raise prep willingness-to-pay, since the new single fee is actually lower than the old combined cost.",
+      "kind": "fact",
+      "topic": "economics",
+      "source_url": "https://rrtnow.com/blogs/news/what-is-the-nbrc-rte-exam-everything-respiratory-therapy-students-need-to-know",
+      "source_excerpt": "First-attempt cost | $390 combined | $360 (a $30 saving) ... Repeat cost | $350 combined | $300 (a $50 saving)",
+      "confidence": "high"
+    },
+    {
+      "statement": "ClinicalResourceLab's product catalog (Breadth vs. Depth framing, a 60-item 'Clinical Judgment Drills' SKU) shows this seller has already read and built directly from the actual NBRC content outline rather than simply relabeling an old TMC guide -- any new entrant's product needs to match this outline-literacy bar to look credible next to it in Etsy search results, not just add '2027' to a TMC title.",
+      "kind": "inference",
+      "topic": "fulfillment",
+      "source_url": "https://www.etsy.com/search?q=RT%20exam%202027",
+      "source_excerpt": "NBRC RTE Clinical Judgment Drills 2027 | 60 Respiratory Therapy Examination Depth Items",
+      "confidence": "medium"
+    }
+  ],
+  "blocks": {
+    "customer": {
+      "rte_exam_structure": {
+        "items": 185,
+        "scored": 160,
+        "pretest": 25,
+        "duration_hours": 4,
+        "breadth_of_knowledge_items": 100,
+        "depth_of_clinical_judgment_items": 60,
+        "clinical_judgment_split": {"information_gathering": 20, "decision_making": 40},
+        "setting_split": {"in_hospital": 46, "outside_hospital": 14},
+        "claims": [0, 1, 2]
+      },
+      "transition_fee_delta": {
+        "description": "RTE ($360/$300) is actually a modest saving vs combined TMC+CSE ($390/$350), tempering (not reversing) the willingness-to-pay thesis from the parent research",
+        "claims": [28]
+      },
+      "handbook_continuity": {
+        "description": "the live Apr-2026 Candidate Handbook already governs RTE candidates and carries the same security/copyright language forward",
+        "claims": [23]
+      }
+    },
+    "offer": {
+      "content_delta_vs_tmc": {
+        "description": "~100 new topics added, ~40 dropped vs TMC outline; heavier reading load / longer scenario stems in clinical-judgment items; no SATA format confirmed",
+        "claims": [3, 4, 5]
+      },
+      "outline_literacy_bar": {
+        "description": "a credible RTE product must mirror the outline's own Breadth/Depth/clinical-judgment-type vocabulary, the bar ClinicalResourceLab has already cleared",
+        "claims": [15, 29]
+      }
+    },
+    "acquisition": {
+      "amazon_channel": {
+        "description": "Amazon KDP guides (Syllabrium, unnamed RRT publisher) are a second live channel already targeting the '2026-2027' transition keyword beyond Etsy",
+        "claims": [18, 19]
+      },
+      "keyword_tool_gap": {
+        "description": "eRank/Marmalead free-tier keyword volumes and Google Trends comparisons were not obtainable this session -- genuine data gap",
+        "claims": [30, 31]
+      }
+    },
+    "sales": {
+      "etsy_rte_listings": {
+        "description": "at least 3 sellers already rank for RTE-2027 keywords on Etsy: FocusExamPrep (established shop, 616 sales/59 reviews, extending into transition keyword), ClinicalResourceLab (5-SKU RTE-specific ladder), 100ickystore",
+        "claims": [14, 15, 16, 17]
+      },
+      "respiratory_cram_subscription_model": {
+        "description": "first confirmed live paid RTE product is a $39-49/mo subscription, not a one-time PDF -- a different unit economics shape than the Etsy norm",
+        "claims": [6, 20]
+      }
+    },
+    "fulfillment": {
+      "trademark_gap": {
+        "description": "no RTE/NBRC-specific naming guidance published; apply the existing TMC-era disclaimer pattern unchanged",
+        "claims": [21, 22]
+      },
+      "security_policy_continuity": {
+        "claims": [23]
+      }
+    },
+    "economics": {
+      "cohort_sizing_gap": {
+        "description": "no NBRC quarterly/monthly candidate-volume breakdown and no fresh (post-2012 graduate count / post-2022 program count) CoARC data exists; any H1-2027 RTE candidate estimate is an unsourced planning assumption, not a fact",
+        "claims": [24, 25, 26]
+      },
+      "free_nbrc_practice_exam_disagreement": {
+        "description": "sources disagree on whether NBRC's own free RTE practice exam is already live or only announced -- if live, it competes directly with any $12-19 entry product on raw practice-question value",
+        "claims": [27]
+      }
+    },
+    "history": {
+      "content_outline_published": {
+        "description": "the RTE detailed content outline is the primary source now available (published Oct 2025) and should replace secondary-source (blog) citations used in the parent business model wherever possible",
+        "claims": [0, 1, 2]
+      }
+    }
+  },
+  "smallest_viable_version": "Given that at least three Etsy sellers (one of them, ClinicalResourceLab, already fielding a 5-SKU ladder built from the actual NBRC outline's own Breadth/Depth-of-Clinical-Judgment vocabulary) and a subscription-based first mover (Respiratory Cram at $39-49/mo) already occupy the generic 'RTE 2027 study guide' wedge, the smallest viable version that is still differentiated and pre-sellable inside a 2-hour/$0 window is a narrow 'TMC-to-RTE crosswalk': a single $12-19 PDF titled around the exact new terms test-takers are anxious about ('NBRC RTE Depth of Clinical Judgment: 50 Original Practice Items with Rationales, 2027 Format') rather than a generic '2027 study guide,' since the Depth-of-Clinical-Judgment portion is the one piece of the exam every incumbent's existing TMC content cannot cover by definition. Before writing any content, Dustan should post the crosswalk concept (one image + the $12-19 price) as a waitlist-with-a-$1-deposit listing on Etsy/Gumroad and drop it into the same free organic channels already validated in the parent research (r/respiratorytherapy transition threads, RT program Facebook groups, a short TikTok/YouTube clip contrasting 'what's new on the RTE'), using the existing NBRC content-outline PDF and the ClinicalResourceLab/Lindsey Jones public breakdowns as the free source material for the crosswalk itself -- no paid tools or NBRC-restricted content required, and if the $1 deposits do not clear a handful of signups in 48 hours, the wedge is not validated and the plan should stop before the 50 questions are written.",
+  "disagreements": [
+    {
+      "topic": "economics",
+      "note": "RRTNOW states an official NBRC free 'RT Practice Examination for the January 2027 format' already exists; OneVisionRC's FAQ (same month range) frames it as 'has announced... will be available before launch' -- i.e. not yet live. Could not resolve directly since nbrc.org is not fetchable in this session (claim index 27)."
+    },
+    {
+      "topic": "economics",
+      "note": "The new RTE's $360/$300 fee is actually a $30-50 saving versus the old combined TMC+CSE cost ($390/$350), which cuts against (without fully reversing) the parent research's inference that the RTE's fee raises prep willingness-to-pay versus TMC alone (claim index 28)."
+    }
+  ],
+  "not_public": [
+    "Exact review/sales counts for the ClinicalResourceLab and 100ickystore RTE-2027 Etsy listings (Parallel Search web_fetch hit its free-tier rate limit mid-session; direct WebFetch to etsy.com, nbrc.org and most competitor domains is blocked by this environment's egress proxy).",
+    "eRank/Marmalead free-tier keyword-volume readings for 'RT exam 2027', 'respiratory therapy exam 2027', 'NBRC exam study guide' -- these tools require an interactive session inside their own app, not reachable via search or static fetch.",
+    "Google Trends interest-over-time comparison for 'RT exam 2027' vs 'TMC exam' -- trends.google.com not fetchable in this environment.",
+    "Any NBRC-published, RTE-specific trademark/naming guidance for third-party prep products (only the general credential-use policy was found; nothing RTE-specific).",
+    "A current (2024-2026) CoARC total accredited-program count or annual graduate count -- most recent found figures are 348 programs (Aug 2022) and 8,132 graduates (2012); CoARC's own next report is not due until early 2027.",
+    "Any NBRC-published breakdown of candidate volume by exam window/quarter, needed to size an H1-2027 RTE-specific cohort precisely.",
+    "rtboardreview.net's current public position on the RTE (site not fetchable via search or direct fetch in this session)."
+  ]
+}

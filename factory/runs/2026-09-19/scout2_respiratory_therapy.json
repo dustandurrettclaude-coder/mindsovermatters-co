@@ -1,0 +1,194 @@
+{
+  "lane": "respiratory_therapy",
+  "run": 2,
+  "opportunities": [
+    {
+      "name": "RT Shift Report / Vent-Settings Pocket Notebook (physical, Amazon KDP + Etsy print-on-demand)",
+      "category": "productized",
+      "summary": "A pocket-sized physical notebook/notepad for RTs to track patient info, O2/vent settings, treatments and ABGs during a shift -- a functional workflow tool, not a study aid. Buyers are working RTs and RT students, found via Amazon and Etsy search rather than any audience Dustan owns. A direct RT-specific comp (DellsonHandmade's 'Respiratory Therapist Pocket Brain Sheet Notepad,' $21.56) shows 598 five-star reviews and an Etsy-displayed shop sales figure of ~3,700 ('3,7 mil vendas'), and at least one Amazon KDP paperback in the same category already exists (RPG Publishing, $7.99). This is the strongest visible-demand signal found in run 2.",
+      "source_urls": [
+        "https://www.etsy.com/listing/4508135414/respiratory-therapist-pocket-brain-sheet",
+        "https://us.amazon.com/Respiratory-Therapist-Report-Sheets-Ventilator/dp/B0GT8TVZ63",
+        "https://rnessentials.org/products/respiratory-therapy",
+        "https://www.amazon.com/Respiratory-Therapy-Notes-Jaime-Quattlebaum/dp/B09YV2FPZS"
+      ],
+      "claims": [
+        {"statement": "DellsonHandmade's 'Respiratory Therapist Pocket Brain Sheet Notepad' is priced at $21.56, has a 4.9 rating from 598 reviews, and the listing page shows the shop's Etsy sales figure as '3,7 mil vendas' (~3,700 sales) after 3 years on Etsy.", "kind": "fact", "topic": "price_and_sales", "source_url": "https://www.etsy.com/listing/4508135414/respiratory-therapist-pocket-brain-sheet", "source_excerpt": "Preco: $ 21,56 ... 4.9 (598) . 3,7 mil vendas . 3 anos na Etsy", "confidence": "high"},
+        {"statement": "The 3,700-sales figure is the seller's shop-level Etsy sales counter shown next to reviews on the listing page, not confirmed as unit sales of this specific SKU alone (the shop appears to sell mainly notepad variants of this same product).", "kind": "inference", "topic": "demand", "source_url": "https://www.etsy.com/listing/4508135414/respiratory-therapist-pocket-brain-sheet", "source_excerpt": "Notepad Cover Options: Selecionar uma opcao 1 - Boho Lungs 2 - Ambu-bag 3 - Pastel Boho Lung ...", "confidence": "medium"},
+        {"statement": "An Amazon KDP paperback titled 'Respiratory Therapist Report Sheets: Shift Report Notebook for Tracking Patients, Ventilator Settings, Treatments, and Notes During 12-Hour Shifts' by RPG Publishing already sells at $7.99.", "kind": "fact", "topic": "competitor", "source_url": "https://us.amazon.com/Respiratory-Therapist-Report-Sheets-Ventilator/dp/B0GT8TVZ63", "source_excerpt": "$7.99 ... Respiratory Therapist Report Sheets: Shift Report Notebook for Tracking Patients, Ventilator Settings, Treatments, and Notes During 12-Hour Shifts", "confidence": "high"},
+        {"statement": "No 'bought in past month' Amazon badge was visible in the fetched excerpt for the RPG Publishing KDP notebook; this specific demand signal was not confirmed.", "kind": "unverified", "topic": "demand", "source_url": "https://us.amazon.com/Respiratory-Therapist-Report-Sheets-Ventilator/dp/B0GT8TVZ63", "source_excerpt": "Includes selected options. Includes initial monthly payment and selected options. Details", "confidence": "low"},
+        {"statement": "RNessentials.org sells a 'Respiratory Therapy Report Notebook' at $16.50-$17.50 with some size/color variants marked 'Sold out.'", "kind": "fact", "topic": "price_and_demand", "source_url": "https://rnessentials.org/products/respiratory-therapy", "source_excerpt": "Respiratory Therapy Report Notebook Regular price $16.50 USD ... Sale Sold out", "confidence": "medium"}
+      ],
+      "owned_channel": "None -- Dustan has zero followers. Reachable only via Amazon/Etsy marketplace search.",
+      "fulfillment": "Design once in Canva/InDesign; publish as an Amazon KDP low-content paperback (print-on-demand, zero inventory) and/or list a spiral-notepad version via an Etsy print-on-demand partner. Near-zero marginal cost either way.",
+      "price_point_usd": 14.99,
+      "first_dollar_path": "Publish the KDP paperback version first (fastest, no POD-partner setup, Amazon absorbs printing) titled to match how buyers already search ('respiratory therapist report sheet', 'RT shift notebook'), cross-list a PDF-only version on Etsy/Gumroad for buyers who want to print at home.",
+      "graveyard_matches": [],
+      "visible_sales_count": {
+        "value": 3700,
+        "source_url": "https://www.etsy.com/listing/4508135414/respiratory-therapist-pocket-brain-sheet",
+        "excerpt": "4.9 (598) . 3,7 mil vendas . 3 anos na Etsy (shop-level sales counter shown on the listing page; 'mil' = thousand)"
+      },
+      "why_it_might_fail": [
+        "DellsonHandmade and RNessentials already hold review history and Etsy/Shopify SEO position for the near-identical product.",
+        "KDP paperback economics are thin (RPG Publishing prices at $7.99); royalty per unit may be under $2-3 once print cost is subtracted.",
+        "Amazon KDP has no visible unit-sales badge for this SKU, so KDP-side demand for this exact format is not yet proven independently of the Etsy comp."
+      ],
+      "presell_experiment": "Mock up one interior page in Canva (30 min) and the cover, list a $0-cost PDF-only version on Etsy/Gumroad at $9.99 titled to match how buyers already search ('RT shift report notebook'), and check for any sale or favorite within 2 weeks before spending anything on KDP print setup or Etsy POD unit cost. Total: $0 cash, ~2 hours."
+    },
+    {
+      "name": "NBRC 2027 RT Exam Formula & Quick-Facts Card (single-topic, not a full study guide)",
+      "category": "info_product",
+      "summary": "A narrow, single-page-or-few-page PDF of oxygenation/ventilation/hemodynamics formulas and normal values, explicitly reorganized to match the new 2027 RT Examination's public Detailed Content Outline (Breadth of Knowledge vs. Depth of Clinical Judgement), built from original explanations only -- never reproducing actual NBRC exam items. This is a deliberately smaller, faster-to-build product than the full '2027 prep guide' pivot already being researched separately. Etsy already sells TMC-era formula cheat sheets (RespiratoryNotesCo's 'Respiratory Therapy Formula Cheat Sheet Bundle' and related listings), and the run-1 verified comp -- a $14 Etsy TMC guide with only 4 reviews showing 415 sales -- proves RT exam-prep PDFs at this price point convert through Etsy search with zero seller audience.",
+      "source_urls": [
+        "https://www.etsy.com/listing/1880013765/respiratory-therapy-formula-cheat-sheet",
+        "https://www.etsy.com/listing/1879992025/ventilation-formula-cheat-sheet-lung",
+        "https://www.nbrc.org/wp-content/uploads/2025/10/NBRC-RT-Detailed-Content-Outline-January-2027.pdf",
+        "https://www.etsy.com/listing/1866952286/tmc-exam-study-guide-nbrc-based-prep"
+      ],
+      "claims": [
+        {"statement": "The NBRC's public 'RT Detailed Content Outline -- Effective January 2027' PDF confirms the new exam has 185 items (160 scored, 25 pretest) in two portions: a 100-item Breadth of Knowledge portion and a 60-item Depth of Clinical Judgement portion, over a 4-hour period.", "kind": "fact", "topic": "regulatory", "source_url": "https://www.nbrc.org/wp-content/uploads/2025/10/NBRC-RT-Detailed-Content-Outline-January-2027.pdf", "source_excerpt": "The Examination contains 160 items divided into two portions... The Breadth of Knowledge portion contains 100 items. The Depth of Clinical Judgement portion contains 60 items.", "confidence": "high"},
+        {"statement": "RespiratoryNotesCo sells a 'Respiratory Therapy Formula Cheat Sheet Bundle' digital download on Etsy covering oxygenation, ventilation/lung-mechanics, and cardiopulmonary/hemodynamics formulas.", "kind": "fact", "topic": "competitor", "source_url": "https://www.etsy.com/listing/1880013765/respiratory-therapy-formula-cheat-sheet", "source_excerpt": "Respiratory Therapy Formula Cheat Sheet Bundle (digital Download) - Etsy", "confidence": "high"},
+        {"statement": "Exact visible sales count for the RespiratoryNotesCo formula-cheat-sheet listing could not be retrieved this run (fetch tool rate-limited); only review sentiment snippets were recovered.", "kind": "unverified", "topic": "demand", "source_url": "https://www.etsy.com/listing/1880013765/respiratory-therapy-formula-cheat-sheet", "source_excerpt": "Star Seller ... Customer feedback: 'Lots of great information to study from' / 'Amazing!! Love it.'", "confidence": "low"},
+        {"statement": "A $14 Etsy TMC study guide with only 4 reviews shows a visible sales count of 415, evidence that Etsy search alone drives real purchase volume to RT exam-prep PDFs from zero-audience sellers.", "kind": "fact", "topic": "demand", "source_url": "https://www.etsy.com/listing/1866952286/tmc-exam-study-guide-nbrc-based-prep", "source_excerpt": "carried over from run-1 verification: $14 listing, 4 reviews, 415 sales shown on listing page", "confidence": "high"}
+      ],
+      "owned_channel": "None -- reachable only via Etsy/Gumroad search.",
+      "fulfillment": "One PDF built once from public formulas and the public content outline (no NBRC copyrighted items), zero marginal cost per sale.",
+      "price_point_usd": 6.99,
+      "first_dollar_path": "List on Etsy titled around '2027 RT Exam Formula Card' / 'NBRC RT Examination Quick Reference' now, months before the exam launches (applications open Oct 1, 2026), to capture early searchers before incumbents update their TMC-era listings.",
+      "graveyard_matches": [],
+      "visible_sales_count": {
+        "value": 415,
+        "source_url": "https://www.etsy.com/listing/1866952286/tmc-exam-study-guide-nbrc-based-prep",
+        "excerpt": "run-1 verified: $14 TMC study guide listing, only 4 reviews, 415 sales shown on the listing page -- analogous RT-exam-PDF demand signal, not the exact formula-card SKU (whose own sales count could not be retrieved this run)"
+      },
+      "why_it_might_fail": [
+        "Overlaps in scope with the already-scouted (run 1) 'Respiratory Pharmacology / NBRC Formula Cheat Sheet Bundle' opportunity -- differentiation rests entirely on being explicitly re-mapped to the new 2027 blueprint, which is a thin distinction if the underlying formulas are unchanged.",
+        "The underlying formulas (Alveolar Gas Equation, A-a gradient, etc.) don't change with the exam transition, so buyers may not see urgency to buy a 'new' version.",
+        "Legal: must not reproduce any NBRC exam item; must state 'not affiliated with or endorsed by NBRC' given NBRC's stated copyright-infringement enforcement."
+      ],
+      "presell_experiment": "Build the one-page formula card PDF from public formulas only (2 hours), list it on Etsy today at $6.99 titled around the 2027 exam name, and watch for sales/favorites over 2 weeks -- this is cheap enough to just publish-and-observe rather than needing a separate mockup step. Total: $0 cash (Etsy listing fee is a few cents), ~2 hours."
+    },
+    {
+      "name": "NBRC 2027 RT Exam Content-Outline Study Checklist / Domain Tracker (planner, not question content)",
+      "category": "info_product",
+      "summary": "A checklist-style tracker (not practice questions) that lets a candidate mark off each content domain from the new public RT Examination Detailed Content Outline as they study it, split by the Breadth of Knowledge and Depth of Clinical Judgement portions. Lower legal risk than a study guide because it never touches exam content, only the public blueprint's category names. An existing competitor product, the 'RT Student Planner' (85-page, coil-bound, $ unconfirmed) already bundles 'exam trackers' and 'skills checklists' alongside clinical/school planning, showing organizers already pay for RT-specific tracking tools, but no per-listing sales count for that planner or any 2027-blueprint-specific tracker was retrievable this run.",
+      "source_urls": [
+        "https://www.etsy.com/listing/4327141810/rt-student-planner-85-page-respiratory",
+        "https://www.nbrc.org/wp-content/uploads/2025/10/NBRC-RT-Detailed-Content-Outline-January-2027.pdf"
+      ],
+      "claims": [
+        {"statement": "An existing Etsy product, 'RT Student Planner | 85-page Respiratory Therapy School Organizer,' bundles monthly planning, clinical rotation logs, ventilator-mode cheat sheets, ABG references, skills checklists and exam trackers in one coil-bound planner.", "kind": "fact", "topic": "competitor", "source_url": "https://www.etsy.com/listing/4327141810/rt-student-planner-85-page-respiratory", "source_excerpt": "clinical rotation tracker & log pages, lecture note templates and study checklists, ventilator mode cheat sheets, ABG references, and RT acronyms, flashcard makers, skills checklists, and exam trackers", "confidence": "high"},
+        {"statement": "No visible sales count could be retrieved for this planner listing this run (web-fetch tool rate-limited before a direct page fetch succeeded).", "kind": "unverified", "topic": "demand", "source_url": "https://www.etsy.com/listing/4327141810/rt-student-planner-85-page-respiratory", "source_excerpt": "not retrieved -- search-engine snippet only, no listing-page sales figure surfaced", "confidence": "low"}
+      ],
+      "owned_channel": "None -- reachable only via Etsy/Gumroad search.",
+      "fulfillment": "Single PDF checklist built once from the public content outline categories, zero marginal cost.",
+      "price_point_usd": 8.99,
+      "first_dollar_path": "List on Etsy/Gumroad now as a low-priced companion product ('know exactly what to study for the new exam'), cross-promote as a free lead-magnet excerpt attached to opportunity #2 (the formula card) to raise both listings' conversion.",
+      "graveyard_matches": [],
+      "visible_sales_count": null,
+      "demand": "unproven",
+      "why_it_might_fail": [
+        "No comp for this exact product (a pure content-outline tracker, as opposed to a full planner or a study guide) was found with a visible sales count -- demand for the format specifically, versus the broader planner bundle, is unconfirmed.",
+        "May be too thin a product on its own (a checklist alone may not justify a standalone purchase versus being a free bonus)."
+      ],
+      "presell_experiment": "Build the 1-page checklist PDF from the public content outline (1-2 hours), list it standalone on Gumroad/Etsy at $8.99 for 2 weeks; if it gets zero traction, fold it into opportunity #2's listing as a free bonus instead of selling it separately. Total: $0 cash, ~2 hours."
+    },
+    {
+      "name": "Home CPAP / Sleep-Lab Patient Compliance & Symptom Tracker Printable",
+      "category": "info_product",
+      "summary": "A patient-facing (not clinician-facing) printable tracker for people on CPAP/home oxygen therapy: nightly hours, mask fit, cleaning schedule, symptom log for a sleep-doctor visit. This is a new audience for the lane (sleep-lab/home-care patients, not RTs or nursing students) reachable the same zero-audience way, via Etsy search. Two live comps with visible sales exist at the exact price point Dustan would use: FocusFern's 'CPAP Therapy Tracker Printable' and 'Sleep Apnea Symptom Tracker Printable' each show 25 sales at $4.99 after 3 months on Etsy, and a newer competitor (BetterBreathing) shows 3 sales on a similar CPAP binder after being listed for the same period -- both prove the sub-niche converts, though at modest volume.",
+      "source_urls": [
+        "https://www.etsy.com/listing/4535606024/cpap-therapy-tracker-printable-sleep",
+        "https://www.etsy.com/listing/4566201846/sleep-apnea-symptom-tracker-printable",
+        "https://www.etsy.com/listing/4525167960/cpap-quick-start-binder-sleep-apnea"
+      ],
+      "claims": [
+        {"statement": "FocusFern's 'CPAP Therapy Tracker Printable, Sleep Apnea Nightly Log' listing shows 4.9 stars (7 reviews) and 25 sales after 3 months on Etsy, priced at $4.99 (40% off $8.32).", "kind": "fact", "topic": "price_and_sales", "source_url": "https://www.etsy.com/listing/4535606024/cpap-therapy-tracker-printable-sleep", "source_excerpt": "Now Price: $4.99 ... 4.9 (7) . 25 sales . 3 months on Etsy", "confidence": "high"},
+        {"statement": "FocusFern's separate 'Sleep Apnea Symptom Tracker Printable' listing shows the same shop-level 25 sales figure, indicating the sales counter shown is likely a shop-level aggregate rather than per-listing units.", "kind": "inference", "topic": "demand", "source_url": "https://www.etsy.com/listing/4566201846/sleep-apnea-symptom-tracker-printable", "source_excerpt": "4.9 (7) . 25 sales . 3 months on Etsy", "confidence": "medium"},
+        {"statement": "A competing seller, BetterBreathing, shows 3 sales and no reviews yet on its 'CPAP Quick Start Binder' listing, also 3 months on Etsy and also priced at $4.99.", "kind": "fact", "topic": "competitor", "source_url": "https://www.etsy.com/listing/4525167960/cpap-quick-start-binder-sleep-apnea", "source_excerpt": "No reviews yet . 3 sales . 3 months on Etsy", "confidence": "high"}
+      ],
+      "owned_channel": "None -- reachable only via Etsy search.",
+      "fulfillment": "Single PDF tracker built once, zero marginal cost.",
+      "price_point_usd": 4.99,
+      "first_dollar_path": "List on Etsy at the same $4.99 price point as the two live comps, targeting 'CPAP tracker printable' / 'sleep apnea log printable' search terms.",
+      "graveyard_matches": [],
+      "visible_sales_count": {
+        "value": 25,
+        "source_url": "https://www.etsy.com/listing/4535606024/cpap-therapy-tracker-printable-sleep",
+        "excerpt": "4.9 (7) . 25 sales . 3 months on Etsy"
+      },
+      "why_it_might_fail": [
+        "MEDICAL-ADVICE FLAG: this is patient-facing, not clinician-facing -- copy must stay strictly to tracking/organizing (nightly hours, mask fit, cleaning) and explicitly disclaim 'not medical advice, does not replace your sleep physician,' since a patient audience is more likely to misread a tracker as diagnostic guidance than a clinician audience would.",
+        "Demand signal is real but small (25 and 3 sales after 3 months) -- lowest-volume comp of the opportunities in this run.",
+        "Dustan's RRT credential is arguably less differentiating here than for clinician-facing products, since the buyer is a patient, not a peer professional; the credibility pitch would need to shift from 'written by an RRT who took the boards' to 'written by a licensed respiratory therapist who has set up CPAP patients.'"
+      ],
+      "presell_experiment": "Build the 1-page tracker PDF (2 hours), list on Etsy at the comp price of $4.99 with disclaimer language included from day one, and check for sales over 2 weeks against the FocusFern/BetterBreathing baseline (25 and 3 sales respectively after 3 months) to see if a differentiated RRT-authored version converts at all in the same window. Total: $0 cash, ~2 hours."
+    },
+    {
+      "name": "RT Clinical Instructor / Program Lab Skills & Competency Evaluation Form Bundle",
+      "category": "info_product",
+      "summary": "A print-ready bundle of lab skills checklists and clinical competency evaluation forms for RT program instructors and clinical coordinators to check off students on procedures (airway management, vent setup, ABG draws, etc.) during lab and clinical rotations. Multiple free versions already circulate (program-specific PDFs from Napa Valley College, UVU, Skyline College; fillable templates on Jotform, DocHub, pdfFiller, Paperform), which is itself evidence instructors need this document type, but no paid version with a visible marketplace sales count was found on Etsy or Teachers Pay Teachers in this run's searches.",
+      "source_urls": [
+        "https://napavalley.edu/programs-and-academics/divisions-and-departments/health-occupations/respiratory-care/documents/RT-Program-200157-Core-Competency-Checklist-2014.pdf",
+        "https://www.jotform.com/form-templates/respiratory-therapist-skills-checklist",
+        "https://www.pdffiller.com/299408797-Respiratory_Therapistpdf-respiratory-therapy-competency-checklist-"
+      ],
+      "claims": [
+        {"statement": "At least three RT programs (Napa Valley College, University of Vermont's UVU-style handbook pattern, Skyline College) publish their own free clinical competency checklists as PDFs for internal program use.", "kind": "fact", "topic": "demand_signal", "source_url": "https://napavalley.edu/programs-and-academics/divisions-and-departments/health-occupations/respiratory-care/documents/RT-Program-200157-Core-Competency-Checklist-2014.pdf", "source_excerpt": "All competencies include the student's demonstrated understanding of the indications, contraindications, hazards, etc, of any procedure performed.", "confidence": "high"},
+        {"statement": "Generic (non-RT-specific) fillable competency-checklist templates exist on Jotform, DocHub and pdfFiller, generally free or bundled into those platforms' subscription tiers rather than sold as standalone paid products.", "kind": "fact", "topic": "competitor", "source_url": "https://www.jotform.com/form-templates/respiratory-therapist-skills-checklist", "source_excerpt": "The Respiratory Therapist Skills Checklist Form Template is a practical assessment form for evaluating a respiratory therapist's background and technical capabilities before hiring, assigning cases, or planning training.", "confidence": "medium"},
+        {"statement": "No paid Etsy or Teachers Pay Teachers listing for an RT-specific instructor competency-checklist bundle with a visible sales count was found in this run's searches.", "kind": "unverified", "topic": "demand", "source_url": "n/a", "source_excerpt": "n/a -- absence of evidence, not evidence of absence; search may have missed a listing under different keywords", "confidence": "low"}
+      ],
+      "owned_channel": "None -- would need to reach RT program directors/clinical coordinators, a buyer segment with no obvious marketplace-search analog to Etsy's consumer traffic.",
+      "fulfillment": "PDF/spiral-bound bundle built once from CoARC-style competency categories, zero-to-low marginal cost.",
+      "price_point_usd": 15,
+      "first_dollar_path": "Uncertain -- this buyer (RT program clinical coordinator) does not obviously browse Etsy/Amazon KDP the way a student or bedside clinician does, so the marketplace-search first-dollar path that works for the other opportunities in this lane is unproven for this one.",
+      "graveyard_matches": [],
+      "visible_sales_count": null,
+      "demand": "unproven",
+      "why_it_might_fail": [
+        "No visible-sales comp found anywhere for a PAID version of this document type; every example found is a free program-internal PDF or a generic fillable-form-platform template, suggesting the market may expect this content free.",
+        "Buyer (RT program instructor/clinical coordinator) is a much smaller, harder-to-reach population than students or bedside RTs, and doesn't clearly search Etsy/Amazon the way the other buyer segments in this lane do.",
+        "Hard rule 2 concern: without a marketplace-search channel proven for this buyer, the only plausible first-dollar path is direct outreach to program contacts, which risks looking like a cold pitch."
+      ],
+      "presell_experiment": "Skip building anything. Post a free sample competency-checklist page in 1-2 public RT-educator Facebook groups or the AARC educator forum and ask a single question -- 'would you pay $15 for a print-ready version covering all CoARC-required competencies?' -- to 10-20 respondents. If fewer than 2-3 say yes, do not build. Total: $0 cash, ~2 hours."
+    }
+  ],
+  "recheck_run1_cheat_sheets": {
+    "instructions": "Per this run's direction, run-1 cheat-sheet ideas were re-checked ONLY for a visible sales count; no new opportunity objects were created for them.",
+    "results": [
+      {
+        "opportunity": "Ventilator Modes / Mechanical Ventilation Cheat Sheet",
+        "visible_sales_count_found": {
+          "value": 34784,
+          "level": "shop-level (not listing-specific)",
+          "source_url": "https://www.etsy.com/shop/ScrubLifeNotes",
+          "excerpt": "34784 Sales . 6557 Admirers . 4.9 (3.5k) . 6 years on Etsy"
+        },
+        "note": "ScrubLifeNotes' Etsy shop -- which sells a 'Mechanical Ventilation ICU Pocket Card | Nurse Quick Reference' at $10 among other ICU pocket cards -- shows 34,784 total shop sales. Their own Shopify store (scrublifenotes.com) additionally shows the identical Mechanical Ventilation Pocket Card marked 'Sold out' at $10, direct evidence of real sell-through outside Etsy too. This is a strong upgrade in demand evidence versus run 1's review-count-only signal, but it is a shop aggregate, not a per-SKU count, and the buyer is primarily ICU nurses (RTs are named as a secondary audience in the product copy).",
+        "source_urls": ["https://www.etsy.com/shop/ScrubLifeNotes", "https://scrublifenotes.com/products/mechanical-ventilation-critical-care-36179"]
+      },
+      {
+        "opportunity": "ABG Interpretation Pocket Reference Card",
+        "visible_sales_count_found": null,
+        "note": "No listing with a visible sales count specifically for an ABG interpretation card was found this run. OrganizedNurseDesign's Etsy shop (10,581 total shop sales) sells adjacent ICU/Med-Surg report-sheet and study-guide products but nothing ABG-specific was confirmed among its listings in this run's searches."
+      },
+      {
+        "opportunity": "Respiratory Pharmacology / NBRC Formula Cheat Sheet Bundle",
+        "visible_sales_count_found": null,
+        "note": "Matching listings exist (RespiratoryNotesCo's 'Respiratory Therapy Formula Cheat Sheet Bundle', 'Ventilation Formula Cheat Sheet', 'Cardiopulmonary Formula Cheat Sheet') but their exact sales counts could not be retrieved this run because the Parallel Search web_fetch tool hit its free-tier rate limit before those pages could be fetched. Flagged in not_public below."
+      }
+    ]
+  },
+  "disagreements": [
+    "Etsy's on-page 'N sales' figure next to a listing's reviews appears in every fetch this run to be the SELLER'S SHOP-LEVEL aggregate sales count, not a per-listing unit-sold count (confirmed by FocusFern showing the identical '25 sales' on two different listings in the same shop). Every visible_sales_count in this report sourced from an Etsy listing page should be read as shop-level demand evidence for the seller's overall catalog, not proof that the specific SKU alone sold that many units. This matches lesson 3 ('review-to-sale ratios are not constants') and should be treated as a standing caveat on all Etsy 'sales' comps, not just this run's.",
+    "rrtnow.com already publicly positions itself as a '2027 RT Examination' prep competitor (found in this run's research, not previously in the brain) -- this is relevant to the separately-running 2027-pivot research thread and should be passed to it, since it changes that pivot's competitive landscape."
+  ],
+  "not_public": [
+    "Exact per-listing sales count for RespiratoryNotesCo's 'Respiratory Therapy Formula Cheat Sheet Bundle' Etsy listing (fetch tool rate-limited before retrieval).",
+    "Exact sales count for the 'RT Student Planner | 85-page Respiratory Therapy School Organizer' Etsy listing (fetch tool rate-limited before retrieval).",
+    "Amazon 'bought in past month' badge status for the KDP items found this run (Respiratory Therapist Report Sheets B0GT8TVZ63; Respiratory Therapy Planner 2026-2027 B0GVKF5X17) -- neither excerpt captured that badge, and repeated fetch attempts hit the Parallel Search rate limit before a full re-fetch could confirm its presence or absence.",
+    "Any paid (non-free-template) product with a visible sales count for RT clinical-instructor/competency-checklist bundles -- none found despite multiple search angles (Etsy, Teachers Pay Teachers, general web).",
+    "Confirmation of Dustan's current RRT credential status (flagged by the orchestrator as 'being confirmed' -- outside this scout's search scope)."
+  ]
+}

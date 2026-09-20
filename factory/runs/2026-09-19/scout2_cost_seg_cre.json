@@ -1,0 +1,167 @@
+{
+  "lane": "cost_seg_cre",
+  "run": 2,
+  "opportunities": [
+    {
+      "name": "Landlord Move-In / Move-Out Tenant Inspection Checklist",
+      "category": "info_product",
+      "summary": "Landlords, small property managers and DIY real-estate investors buy printable/editable move-in-move-out condition checklists on Etsy for $2-5 to document unit condition and protect security deposits. Dustan could design one clean, editable PDF/Canva version once and sell it via Etsy/Gumroad search, with zero marginal cost per download; a state-specific expanded version (with local notice-period reference tables, not legal advice) could sell for more.",
+      "source_urls": [
+        "https://www.etsy.com/listing/4443958236/tenant-move-in-checklist-landlord-move",
+        "https://www.etsy.com/market/rental_inspection_checklist"
+      ],
+      "claims": [
+        {"statement": "Tenant Move In Move Out Checklist listing shows '4.9 (11) · 99 sales' visible on the listing page.", "kind": "fact", "topic": "visible_sales_count", "source_url": "https://www.etsy.com/listing/4443958236/tenant-move-in-checklist-landlord-move", "source_excerpt": "4.9 (11) · 99 sales · $4.79", "confidence": "high"},
+        {"statement": "A comparable Move-In Move-Out Checklist (PDF, Google Docs, Word) shows (532) next to its price on the market grid.", "kind": "fact", "topic": "review_count_proxy", "source_url": "https://www.etsy.com/market/rental_inspection_checklist", "source_excerpt": "Move-In Move-Out Checklist (PDF, Google Docs, Word) (532) $3.00", "confidence": "medium"},
+        {"statement": "The (532) and similar parenthetical figures next to stars are review counts, not sales counts; only the '99 sales' text is a verified sales figure.", "kind": "inference", "topic": "evidence_standard", "source_url": "https://www.etsy.com/listing/4443958236/tenant-move-in-checklist-landlord-move", "source_excerpt": "4.9 (11) · 99 sales", "confidence": "medium"}
+      ],
+      "owned_channel": "None required for first dollar (Etsy/Gumroad search). Optional value-add: give a free copy to 5-10 of Dustan's 56 CPA and 60 broker referral contacts who have landlord clients, never as a cold pitch.",
+      "fulfillment": "One PDF + editable Canva/Word template built once (2-4 hrs); zero marginal cost per download.",
+      "price_point_usd": 5,
+      "first_dollar_path": "List on Etsy and Gumroad; buyers arrive via marketplace search for 'move in move out checklist'.",
+      "graveyard_matches": [],
+      "why_it_might_fail": [
+        "LEGAL FLAG: move-in/move-out condition forms intersect with state security-deposit law (timelines, required disclosures); must ship as a plain condition-documentation form with a 'not legal advice, verify local landlord-tenant law' disclaimer and no deadline/legal claims.",
+        "Crowded low-price niche ($1.79-$5); differentiation must come from design quality, not price.",
+        "The 99-sales comp is a small shop (11 reviews); demand at scale is not independently confirmed."
+      ],
+      "visible_sales_count": {"value": 99, "source_url": "https://www.etsy.com/listing/4443958236/tenant-move-in-checklist-landlord-move", "excerpt": "4.9 (11) · 99 sales · $4.79"},
+      "presell_experiment": "Build a 1-page mockup image + a $4.99 Gumroad pre-order link. Ask 10-15 of the 212 referral contacts (brokers/CPAs with landlord clients) one question: 'Would you or a landlord client pay $5 for a clean move-in/move-out checklist?' Track yes/no + any pre-orders in 48 hrs. $0 cost, ~2 hrs."
+    },
+    {
+      "name": "Open House Sign-In & Lead Capture Template Bundle",
+      "category": "info_product",
+      "summary": "Real estate agents buy editable Canva open-house sign-in sheets and feedback forms to collect visitor contact info at showings, priced $3-10 on Etsy. An established shop selling exactly this category shows 5.7k sales after 5 years on the platform. Dustan, a licensed agent himself, could build a clean bundle (sign-in sheet + feedback form + QR-code follow-up flyer) once and list it on Etsy/Gumroad.",
+      "source_urls": [
+        "https://www.etsy.com/listing/1697750711/real-estate-open-house-sign-in-sheet",
+        "https://www.etsy.com/listing/1285362765/ultimate-open-house-bundle-real-estate"
+      ],
+      "claims": [
+        {"statement": "Real Estate Open House Sign-In Sheet Template listing page shows '4.6 (260) · 5.7k sales · 5 years on Etsy'.", "kind": "fact", "topic": "visible_sales_count", "source_url": "https://www.etsy.com/listing/1697750711/real-estate-open-house-sign-in-sheet", "source_excerpt": "4.6 (260) · 5.7k sales · 5 years on Etsy", "confidence": "high"},
+        {"statement": "A '375+ REAL ESTATE TEMPLATES' shop sells an 'Ultimate Open House Bundle' (sign-in, thank-you, feedback) as part of a broader realtor-template catalog.", "kind": "fact", "topic": "product_existence", "source_url": "https://www.etsy.com/listing/1285362765/ultimate-open-house-bundle-real-estate", "source_excerpt": "375+ REAL ESTATE TEMPLATES ... OPEN HOUSE BUNDLE", "confidence": "medium"}
+      ],
+      "owned_channel": "None required for first dollar. Optional value-add: share a free copy with the 60 commercial/residential broker referral contacts as a goodwill item, never a cold pitch.",
+      "fulfillment": "Canva template built once (2-3 hrs); zero marginal cost per sale.",
+      "price_point_usd": 6,
+      "first_dollar_path": "List on Etsy/Gumroad; buyers arrive via marketplace search for 'open house sign in sheet'.",
+      "graveyard_matches": [],
+      "why_it_might_fail": [
+        "Highly saturated sub-niche with many multi-thousand-sale incumbent shops; a new listing competes on SEO and design polish, not novelty.",
+        "Minor privacy consideration if the sheet is framed as collecting emails/phone numbers (light disclosure suggested, not a legal contract)."
+      ],
+      "visible_sales_count": {"value": 5700, "source_url": "https://www.etsy.com/listing/1697750711/real-estate-open-house-sign-in-sheet", "excerpt": "4.6 (260) · 5.7k sales · 5 years on Etsy"},
+      "presell_experiment": "Mock up the sign-in sheet + feedback form as one image, post a $0 'coming soon' Gumroad waitlist page, and ask 10 broker referral contacts one question: 'Would you use/pay $6 for a nicer open-house sign-in + feedback set?' $0 cost, ~2 hrs."
+    },
+    {
+      "name": "Property Management / Landlord Forms & Checklist Bundle (non-contract)",
+      "category": "info_product",
+      "summary": "Small landlords and new property managers buy multi-page Canva checklist bundles (prep-to-rent, advertising, tenant application tracker, move-in/out, maintenance log) rather than single forms. A shop selling this exact bundle type shows 5.1k total sales and a 4.7-star rating over 299 reviews. Dustan could build a checklist-only bundle (no lease/eviction contracts, to avoid legal-drafting exposure) and sell it at a bundle price point.",
+      "source_urls": [
+        "https://www.etsy.com/listing/1762369628/property-management-checklist-bundle",
+        "https://www.etsy.com/market/property_management_template_bundle"
+      ],
+      "claims": [
+        {"statement": "The Property Checklist Bundle - Canva Template listing page (German locale) shows '4.7 (299) · 5,1 Tsd. Verkäufe' (5.1k sales).", "kind": "fact", "topic": "visible_sales_count", "source_url": "https://www.etsy.com/listing/1762369628/property-management-checklist-bundle", "source_excerpt": "4,7 (299) · 5,1 Tsd. Verkäufe · 4 Jahre auf Etsy", "confidence": "high"},
+        {"statement": "The bundle is priced at €16.64 on the listing page.", "kind": "fact", "topic": "price", "source_url": "https://www.etsy.com/listing/1762369628/property-management-checklist-bundle", "source_excerpt": "Preis: 16,64 €", "confidence": "high"}
+      ],
+      "owned_channel": "None required for first dollar. Optional value-add: give a free copy to CPA/broker referral contacts who have landlord or property-manager clients, never a cold pitch.",
+      "fulfillment": "Canva/PDF bundle (checklists, logs, trackers only — no lease or notice contracts) built once, 4-6 hrs; zero marginal cost per sale.",
+      "price_point_usd": 19,
+      "first_dollar_path": "List on Etsy/Gumroad; buyers arrive via marketplace search for 'property management checklist' / 'landlord toolkit'.",
+      "graveyard_matches": [],
+      "why_it_might_fail": [
+        "LEGAL FLAG (light): many competing bundles mix in lease agreements, notice-to-quit and eviction forms; Dustan's version must stay to checklists/logs/trackers only or route the lease-adjacent items to 'consult a local attorney' language.",
+        "Adjacent to the approved-for-validation Offering Memorandum template in the same 'Etsy real-estate-agent template' market category; evaluator should confirm this does not cannibalize that pre-sell test's audience.",
+        "Established competitor has a 4-year head start and hundreds of reviews; differentiation must be on design and scope, not price."
+      ],
+      "visible_sales_count": {"value": 5100, "source_url": "https://www.etsy.com/listing/1762369628/property-management-checklist-bundle", "excerpt": "4,7 (299) · 5,1 Tsd. Verkäufe · 4 Jahre auf Etsy"},
+      "presell_experiment": "Mock up a 5-page sample (rent-ready checklist, application tracker, maintenance log) as a PDF, list it at $19 on Gumroad with no ads, and ask 10 CPA/broker referral contacts with landlord clients one question: 'Would this be useful/worth $19 to a landlord you know?' $0 cost, ~2 hrs."
+    },
+    {
+      "name": "Real Estate Agent Buyer & Seller Transaction Checklist / Questionnaire Bundle",
+      "category": "info_product",
+      "summary": "Established real-estate-template shops sell buyer questionnaires, seller guides and transaction checklists as internal workflow tools for agents managing a file (distinct from investor-facing marketing collateral like an offering memorandum). Two such shops show total sales of 5,746 and 7,276. Dustan could build a residential buyer/seller intake-and-checklist set and sell it to agents via marketplace search.",
+      "source_urls": [
+        "https://www.etsy.com/shop/RealEstateCreate",
+        "https://www.etsy.com/shop/yoladigitalagent"
+      ],
+      "claims": [
+        {"statement": "RealEstateCreate, a shop selling seller's guides, buyer questionnaires and listing flyers, shows '5746 Sales' on its shop page.", "kind": "fact", "topic": "visible_sales_count", "source_url": "https://www.etsy.com/shop/RealEstateCreate", "source_excerpt": "5746 Sales\n429 Admirers", "confidence": "high"},
+        {"statement": "yoladigitalagent, a shop selling 'Real Estate Marketing Templates for Realtors', shows 'Sales 7,276' on its shop page.", "kind": "fact", "topic": "visible_sales_count", "source_url": "https://www.etsy.com/shop/yoladigitalagent", "source_excerpt": "Templates for Realtors Sales 7,276", "confidence": "high"}
+      ],
+      "owned_channel": "None required for first dollar. Optional value-add: give a free copy to broker referral contacts to hand to newer agents on their teams, never a cold pitch.",
+      "fulfillment": "Canva/PDF questionnaire + checklist set built once, 3-5 hrs; zero marginal cost per sale.",
+      "price_point_usd": 15,
+      "first_dollar_path": "List on Etsy/Gumroad; buyers arrive via marketplace search for 'real estate buyer questionnaire' / 'seller checklist'.",
+      "graveyard_matches": [],
+      "why_it_might_fail": [
+        "Same broad Etsy 'realtor Canva template' market as the approved-for-validation OM template; risk of internal cannibalization if marketed to the same broker contacts at the same time — sequence after the OM pre-sell result, or target a different persona (residential agents vs. CRE brokers).",
+        "Sales figures cited are shop totals across many SKUs, not this specific product; per-listing demand is not independently confirmed.",
+        "Many incumbents include NAR-2025-compliance framing; a generic version without that framing may look dated to buyers."
+      ],
+      "visible_sales_count": {"value": 7276, "source_url": "https://www.etsy.com/shop/yoladigitalagent", "excerpt": "Templates for Realtors Sales 7,276"},
+      "presell_experiment": "Build a 1-page mockup of the buyer questionnaire, post it as a $0 Gumroad waitlist link, and ask 10 residential agents in Dustan's broker referral list one question: 'Would you pay $15 for a ready-made buyer/seller intake and checklist set?' $0 cost, ~2 hrs."
+    },
+    {
+      "name": "Rental Property Income & Expense Ledger (KDP paperback logbook)",
+      "category": "productized",
+      "summary": "Amazon shoppers actively buy small-business/rental bookkeeping paperback ledgers, with the general 'bookkeeping record book' category showing real 'bought in past month' counts of 100-200+ units on multiple listings. The rental/landlord-specific niche within that format exists (several titles) but the specific rental-only listings checked show far fewer verified reviews, so this is a directional (adjacent-category) rather than a directly-proven signal. Dustan could design one rental-specific ledger and publish via KDP print-on-demand (near-zero marginal cost, no inventory).",
+      "source_urls": [
+        "https://www.amazon.com/bookkeeping-record-book/s?k=bookkeeping%2Brecord%2Bbook",
+        "https://www.amazon.com/Rental-Ledger-Log-Book-Bookkeeping/dp/B0B3952HHP"
+      ],
+      "claims": [
+        {"statement": "'Income and Expense Log Book - Bookkeeping Record Book' shows '(244) 200+ bought in past month' at $9.99 on Amazon search results.", "kind": "fact", "topic": "visible_sales_count", "source_url": "https://www.amazon.com/bookkeeping-record-book/s?k=bookkeeping%2Brecord%2Bbook", "source_excerpt": "4.6 (244) 200+ bought in past month $9.99", "confidence": "high"},
+        {"statement": "'HAUTOCO Accounting Ledger Book' shows '(180) 100+ bought in past month' at $6.99.", "kind": "fact", "topic": "visible_sales_count", "source_url": "https://www.amazon.com/bookkeeping-record-book/s?k=bookkeeping%2Brecord%2Bbook", "source_excerpt": "4.6 (180) 100+ bought in past month $6.99", "confidence": "high"},
+        {"statement": "A rental-specific title, 'Rental Ledger Log Book' (B0B3952HHP), has only 10 global ratings and Best Sellers Rank #1,291,630 in Books, no visible 'bought in past month' badge.", "kind": "fact", "topic": "niche_weakness", "source_url": "https://www.amazon.com/Rental-Ledger-Log-Book-Bookkeeping/dp/B0B3952HHP", "source_excerpt": "4.4 out of 5 stars (10) ... Best Sellers Rank: #1,291,630 in Books", "confidence": "high"}
+      ],
+      "owned_channel": "None required (Amazon KDP organic/search + category browse).",
+      "fulfillment": "Design interior once in a KDP template tool (4-6 hrs); Amazon prints and ships on demand, small per-unit royalty, no inventory held.",
+      "price_point_usd": 9,
+      "first_dollar_path": "Publish via KDP; buyers arrive via Amazon search for 'rental property ledger' / general 'bookkeeping ledger' category browse.",
+      "graveyard_matches": [],
+      "why_it_might_fail": [
+        "demand: unproven for the rental-specific SKU itself — the strong 'bought in past month' numbers are for the general small-business ledger format, not confirmed for rental/landlord-specific titles.",
+        "KDP paperback margins are thin (typically $1-3/unit after Amazon's cut and print cost); needs volume to matter.",
+        "Not tax advice — must be framed purely as a record-keeping ledger, no depreciation or deduction guidance, to stay clear of CSSI's tax-advice territory."
+      ],
+      "visible_sales_count": {"value": 200, "source_url": "https://www.amazon.com/bookkeeping-record-book/s?k=bookkeeping%2Brecord%2Bbook", "excerpt": "4.6 (244) 200+ bought in past month $9.99"},
+      "presell_experiment": "Design the cover + one interior spread as a mockup, list a $9 pre-order interest form (Google Form, $0 cost), and ask 10 landlord/small-investor contacts from county lead lists Dustan already has for CSSI outreach one question, framed strictly as market research (not a CSSI pitch): 'Would you buy a $9 printed rental ledger?' ~2 hrs."
+    },
+    {
+      "name": "Realtor Closing Gift Digital Printable Bundle (New Homeowner / Home Maintenance Set)",
+      "category": "info_product",
+      "summary": "Realtor closing gifts are a large, proven Etsy category — one housewarming/gift shop selling a 'Housewarming/Realtor' line (gift baskets, custom logo, personalized items) shows 131.7k total shop sales. Within that category, purely digital 'home maintenance binder' printables (positioned as a free-to-print closing gift agents hand to buyers) exist but the specific listings checked are new and low-volume, so direct evidence for the digital sub-format is weak relative to the category as a whole.",
+      "source_urls": [
+        "https://www.etsy.com/shop/ErynsHomeAndGifts",
+        "https://www.etsy.com/listing/4537434956/new-homeowner-binder-home-setup"
+      ],
+      "claims": [
+        {"statement": "ErynsHomeAndGifts, a shop with a 'Housewarming/Realtor' category (5 items) including realtor closing-gift baskets, shows '131.7k Sales' and '4.9 (23.4k)' on its shop page.", "kind": "fact", "topic": "visible_sales_count", "source_url": "https://www.etsy.com/shop/ErynsHomeAndGifts", "source_excerpt": "131.7k Sales · 4.9 (23.4k) · 5 years on Etsy", "confidence": "high"},
+        {"statement": "A specific digital 'New Homeowner Binder — Home Setup, Maintenance & Info, Fillable PDF' listing shows 'No reviews yet · 2 sales · 4 months on Etsy'.", "kind": "fact", "topic": "niche_weakness", "source_url": "https://www.etsy.com/listing/4537434956/new-homeowner-binder-home-setup", "source_excerpt": "No reviews yet · 2 sales · 4 months on Etsy", "confidence": "high"}
+      ],
+      "owned_channel": "Best fit is Dustan's own listing-agent/buyer-agent transactions as a co-branded value-add closing gift, plus Etsy/Gumroad search for standalone sales.",
+      "fulfillment": "PDF binder built once (4-6 hrs); zero marginal cost per download; a co-branded version just swaps agent contact info.",
+      "price_point_usd": 8,
+      "first_dollar_path": "List on Etsy/Gumroad for organic search buyers; separately, use it as Dustan's own free closing-gift add-on in his own real-estate transactions (not a sale, but validates the format before selling it to other agents).",
+      "graveyard_matches": [],
+      "why_it_might_fail": [
+        "demand: unproven — the strong 131.7k-sales comp is for the broader physical-gift category (baskets, engraved items), not the specific digital-binder sub-format, where the closest listing found has only 2 sales after 4 months.",
+        "Physical closing gifts (candles, cutting boards, engraved signs) may out-compete a digital PDF on perceived gift value even at similar price.",
+        "If marketed to other agents as 'give this to your clients,' must stay purely informational (no tax/financial claims) to avoid any tax-advice overlap."
+      ],
+      "visible_sales_count": {"value": 2, "source_url": "https://www.etsy.com/listing/4537434956/new-homeowner-binder-home-setup", "excerpt": "No reviews yet · 2 sales · 4 months on Etsy"},
+      "presell_experiment": "Build the binder as a PDF mockup, give Dustan's next 2-3 real closing clients a free printed/digital copy as his own closing gift, and separately ask 10 broker referral contacts one question: 'Would you buy a co-brandable version of this for $8 to give your own clients?' $0 cost, ~2 hrs."
+    }
+  ],
+  "disagreements": [
+    "Etsy listing pages do not reliably show a per-SKU 'sales' figure distinct from the shop's all-time total; the number shown alongside a star rating (e.g., '4.9 (11) · 99 sales') is frequently the SHOP's cumulative sales and review count, not sales of that specific listing. Per lesson 3 (~100:1 sales-to-review ratio seen in run 1), every visible_sales_count in this file is labeled with exactly what was shown (shop-level vs. the rare small-shop case where shop and listing are effectively the same product) rather than assumed to be item-specific.",
+    "The Amazon 'bought in past month' badge (used for the rental ledger opportunity) is a strong, genuinely item-level signal, but it was only confirmed for general small-business bookkeeping ledgers, not for rental/landlord-specific titles; that opportunity is flagged demand: unproven for its specific niche despite a real visible-sales comp existing for the parent format."
+  ],
+  "not_public": [
+    "Per-SKU (not shop-total) sales counts for the Property Management Bundle, Buyer/Seller Checklist, and Open House Sign-In listings — Etsy does not expose this without the seller's own dashboard.",
+    "KDP per-unit royalty and monthly unit sales for any specific rental-ledger or mileage-log title (Amazon does not expose author-side numbers to the public).",
+    "Conversion rate from Etsy/Gumroad listing views to purchases for any of the above, needed to size a realistic first-90-days revenue estimate.",
+    "Whether a landlord-specific mileage-log or client-log KDP title carries a visible 'bought in past month' badge — could not be independently re-verified this run after the Parallel Search web_fetch tool hit its free-tier rate limit; Firecrawl/WebSearch located the product (amazon.com/dp/B0H32FTX6C) but returned only paraphrased summaries, not a verbatim badge, so it was left out of the opportunity list rather than cited without a direct quote."
+  ]
+}

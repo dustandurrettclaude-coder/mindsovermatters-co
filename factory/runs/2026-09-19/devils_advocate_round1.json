@@ -1,0 +1,293 @@
+{
+  "opportunities": [
+    {
+      "opportunity_id": "f5626232-4424-4a61-97a3-581874d8ffad",
+      "objections": [
+        {
+          "topic": "demand_evidence",
+          "statement": "No verified sale exists for any CRE-OM template. Every unit/revenue figure is an estimate built on an unsourced 8-10 sales-per-review ratio the research itself flags as undisclosed. Review counts (1, 18, 91) are the only hard data.",
+          "contradicts_claim_ids": ["48e00f0b-db2a-4a37-8e7c-b1adf1369c8b", "05ac7f72-32fc-4feb-8637-d7d29d1d0742", "0859bf1f-7fbf-452d-a9c9-0125d53d59ea"],
+          "missing_evidence": "Any disclosed unit-sales count for a CRE-OM listing; Etsy does not publish it. Claims 48e00f0b-3a7e (revenue est), 05ac7f72 (units est), 0859bf1f (ratio is an assumption).",
+          "severity": "serious"
+        },
+        {
+          "topic": "demand_evidence",
+          "statement": "One of the two cheapest observed CRE-OM Canva listings has 1 review. That is the closest comp to the proposed 15-20 page $15-29 product, not the 91-review 49-page CIM at $79.99. The comp that matches the plan shows almost no demand.",
+          "contradicts_claim_ids": ["9e991970-8f8e-49bb-bf00-ac1f4e738515", "56a6099c-2519-4f00-ab56-2aa251ad112b"],
+          "missing_evidence": "Review/sales data for sub-20-page CRE OM Canva listings specifically, versus the 40-70 page tier.",
+          "severity": "serious"
+        },
+        {
+          "topic": "competition_cheaper",
+          "statement": "Someone already does it cheaper: a $9.99 Etsy CRE OM Canva template and a $36 44-slide PPT at offeringmemos.com. A $29 price has no stated differentiator over either, and neither seller needs to earn a first review.",
+          "contradicts_claim_ids": ["722b0b8c-6420-4929-86ff-6865cf11d8cb", "2f108e50-49d0-44a3-bc83-8a4387e9b70d"],
+          "missing_evidence": "Any feature or credential of Dustan's version a buyer would pay 3x the $9.99 floor for.",
+          "severity": "serious"
+        },
+        {
+          "topic": "competition_cheaper",
+          "statement": "The 'why haven't they' question is already answered: they have. Agencies have served this market since 2013, StructuredCreativeCo holds 5.0/76 reviews, and enterprise Buildout covers the teams. The gap is occupied, not open.",
+          "contradicts_claim_ids": ["bda02d1b-f54d-493b-a4e3-b8602a9a5f2f", "42fc5ce0-1431-46ff-9897-2a78e8ddc561"],
+          "missing_evidence": "Evidence any CRE-OM seller has exited or that demand outruns current supply.",
+          "severity": "serious"
+        },
+        {
+          "topic": "owner_time",
+          "statement": "Build alone blows the kill cap. 15-20 Canva pages across 6-10 OM sections is 15-25 h before a single listing exists. The cap is 5 human hours per validation. The plan cannot be validated inside its own budget.",
+          "contradicts_claim_ids": ["6a09a9e5-795c-42f3-ab04-af005696089e", "6cfcd3a9-1822-436b-a52d-cd38362acc58"],
+          "missing_evidence": "A timed build estimate from Dustan for one Canva page at the polish level a 5.0-star incumbent sets.",
+          "severity": "fatal"
+        },
+        {
+          "topic": "owner_time",
+          "statement": "Steady state exceeds 2 h/week. Canva template-link support, 'how do I swap fonts/logo', refund and license questions, Etsy message SLA, listing/SEO refresh, and Pinterest pinning run ~2.5 h/week once any volume exists.",
+          "contradicts_claim_ids": [],
+          "missing_evidence": "Etsy message-volume-per-sale data for digital template shops; not public.",
+          "severity": "serious"
+        },
+        {
+          "topic": "channel_reality",
+          "statement": "Etsy is not a 30-day channel here. Etsy's own results for 'offering memorandum template' are led by paid ad listings from three sellers. With $0 ad budget and 0 reviews, a new listing ranks nowhere inside the Gate-2 window.",
+          "contradicts_claim_ids": ["4e135e40-561e-4bc9-9deb-0f0d8ff72c0c"],
+          "missing_evidence": "Organic-position data for a zero-review listing on this term; Etsy does not expose it.",
+          "severity": "fatal"
+        },
+        {
+          "topic": "channel_reality_cssi",
+          "statement": "The 60 brokers are a CSSI referral asset, not a customer list. Sending them a $29 Gumroad link converts a referral partner into a prospect and spends relationship credit CSSI pays Dustan to build. One awkward reply can cost a referral stream.",
+          "contradicts_claim_ids": ["abe7c672-78e9-41b6-a2a9-7b695b7d14c7"],
+          "missing_evidence": "Whether CSSI has any policy on employee side-offers to referral contacts; the research lists this as not public.",
+          "severity": "serious"
+        },
+        {
+          "topic": "legal_platform",
+          "statement": "Canva's license grants use of Pro content in a single design transferable to one client and bars sub-licensing standalone. Selling one template to many buyers sits outside that grant unless every element is original or licensed elsewhere.",
+          "contradicts_claim_ids": ["eb6f5cd2-8bfc-469f-93e9-5c242bb2bcb7", "b32374c4-5ffb-40ad-b0ed-f7f0bb3682ff"],
+          "missing_evidence": "Canva's written position on multi-buyer template-link distribution of Pro elements; the two claims cited are the license text and third-party guidance, not a ruling.",
+          "severity": "serious"
+        },
+        {
+          "topic": "legal_employer",
+          "statement": "Lower risk than the other two: an OM layout is marketing collateral, not tax content, so no CSSI competition or tax-advice exposure. The real-estate licence adds no disclosure duty for a design file.",
+          "contradicts_claim_ids": [],
+          "missing_evidence": "Dustan's CSSI employment agreement outside-business clause.",
+          "severity": "minor"
+        },
+        {
+          "topic": "graveyard_60d",
+          "statement": "60-day graveyard path: 20 h of Canva work, a listing sitting below three ad slots with 0 reviews, one broker email producing 0-1 sales, no second channel and nothing left to do but wait. Interest dies before the first review lands.",
+          "contradicts_claim_ids": [],
+          "missing_evidence": "None; this is the default outcome absent a pre-sale.",
+          "severity": "serious"
+        }
+      ],
+      "owner_time_first_30d_hours": 30,
+      "owner_time_steady_hours_week": 2.5,
+      "kill_conditions": [
+        "Fewer than 2 of 20 warm brokers reply that their brokerage does NOT already supply an OM template",
+        "Zero pre-orders from 20 warm brokers shown a mockup at $29 within 7 days",
+        "Build exceeds 5 hours before any paid commitment exists",
+        "Etsy listing sits below page 1 organic for the exact term after 30 days with 0 sales",
+        "Any broker reacts negatively to being sold to, threatening the CSSI referral relationship"
+      ],
+      "cheapest_kill_experiment": "90 minutes, $0: build ONE mockup page (cover + exec summary) and email 20 of the 60 brokers a two-line note asking (a) does your brokerage already give you an OM template, and (b) a $29 pre-order link for delivery in 10 days. Zero pre-orders or a majority answering 'we already have one' kills it before any build.",
+      "verdict": "proceed_with_changes",
+      "verdict_reason": "Only idea whose buyer persona actually sits in the one owned list, and it is the only one with no tax/medical/employer-competition exposure. But the plan as written is unvalidatable: a 20 h build against a 5 h cap, and Etsy is ad-dominated so it cannot deliver a dollar in 30 days. Proceed only if reordered to pre-sell first, capped at 5 h, positioned to brokers as a free CSSI value-add with a paid upgrade rather than a cold $29 pitch."
+    },
+    {
+      "opportunity_id": "0ef84e08-15ca-4d29-9605-2148e2cfbc36",
+      "objections": [
+        {
+          "topic": "demand_evidence",
+          "statement": "The forum threads are evidence of demand for FREE models, not paying demand. The 2026 Reddit reply to a template request tells the asker to build one from A.CRE, LoneStar and WSO free models. That is the market answering the question at $0.",
+          "contradicts_claim_ids": ["3bf46f72-5bac-4285-aa0b-0792b14bb170", "4b5893f7-0c0e-47d6-8702-b9fd19b57b45", "f810fa4a-0d7e-4a0b-a8c6-c7930ac2defc"],
+          "missing_evidence": "A single forum or review post from someone who PAID for a spreadsheet at the $29-$119 tier.",
+          "severity": "fatal"
+        },
+        {
+          "topic": "demand_evidence",
+          "statement": "The two paid Etsy comps ($119 and SGD 99.63) carry no cited review count at all. Unlike the OM idea, there is not even a review-count proxy that any unit ever sold at this price on a marketplace.",
+          "contradicts_claim_ids": ["8d2b056d-97cb-416e-9a32-367c33e3f342", "f4615d03-44ee-4f0a-852c-69b86d4d74da"],
+          "missing_evidence": "Review counts, favourites or 'recently sold' signals on those exact two listings.",
+          "severity": "fatal"
+        },
+        {
+          "topic": "competition_cheaper",
+          "statement": "A.CRE gives away 60+ models, 30+ tutorials and 15 case studies at a $0 floor, and a Cornell-credentialed brand has out-SEO'd this term for a decade. The cheaper competitor is free, better, and already owns the search result.",
+          "contradicts_claim_ids": ["ba939cff-d891-4ac1-a480-f94620be4bbb", "d79360f1-fe8c-47c4-8d47-12fed73561b1", "26653c78-b9d0-429b-b0f7-196fb43d4ae3", "b4809f13-159b-43c9-b016-66518198bb9e"],
+          "missing_evidence": "Any axis on which a solo first build beats a free 60-model library.",
+          "severity": "fatal"
+        },
+        {
+          "topic": "competition_cheaper",
+          "statement": "The free leaders monetize a course, service or capital raise behind the model. Dustan has no course, no service and no audience, so he is entering at the commodity tier the winners deliberately gave away.",
+          "contradicts_claim_ids": ["f99ea36f-1912-4bb6-9ae4-474a868c1c63", "15a8c86a-9f4d-45b7-ac28-2e564ac12c90", "dd5bed80-bb0b-445b-9bb6-838f5e339dc9"],
+          "missing_evidence": "A back-end Dustan could attach that does not compete with CSSI.",
+          "severity": "serious"
+        },
+        {
+          "topic": "owner_time",
+          "statement": "Biggest build of the three and the worst overrun. Research calls a competitive NOI/DSCR/IRR/sensitivity model multi-day-to-multi-week; realistically 25-40 h, versus a 5 h kill cap. The opportunity's own 10-20 h figure is optimistic for a first model.",
+          "contradicts_claim_ids": ["589dae47-58d2-407b-a6b3-424b735b575c", "e55b1699-ca5d-413c-9654-3cc9b23a8875"],
+          "missing_evidence": "Evidence Dustan has built an IRR/DCF model before; the RRT and cost-seg-sales background does not establish it.",
+          "severity": "fatal"
+        },
+        {
+          "topic": "owner_time",
+          "statement": "Steady state is the worst of the three at ~3 h/week. Spreadsheets break across Excel versions and Google Sheets, and every buyer emails a formula question. Support is formula-and-updates by incumbent convention, but that still lands on Dustan weekly.",
+          "contradicts_claim_ids": ["6f7827e1-d534-4530-ad80-a623ef60927e", "faf522cb-9165-4af3-ac89-63a1a9b9f965"],
+          "missing_evidence": "Support-tickets-per-100-sales data for a finance template; not public.",
+          "severity": "serious"
+        },
+        {
+          "topic": "channel_reality",
+          "statement": "The owned list does not contain these buyers. 56 CPAs do not underwrite acquisitions and 60 brokers already use brokerage or Argus models. The research itself calls them intermediaries needing a referral angle, not a direct funnel.",
+          "contradicts_claim_ids": ["62f8d325-8eb1-4641-ad17-986586df2070", "ab837ca8-e39a-4995-a80d-dbbcfb202786"],
+          "missing_evidence": "Any count of actual investor-buyers in referral_contacts; the list is audience='broker'/'cpa', not investor.",
+          "severity": "fatal"
+        },
+        {
+          "topic": "channel_reality_cssi",
+          "statement": "Using the free county owner lead lists as distribution is worse than using the broker list. Those owners are CSSI's live cost-seg prospects. Emailing them a personal $49 product puts a side offer in front of the employer's pipeline.",
+          "contradicts_claim_ids": [],
+          "missing_evidence": "Whether county open-records terms even permit commercial reuse; the scout flagged this as not established.",
+          "severity": "fatal"
+        },
+        {
+          "topic": "legal_employer",
+          "statement": "A cost-seg or depreciation tab duplicates CSSI's own free calculator and directly contradicts CSSI's published 'DIY Trap' position. Dustan would be selling the thing his employer publicly argues against, to his employer's prospects.",
+          "contradicts_claim_ids": ["604a6560-d340-4230-b41b-095ce75b05a8", "ab96c48d-43e5-4e43-a92a-0990afca4bdc", "f09b4ce3-1432-493d-80e4-cc3ace8ed186"],
+          "missing_evidence": "CSSI's written policy on employee side businesses touching cost segregation; the research lists this as not public.",
+          "severity": "fatal"
+        },
+        {
+          "topic": "legal_advice",
+          "statement": "Any tab that outputs a dollar tax-savings or depreciation figure reads as tax advice, which is why CSSI's own calculator disclaims it. Stripping it removes the only differentiator Dustan brings; keeping it creates the exposure.",
+          "contradicts_claim_ids": ["288d1843-84b6-4b7d-9c4a-c923e61edbf9", "97484bc3-d7ff-476e-bead-9dc26a52532a", "0aa4174d-b688-4d40-af3e-dc4e4728cdcf"],
+          "missing_evidence": "A disclaimer wording reviewed by anyone qualified; none exists and the constraint forbids paying for one.",
+          "severity": "serious"
+        },
+        {
+          "topic": "legal_liability",
+          "statement": "A formula error in an IRR or DSCR model feeds a real acquisition decision on a seven-figure asset. Dustan holds an active real-estate licence, which raises rather than lowers the standard a complainant would point to. No E&O, no budget for one.",
+          "contradicts_claim_ids": [],
+          "missing_evidence": "Whether a licensed agent's E&O or state commission rules reach a sold analysis tool.",
+          "severity": "minor"
+        },
+        {
+          "topic": "graveyard_60d",
+          "statement": "60-day graveyard path: 30+ hours of Excel work, listed against a free 60-model library, sold to a list of intermediaries who are not buyers, with the one differentiating tab removed for employer and tax-advice reasons. Nothing left that is distinct.",
+          "contradicts_claim_ids": [],
+          "missing_evidence": "None.",
+          "severity": "fatal"
+        }
+      ],
+      "owner_time_first_30d_hours": 35,
+      "owner_time_steady_hours_week": 3,
+      "kill_conditions": [
+        "Zero of 10 broker/CPA contacts name a paid spreadsheet when asked what they or their clients use",
+        "The cost-seg/depreciation tab must be removed for employer conflict, leaving no differentiator",
+        "Build passes 5 hours with no paid commitment",
+        "Any reply citing A.CRE, Lone Star or BiggerPockets as 'already free' from more than 2 of 10 contacts",
+        "Owner lead lists cannot be used without touching CSSI's prospect pipeline"
+      ],
+      "cheapest_kill_experiment": "60 minutes, $0: ask 10 of the warmest broker/CPA contacts one question, 'what do you or your investor clients use to underwrite a deal, and what did it cost?'. If the answers are Argus, in-house, A.CRE, BiggerPockets or Excel-from-scratch and nobody names a paid template, the paying-demand premise is dead before a cell is typed.",
+      "verdict": "kill",
+      "verdict_reason": "Five independent fatals: the demand evidence is for free products, the best competitor is free with a decade of SEO, the owned list holds intermediaries not buyers, the only distribution asset that reaches real buyers is CSSI's own prospect pipeline, and the one feature Dustan is uniquely qualified to build is the one that conflicts with his employer and reads as tax advice. Largest build, worst support tail, weakest channel."
+    },
+    {
+      "opportunity_id": "2a4dc4ba-b265-4dcb-9f18-02722758ef66",
+      "objections": [
+        {
+          "topic": "timing_product_death",
+          "statement": "The product expires in 107 days. NBRC confirms applications for the replacement single RT Examination open 1 Oct 2026 and the exam goes live 4 Jan 2027, retiring TMC+CSE. A TMC-titled guide's buyer pool stops forming almost immediately.",
+          "contradicts_claim_ids": ["043e2a32-1f4b-42aa-b8d2-a4f9bfa3e0d1"],
+          "missing_evidence": "Nothing; verified at nbrc.org/examination-changes-coming-in-2027-new-details-added. The research held this at only 0.6 confidence from a third-party blog.",
+          "severity": "fatal"
+        },
+        {
+          "topic": "demand_evidence",
+          "statement": "Comps are tiny and the volume figures are invented. The two Etsy TMC guides show 23 and 4 reviews; the 240-unit/$3.4k estimate rests on a 1-in-10 review ratio the research itself flags as not a sourced Etsy statistic.",
+          "contradicts_claim_ids": ["d7f774ed-bb0a-4ad2-8897-98eb48732dd1", "9b7375f2-eff2-4e40-92bf-16faca9558ee", "1be6da4e-dea9-45ff-849c-cc9cabe2ffa1", "c957b8b7-d93d-4bf5-8615-d5aebf88b1fc"],
+          "missing_evidence": "Any disclosed sales count for an Etsy TMC guide. The one visible unit counter in the niche (Lindsey Jones, 14,403) is a 40-year-old seminar brand, not a comp for a $12 PDF.",
+          "severity": "serious"
+        },
+        {
+          "topic": "competition_cheaper",
+          "statement": "The market leader is free. RTZ states 99.9% of its offering is free, Mometrix runs a free practice exam, and TikTok creators push a free NBRC guide as a lead magnet. The price floor is $0 from brands with a decade of trust.",
+          "contradicts_claim_ids": ["f4354786-7004-46d4-926c-c8dd8f521db7", "96fcd0bc-8301-4dea-889b-8c287b1b9fb4", "15fee04b-7e7a-47fa-8cc2-9e10ad3dfa8d", "e9604c87-3bf8-4ca8-ba38-d609866e07ac"],
+          "missing_evidence": "Why a student would pay $12 for an unknown author's PDF when RTZ's free tier plus Quizlet exists.",
+          "severity": "fatal"
+        },
+        {
+          "topic": "channel_reality",
+          "statement": "There is no channel. RT social is 0 followers and the only list with reach is 212 brokers and CPAs, none of whom are RT students. Every stated channel requires an audience Dustan does not have.",
+          "contradicts_claim_ids": ["f0773be8-ced3-48c5-8840-99f20dff2ace", "e6c6208b-66b9-43a7-a4e0-055a726415ca", "9ea9d0ad-e31d-4102-9dbc-0cf9950735f1"],
+          "missing_evidence": "Dustan's Pinterest follower count, still unknown; Pinterest is also a weak fit for exam prep versus CRE design.",
+          "severity": "fatal"
+        },
+        {
+          "topic": "channel_reality",
+          "statement": "The first-dollar path is to seed links into r/respiratorytherapy threads. That is self-promotion from a zero-history account into a subreddit that treats it as spam. The plan's own channel is the one most likely to get the seller removed.",
+          "contradicts_claim_ids": ["e9e7fc1f-4f5b-4ec0-b003-760848b1de6b", "b68fbd4e-8756-4da0-8401-7fe8d80b1b31"],
+          "missing_evidence": "r/respiratorytherapy self-promotion rules and Dustan's account age/karma were never checked.",
+          "severity": "fatal"
+        },
+        {
+          "topic": "legal_nbrc",
+          "statement": "Dustan personally sat the TMC and is bound by NBRC's security policy never to reproduce or disclose items 'by any means'. Writing practice questions from that memory is precisely the exposure, and NBRC enforced against a paid prep group in 2023.",
+          "contradicts_claim_ids": ["0a9d53c7-2e92-49a6-8ec2-8f69c6dc1ef6", "4e06d4ee-57c9-4cb7-8390-7f5ecc696f9e", "4fdf81e1-329b-42de-a407-777f6f8705ac"],
+          "missing_evidence": "Whether NBRC's candidate agreement carries a durable post-exam obligation for Dustan specifically; the policy text says it does.",
+          "severity": "fatal"
+        },
+        {
+          "topic": "legal_clinical",
+          "statement": "Content covers vent settings, dosing and blood-gas interpretation. Dustan is a FORMER RRT; if the credential has lapsed, the stated differentiator is gone and a wrong rationale carries patient-safety criticism with no defence.",
+          "contradicts_claim_ids": ["56d0cd3c-4833-447b-9132-cd15075c02b4", "fcaf2676-97ad-47cc-ae4c-ace8db5bbde9"],
+          "missing_evidence": "Current status of Dustan's RRT credential and how recent his clinical practice is versus 2026 guidelines.",
+          "severity": "serious"
+        },
+        {
+          "topic": "legal_trademark",
+          "statement": "TMC, CRT and RRT are NBRC marks. Selling under those names requires a clear non-affiliation disclaimer, which incumbents carry. Low cost to comply, but it caps how the product can be titled and marketed.",
+          "contradicts_claim_ids": ["17f98648-3e99-4dad-84f6-11cdec0e04fd", "c439e629-94b4-4c44-9fb4-3c9ba6c94e41", "7edd41c0-56d5-4e16-9e23-043f748660a7"],
+          "missing_evidence": "None; the disclaimer pattern is established.",
+          "severity": "minor"
+        },
+        {
+          "topic": "owner_time",
+          "statement": "Heaviest content lift of the three. 50-100 original questions each with a defensible clinical rationale, cross-checked against current guidelines and the NBRC outline, is 25-45 hours of writing. The cap is 5 hours.",
+          "contradicts_claim_ids": [],
+          "missing_evidence": "A timed sample: how long Dustan takes to write 5 questions with rationales.",
+          "severity": "fatal"
+        },
+        {
+          "topic": "owner_time",
+          "statement": "Steady state exceeds 2 h/week: student emails disputing answers, refunds, Reddit and TikTok posting to stay discoverable, plus a full content rewrite for the 2027 RT Exam blueprint within months of launch.",
+          "contradicts_claim_ids": [],
+          "missing_evidence": "None.",
+          "severity": "serious"
+        },
+        {
+          "topic": "graveyard_60d",
+          "statement": "60-day graveyard path: 40 hours of question writing, a launch into a keyword whose candidate pool is migrating to a differently-named exam, promoted through a subreddit that removes the post, with 0 followers to fall back on.",
+          "contradicts_claim_ids": [],
+          "missing_evidence": "None.",
+          "severity": "fatal"
+        }
+      ],
+      "owner_time_first_30d_hours": 40,
+      "owner_time_steady_hours_week": 2.5,
+      "kill_conditions": [
+        "NBRC confirms TMC retirement in Jan 2027 (ALREADY CONFIRMED - this condition is met today)",
+        "First Reddit sample post removed by mods or under 5 upvotes",
+        "Writing 5 questions with rationales takes more than 30 minutes, implying a 40h+ build",
+        "Dustan's RRT credential is lapsed, removing the only differentiator",
+        "Etsy autocomplete/search volume for 'TMC exam' declines through Q4 2026"
+      ],
+      "cheapest_kill_experiment": "15 minutes, $0 - and it has already run. Reading NBRC's own 2027 transition page confirms applications for the replacement RT Examination open 1 Oct 2026 and the TMC retires 4 Jan 2027, so the product's keyword and buyer pool die inside the payback window. If any version survives, the second cheapest kill is one free 10-question sample posted to r/respiratorytherapy: removal by mods or under 5 upvotes ends the only stated channel.",
+      "verdict": "kill",
+      "verdict_reason": "The exam the product is named after is being retired 107 days from now, verified at nbrc.org. On top of that: the market leader gives its content away free, there is no audience and no owned list containing RT students, the stated channel is self-promotion into a subreddit that removes it, Dustan is personally bound by NBRC's exam-security policy over the exact content he would write from memory, and the build is 25-45 hours against a 5-hour cap."
+    }
+  ]
+}

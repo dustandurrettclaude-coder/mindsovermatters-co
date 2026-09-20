@@ -1,0 +1,183 @@
+{
+  "fees": {
+    "etsy": {
+      "listing_fee_usd": 0.20,
+      "listing_fee_note": "$0.20 per listing, charged at creation, on every 4-month auto-renew, and each time a multi-quantity item sells",
+      "transaction_fee_pct": 6.5,
+      "transaction_fee_basis": "total buyer pays incl. shipping",
+      "payment_processing_us": "3.0% + $0.25",
+      "etsy_ads": "not used (opt-in). Offsite Ads 15% (12% high-volume) is mandatory only for shops over $10k/yr; not applicable at this scale",
+      "effective_formula_usd": "0.095 x price + 0.45",
+      "source_url": "https://craftybase.com/blog/the-complete-guide-to-etsy-fees",
+      "corroborating_source_url": "https://sellerfeecalc.com/blog/etsy-fees-explained-2026"
+    },
+    "gumroad": {
+      "listing_fee_usd": 0.00,
+      "direct_sale_fee": "10% + $0.50 per transaction",
+      "discover_marketplace_fee": "30% flat per transaction",
+      "monthly_fee_usd": 0.00,
+      "effective_formula_usd_direct": "0.10 x price + 0.50",
+      "disagreement_note": "Sources disagree whether the 10% + $0.50 already absorbs card processing; some report an all-in effective ~12.9-13.2% with Stripe. Modeled at 10% + $0.50 direct; treat as a low estimate.",
+      "merchant_of_record": "Gumroad is MoR since Jan 2025 and remits sales tax/VAT/GST",
+      "source_url": "https://checkoutpage.com/blog/gumroad-fees",
+      "corroborating_source_url": "https://dodopayments.com/blogs/gumroad-fees-explained"
+    },
+    "shared_assumptions": [
+      {"name": "owner time value", "value": "$50/hour", "basis": "stated by owner as an explicit assumption"},
+      {"name": "AI research cost to date", "value": "~400k-500k tokens of Sonnet/Opus per opportunity", "basis": "stated by owner; deliberately not priced, cost_cents left null"},
+      {"name": "ad budget", "value": "$0; Etsy Ads off, no paid acquisition", "basis": "stated by owner"},
+      {"name": "audience at launch", "value": "zero, except a stated 60-broker / 56-CRE-CPA contact list usable only for the two CRE products", "basis": "stated; business_models f5626232 smallest_viable_version"},
+      {"name": "marginal cost per sale", "value": "$0 (digital delivery, auto-fulfilled)", "basis": "estimate; all three are downloadable/template-link products"},
+      {"name": "review-to-sale ratio", "value": "1 review per 8-10 sales", "basis": "claims 05ac7f72, c957b8b7, 1be6da4e, 0859bf1f - explicitly NOT an Etsy-disclosed statistic"}
+    ]
+  },
+  "opportunities": [
+    {
+      "opportunity_id": "f5626232-4424-4a61-97a3-581874d8ffad",
+      "name": "CRE offering-memorandum template (Etsy, Canva)",
+      "assumptions": [
+        {"name": "list price", "value": "$29 (range $15-$49)", "basis": "claims 722b0b8c ($9.99), 6cfcd3a9/e4bebffc ($17.99), 8230784a ($47), 429077e2 ($79.99) - mid of the Etsy band"},
+        {"name": "review-to-sale ratio", "value": "8-10 sales per review", "basis": "claims 05ac7f72, 0859bf1f (assumption, not Etsy-disclosed)"},
+        {"name": "comparable lifetime volume", "value": "150-900 lifetime sales per established listing", "basis": "claim 05ac7f72; those are multi-year totals for listings with 18-91 reviews, not year-1 rates"},
+        {"name": "Etsy search conversion", "value": "1.0-2.0% visit-to-order, new shop with 0 reviews at the low end", "basis": "stated assumption; no Etsy keyword or conversion data is public (claim 0859bf1f)"},
+        {"name": "build hours", "value": "20-35 h for a 15-20 page Canva template, 8-10 sections, mockups and listing copy", "basis": "stated; claim b660427d (72pg agency scope) and 6cfcd3a9 (44 slides) bound the upper end"},
+        {"name": "ongoing marketing/support", "value": "2 h/month = 24 h/year of Pinterest, listing refresh, broker outreach", "basis": "stated assumption"},
+        {"name": "warm-list boost", "value": "60 brokers + 56 CRE CPAs emailed once; 2-5% buy", "basis": "business_models f5626232 smallest_viable_version"},
+        {"name": "photography excluded", "value": "buyer supplies photos; no stock licensing cost", "basis": "claim 30209dc8"}
+      ],
+      "unit_economics": {
+        "price_usd": 29.00,
+        "fees_usd": 3.21,
+        "marginal_cost_usd": 0.00,
+        "cac_usd": 0.00,
+        "cac_note": "organic only. Acquisition labor is capitalised into build+marketing hours, not per-sale CAC. At base volume the implied loaded CAC is 24 h x $50 / 30 sales = $40/sale, i.e. above contribution.",
+        "contribution_per_sale_usd": 25.79,
+        "build_hours": [20, 35],
+        "hours_to_first_dollar": [22, 40],
+        "break_even_sales_at_50_per_hour": 53,
+        "break_even_note": "27.5 h midpoint x $50 = $1,375 of owner time / $25.79 contribution",
+        "cash_required_usd": [1, 160],
+        "cash_note": "$0.20-$1 Etsy listing fees; Canva Pro ~$13/mo only if needed (claim 010ab5af)",
+        "payback_days_base": 365
+      },
+      "cases": {
+        "bear": {"sales_90d": 1, "revenue_90d_usd": 29, "sales_year1": 6, "revenue_year1_usd": 174, "contribution_year1_usd": 155},
+        "base": {"sales_90d": 5, "revenue_90d_usd": 145, "sales_year1": 30, "revenue_year1_usd": 870, "contribution_year1_usd": 774},
+        "bull": {"sales_90d": 15, "revenue_90d_usd": 435, "sales_year1": 120, "revenue_year1_usd": 3480, "contribution_year1_usd": 3095}
+      },
+      "clears_first_100_in_30d": "coin-flip",
+      "clears_note": "Needs 4 sales at $29 in 30 days. Cold Etsy search will not do it; the 60-broker/56-CPA warm list plausibly can. Hinges entirely on that list converting.",
+      "worth_50_per_hour_year1": "no",
+      "worth_note": "Base: $774 contribution / ~52 h (27.5 build + 24 marketing) = ~$15/h. Bull ($3,095 / ~60 h = ~$52/h) is the only case that clears.",
+      "most_sensitive_assumption": "Year-1 organic sales velocity for a brand-new listing, which rests on the unverified 8-10 sales-per-review ratio and on Etsy search demand for 'offering memorandum template' being real rather than inferred from review counts.",
+      "evidence_to_pin_it": "eRank/Marmalead monthly Etsy search volume for the 4 target keywords; then a live 30-day listing read from Etsy Stats: impressions, visits, visit-to-order rate. A single emailed offer to the 60-broker list gives a warm-conversion number in a week.",
+      "claims": [
+        {"statement": "Estimate: at a $29 Etsy price, fees are $3.21 (6.5% + 3% + $0.25 + $0.20), leaving $25.79 contribution per sale; marginal cost is ~$0.", "kind": "estimate", "topic": "economics", "source_url": "https://craftybase.com/blog/the-complete-guide-to-etsy-fees", "source_excerpt": "basis: Etsy 2026 fee schedule $0.20 listing + 6.5% transaction + 3% + $0.25 US processing", "confidence": 0.7},
+        {"statement": "Estimate: base-case year-1 volume is 30 sales (bear 6, bull 120) for a zero-audience CRE OM listing, vs 150-900 lifetime for established listings.", "kind": "estimate", "topic": "economics", "source_url": null, "source_excerpt": "basis: claim 05ac7f72 lifetime range de-rated for a new listing with 0 reviews and no ad spend", "confidence": 0.3},
+        {"statement": "Estimate: break-even is ~53 sales before the owner's 27.5 build hours are worth $50/h; base case reaches ~$15/h in year one.", "kind": "estimate", "topic": "economics", "source_url": null, "source_excerpt": "basis: 27.5 h x $50 / $25.79 contribution; stated $50/h owner-time assumption", "confidence": 0.35},
+        {"statement": "Assumption: the 60-broker / 56-CRE-CPA warm list is the only credible path to $100 in 30 days; cold Etsy search is not.", "kind": "assumption", "topic": "sales", "source_url": null, "source_excerpt": "basis: business_models smallest_viable_version; new Etsy listings rank poorly without reviews", "confidence": 0.5}
+      ]
+    },
+    {
+      "opportunity_id": "0ef84e08-15ca-4d29-9605-2148e2cfbc36",
+      "name": "CRE deal-analyzer spreadsheet (Etsy/Gumroad)",
+      "assumptions": [
+        {"name": "list price", "value": "$49 (range $29-$119)", "basis": "claims 8d2b056d (SGD 99.63), f4615d03 ($119), ddc5b043 ($29-$119 Etsy mid band)"},
+        {"name": "free substitutes", "value": "A.CRE 60+ free models; All-in-One is pay-what-you-can with a $0 floor", "basis": "claims d79360f1, ba939cff"},
+        {"name": "buyer default behaviour", "value": "forum answer to a template request is 'build your own from the free models'", "basis": "claim 3bf46f72; also 4b5893f7, c53dace9"},
+        {"name": "build hours", "value": "40-100 h for NOI / cap rate / DSCR / CoC / IRR tabs plus sensitivity and a walkthrough", "basis": "claim 589dae47 (multi-day to multi-week); claim e55b1699 (minimum feature set)"},
+        {"name": "Etsy search conversion", "value": "0.5-1.5% visit-to-order; below the OM template because free options are one search away", "basis": "stated assumption"},
+        {"name": "per-listing volume ceiling", "value": "tens-to-low-hundreds of sales/year for a niche finance template", "basis": "claim 6af669c9"},
+        {"name": "ongoing marketing/support", "value": "2 h/month = 25 h/year of forum seeding and formula support", "basis": "stated; claims 6f7827e1, faf522cb scope support to formulas only"},
+        {"name": "cost-seg tab", "value": "screener only, no tax-savings output; adds no priced revenue in this model", "basis": "claims fc892158, 0aa4174d"}
+      ],
+      "unit_economics": {
+        "price_usd": 49.00,
+        "fees_usd": 5.11,
+        "marginal_cost_usd": 0.00,
+        "cac_usd": 0.00,
+        "cac_note": "organic only. Implied loaded CAC at base volume is 25 h x $50 / 15 sales = $83/sale, roughly 2x contribution.",
+        "contribution_per_sale_usd": 43.89,
+        "build_hours": [40, 100],
+        "hours_to_first_dollar": [45, 110],
+        "break_even_sales_at_50_per_hour": 68,
+        "break_even_note": "60 h midpoint x $50 = $3,000 of owner time / $43.89 contribution",
+        "cash_required_usd": [1, 20],
+        "cash_note": "Etsy listing fees only; Excel/Sheets already owned. Gumroad at $49 would cost $5.40 vs Etsy $5.11.",
+        "payback_days_base": 1460
+      },
+      "cases": {
+        "bear": {"sales_90d": 0, "revenue_90d_usd": 0, "sales_year1": 3, "revenue_year1_usd": 147, "contribution_year1_usd": 132},
+        "base": {"sales_90d": 2, "revenue_90d_usd": 98, "sales_year1": 15, "revenue_year1_usd": 735, "contribution_year1_usd": 658},
+        "bull": {"sales_90d": 8, "revenue_90d_usd": 392, "sales_year1": 60, "revenue_year1_usd": 2940, "contribution_year1_usd": 2633}
+      },
+      "clears_first_100_in_30d": "no",
+      "clears_note": "Needs 3 sales at $49 in month 1 against free, well-marketed substitutes and a 40-100 h build that likely is not finished inside 30 days at all.",
+      "worth_50_per_hour_year1": "no",
+      "worth_note": "Base: $658 contribution / ~85 h (60 build + 25 marketing) = ~$8/h. Even the bull case ($2,633 / ~95 h = ~$28/h) does not reach $50/h in year one.",
+      "most_sensitive_assumption": "Willingness to pay anything when A.CRE, Lone Star and BiggerPockets give away credible models and forums actively steer buyers to them. Every case collapses or holds on the paid-conversion rate, not on price or traffic.",
+      "evidence_to_pin_it": "List a $49 version and a free lead-magnet version to the same audience (one broker/CPA email, one forum thread) and measure paid vs free take-up. Or read 30 days of Etsy Stats visit-to-order on a live listing. A paid-conversion under ~0.5% kills it.",
+      "claims": [
+        {"statement": "Estimate: at $49 on Etsy, fees are $5.11 and contribution is $43.89; the same sale on Gumroad direct nets $43.60, so platform choice is near-neutral at this price.", "kind": "estimate", "topic": "economics", "source_url": "https://checkoutpage.com/blog/gumroad-fees", "source_excerpt": "basis: Etsy 0.095x+0.45 vs Gumroad 0.10x+0.50", "confidence": 0.7},
+        {"statement": "Estimate: base-case year-1 volume is 15 sales (bear 3, bull 60), de-rated below the niche's tens-to-low-hundreds ceiling for a zero-audience launch against free substitutes.", "kind": "estimate", "topic": "economics", "source_url": null, "source_excerpt": "basis: claims 6af669c9 (volume ceiling), 3bf46f72 and d79360f1 (free substitutes dominate)", "confidence": 0.25},
+        {"statement": "Estimate: ~68 sales are needed before the 60-hour build is worth $50/h; base case returns ~$8/h, the worst of the three opportunities.", "kind": "estimate", "topic": "economics", "source_url": null, "source_excerpt": "basis: 60 h x $50 / $43.89; stated $50/h owner-time assumption", "confidence": 0.35},
+        {"statement": "Inference: the 40-100 h build alone makes the 30-day $100 test unreachable, independent of demand.", "kind": "inference", "topic": "fulfillment", "source_url": "https://www.adventuresincre.com/all-in-one-underwriting-model-for-real-estate-development-and-acquisition", "source_excerpt": "basis: claim 589dae47, multi-day-to-multi-week build for a CRE-literate builder", "confidence": 0.5}
+      ]
+    },
+    {
+      "opportunity_id": "2a4dc4ba-b265-4dcb-9f18-02722758ef66",
+      "name": "TMC exam study guide (Etsy and/or Gumroad PDF)",
+      "assumptions": [
+        {"name": "list price", "value": "$14 (range $7-$19)", "basis": "claims df3de33e ($14, 73pg), 9b7375f2, e9604c87/fc2f7acc ($7 RTZ single-domain), 0c3ff2ea ($5.21 flashcards)"},
+        {"name": "review-to-sale ratio", "value": "1 review per 10 sales", "basis": "claims 1be6da4e, c957b8b7 - explicitly flagged as not a sourced Etsy statistic"},
+        {"name": "comparable lifetime volume", "value": "~240 lifetime sales / ~$3.4k gross for the $14 Etsy guide; 889 shop-lifetime sales for a comparable solo study-sheet seller", "basis": "claims 1be6da4e, 7ebd197e"},
+        {"name": "annual candidate pool", "value": "23,302 NBRC exams administered in 2024; repeat low-cut pass rate 50.6% creates a recurring retake segment", "basis": "claims 4da01ea3, cf8b6caa"},
+        {"name": "Etsy search conversion", "value": "1.5-3.0% visit-to-order; higher than the CRE products because buyers are in acute, time-boxed pain at a $190 exam fee", "basis": "stated assumption; claim c439e629 ($190/$150 exam fee)"},
+        {"name": "build hours", "value": "15-30 h for 50-100 original questions with rationales on one high-weight domain, plus layout and listing", "basis": "stated; business_models smallest_viable_version"},
+        {"name": "organic seeding", "value": "3 h/month = 30 h/year into Reddit retake threads, RT program FB groups, short video", "basis": "stated; claims 27840402, business_models acquisition"},
+        {"name": "IP boundary", "value": "original items only, structured on the public NBRC content outline, with a not-affiliated disclaimer; no licensing cost", "basis": "claims 0a9d53c7, 683298ba, fcaf2676, 7edd41c0"},
+        {"name": "shelf life", "value": "content must be reworked for the single RT Exam from Jan 2027, roughly 15 months after a late-2026 launch", "basis": "claim 043e2a32"}
+      ],
+      "unit_economics": {
+        "price_usd": 14.00,
+        "fees_usd": 1.78,
+        "marginal_cost_usd": 0.00,
+        "cac_usd": 0.00,
+        "cac_note": "organic only. Implied loaded CAC at base volume is 30 h x $50 / 100 sales = $15/sale, slightly above the $12.22 contribution - marketing labor is the binding cost, not fees.",
+        "contribution_per_sale_usd": 12.22,
+        "contribution_gumroad_usd": 12.10,
+        "build_hours": [15, 30],
+        "hours_to_first_dollar": [16, 35],
+        "break_even_sales_at_50_per_hour": 90,
+        "break_even_note": "22 h midpoint x $50 = $1,100 of owner time / $12.22 contribution",
+        "cash_required_usd": [1, 20],
+        "cash_note": "Etsy listing fees only; Gumroad has no listing fee. NBRC content outline is free.",
+        "payback_days_base": 300
+      },
+      "cases": {
+        "bear": {"sales_90d": 3, "revenue_90d_usd": 42, "sales_year1": 25, "revenue_year1_usd": 350, "contribution_year1_usd": 306},
+        "base": {"sales_90d": 12, "revenue_90d_usd": 168, "sales_year1": 100, "revenue_year1_usd": 1400, "contribution_year1_usd": 1222},
+        "bull": {"sales_90d": 45, "revenue_90d_usd": 630, "sales_year1": 400, "revenue_year1_usd": 5600, "contribution_year1_usd": 4888}
+      },
+      "clears_first_100_in_30d": "coin-flip",
+      "clears_note": "Needs ~8 sales at $14 in 30 days. Base month-1 is ~4-6 sales, so it lands just under. A single well-received Reddit retake-thread post flips it; a deleted or ignored post does not.",
+      "worth_50_per_hour_year1": "no",
+      "worth_note": "Base: $1,222 contribution / ~52 h (22 build + 30 seeding) = ~$24/h - the best of the three but still under $50/h. Bull ($4,888 / ~70 h = ~$70/h) clears.",
+      "most_sensitive_assumption": "Whether zero-cost Reddit and RT-program-Facebook seeding actually converts, since it is both the only traffic source and the item that makes loaded CAC ($15/sale) exceed contribution ($12.22). Price, fees and build hours barely move the answer.",
+      "evidence_to_pin_it": "Post a genuinely useful free sample (10 questions + rationales) into two live r/respiratorytherapy retake threads with a tracked Gumroad link and count clicks and orders over 14 days. That single number sets the year-1 case. Also confirm 8-10 sales-per-review against Etsy Stats once live.",
+      "claims": [
+        {"statement": "Estimate: at $14 on Etsy, fees are $1.78 and contribution is $12.22 per sale; Gumroad direct nets $12.10, so the platforms are equivalent at this price point.", "kind": "estimate", "topic": "economics", "source_url": "https://craftybase.com/blog/the-complete-guide-to-etsy-fees", "source_excerpt": "basis: Etsy 0.095x+0.45 vs Gumroad 0.10x+0.50", "confidence": 0.7},
+        {"statement": "Estimate: base-case year-1 volume is 100 sales (bear 25, bull 400), anchored to the ~240 lifetime sales estimated for a comparable $14 Etsy TMC guide.", "kind": "estimate", "topic": "economics", "source_url": null, "source_excerpt": "basis: claims 1be6da4e, 7ebd197e, 4da01ea3; assumes 1-in-10 review-to-sale", "confidence": 0.3},
+        {"statement": "Estimate: ~90 sales are needed before the 22-hour build is worth $50/h; base case returns ~$24/h, the highest of the three opportunities.", "kind": "estimate", "topic": "economics", "source_url": null, "source_excerpt": "basis: 22 h x $50 / $12.22; stated $50/h owner-time assumption", "confidence": 0.35},
+        {"statement": "Inference: the Jan 2027 single RT Exam shortens the product's saleable life to roughly 15 months from launch, capping steady-state value unless the guide is rewritten.", "kind": "inference", "topic": "economics", "source_url": "https://rrtnow.com/blogs/news/what-is-the-nbrc-rte-exam-everything-respiratory-therapy-students-need-to-know", "source_excerpt": "basis: claim 043e2a32, TMC+CSE replaced by a single 185-item RT Exam from Jan 2027", "confidence": 0.5},
+        {"statement": "Estimate: loaded organic CAC of ~$15/sale (30 seeding hours at $50 / 100 base sales) exceeds the $12.22 contribution, so at base volume the owner's marketing time is not repaid.", "kind": "estimate", "topic": "economics", "source_url": null, "source_excerpt": "basis: stated $50/h and 3 h/month seeding assumptions", "confidence": 0.35}
+      ]
+    }
+  ],
+  "cross_cutting_notes": [
+    "All three fail the $50/hour test in year one under base cases. Only the TMC guide's bull case and the CRE OM template's bull case clear it.",
+    "Two of the three source-level disagreements are inherited: vip.graphics sells the same OM asset at $36/$99/$249 across channels, and the CRE-analyzer price band sits inside a $0-$1,000 ladder, not a market norm.",
+    "Every revenue figure descends from one unverified assumption - the 8-10 sales-per-review ratio - which Etsy does not publish. Treat all case numbers as order-of-magnitude, not point estimates.",
+    "AI research cost (~400k-500k tokens per opportunity) is recorded as an assumption and deliberately not priced; cost_cents is null."
+  ]
+}

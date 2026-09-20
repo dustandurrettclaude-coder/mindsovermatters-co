@@ -1,0 +1,361 @@
+{
+  "opportunity_id": "0ef84e08-15ca-4d29-9605-2148e2cfbc36",
+  "claims": [
+    {
+      "statement": "A.CRE was founded by Spencer Burton and Michael Belasco during their first year of grad real estate studies at Cornell, started as a free resource-sharing site.",
+      "kind": "fact",
+      "topic": "history",
+      "source_url": "https://careerservices.upenn.edu/resources/adventures-in-cre-a-cre-commercial-real-estate",
+      "source_excerpt": "The site was started by Spencer Burton and Michael Belasco during their first year of graduate real estate studies at Cornell University.",
+      "confidence": 0.9
+    },
+    {
+      "statement": "A.CRE only launched its paid 'Accelerator' modeling course in 2019, years after building an audience on free models and articles.",
+      "kind": "fact",
+      "topic": "history",
+      "source_url": "https://careerservices.upenn.edu/resources/adventures-in-cre-a-cre-commercial-real-estate",
+      "source_excerpt": "In 2019, Michael and Spencer co-created the A.CRE real estate financial modeling Accelerator program.",
+      "confidence": 0.9
+    },
+    {
+      "statement": "A.CRE's flagship All-in-One underwriting model is 'Pay What You're Able' with a $0 floor; page cites similar DCF models selling $300-$1,000+/license.",
+      "kind": "fact",
+      "topic": "offer",
+      "source_url": "https://www.adventuresincre.com/product/all-in-one-model",
+      "source_excerpt": "offered on a 'Pay What You're Able' basis with no minimum...similar real estate DCF models sell for $300 – $1,000+ per license",
+      "confidence": 0.95
+    },
+    {
+      "statement": "A.CRE likely monetizes via its paid Accelerator course rather than the free templates, which function as a lead magnet/audience builder.",
+      "kind": "inference",
+      "topic": "economics",
+      "source_url": "https://www.adventuresincre.com/product/all-in-one-model",
+      "source_excerpt": "Pay What You're Able basis with no minimum (choose 'Free' if you need) or maximum (your paid support helps keep the content coming)",
+      "confidence": 0.6
+    },
+    {
+      "statement": "A.CRE's free Model Hub lists 60+ downloadable Excel models, 30+ tutorials, and 15 practice case studies at no cost.",
+      "kind": "fact",
+      "topic": "offer",
+      "source_url": "https://models.adventuresincre.com/",
+      "source_excerpt": "The A.CRE Model Hub is a free resource...with 60+ downloadable real estate Excel models, 30+ tutorial articles & videos, and 15 practice case studies",
+      "confidence": 0.95
+    },
+    {
+      "statement": "Michael Blank's Syndicated Deal Analyzer (SDA) is a one-time $249 purchase, no subscription, works in Excel or Google Sheets.",
+      "kind": "fact",
+      "topic": "offer",
+      "source_url": "https://www.syndicateddealanalyzer.com/",
+      "source_excerpt": "this product has a one-time price of $249...you can use the Syndicated Deal Analyzer with either Google Sheets or Microsoft Excel",
+      "confidence": 0.95
+    },
+    {
+      "statement": "SDA's $249 bundle includes 37 training videos (370 min), a Word deal-package template, 2 case-study videos, a 39-page eBook, and a 30-day refund.",
+      "kind": "fact",
+      "topic": "offer",
+      "source_url": "https://www.syndicateddealanalyzer.com/",
+      "source_excerpt": "37 game-changing training videos, 370 minutes...Bonus: high-impact Deal Package Word Template...39-Page eBook...30-day money-back guarantee",
+      "confidence": 0.9
+    },
+    {
+      "statement": "SDA's own marketing claims '$1.5B Real Estate Purchased,' '41,014 Total Units Purchased,' and '1,000+ Users' globally.",
+      "kind": "fact",
+      "topic": "economics",
+      "source_url": "https://www.syndicateddealanalyzer.com/",
+      "source_excerpt": "$1.5B Real Estate Purchased By Students, 41,014 Total Units Purchased, 1,000+ Users Of the SDA globally.",
+      "confidence": 0.7
+    },
+    {
+      "statement": "SDA explicitly excludes deal-specific underwriting or personalized investment analysis from its support scope.",
+      "kind": "fact",
+      "topic": "fulfillment",
+      "source_url": "https://www.syndicateddealanalyzer.com/",
+      "source_excerpt": "Our support does not extend to deal-specific underwriting or personalized investment analysis. For that level of guidance, please contact...",
+      "confidence": 0.9
+    },
+    {
+      "statement": "Underwriting-template sellers likely draw this support boundary (formulas only, no deal/tax advice) deliberately to limit liability for investment guidance.",
+      "kind": "inference",
+      "topic": "legal",
+      "source_url": "https://www.syndicateddealanalyzer.com/",
+      "source_excerpt": "Our support does not extend to deal-specific underwriting or personalized investment analysis.",
+      "confidence": 0.55
+    },
+    {
+      "statement": "Support for a spreadsheet product centers on formula/technical questions and version updates, not deal analysis, per SDA's stated support scope.",
+      "kind": "fact",
+      "topic": "fulfillment",
+      "source_url": "https://www.syndicateddealanalyzer.com/",
+      "source_excerpt": "Technical Support, Access to the program and training materials, Functionality and updates to the SDA tool",
+      "confidence": 0.8
+    },
+    {
+      "statement": "Chris Jackson's 'Synthesis' multifamily analyzer is sold bundled with a $497 six-hour course; buying the course tier includes the model at no extra cost.",
+      "kind": "fact",
+      "topic": "offer",
+      "source_url": "https://www.themultifamilyanalyzer.com/",
+      "source_excerpt": "Underwrite multifamily deals faster...for $497 choose the 6 hour course option and get Synthesis at no cost!",
+      "confidence": 0.85
+    },
+    {
+      "statement": "A 2021 BiggerPockets thread names at least 8 named free/paid underwriting-model alternatives (SDA, Chris Jackson, James Eng, Justin Kivel/Udemy, Rob Beardsley, David Toupin, A.CRE, GetREFM).",
+      "kind": "fact",
+      "topic": "competition",
+      "source_url": "https://www.biggerpockets.com/forums/432/topics/922556-underwriting-excel-template",
+      "source_excerpt": "Chris Jackson has a great MF UW analyzer...Michael Blank has his popular SDA...Rob Beardsley...David Toupin (Obsidian Capital)...Adventures in CRE",
+      "confidence": 0.9
+    },
+    {
+      "statement": "A BiggerPockets thread cites Rob Beardsley's Lone Star Capital underwriting model as a free 'model giveaway' rather than a paid product.",
+      "kind": "fact",
+      "topic": "acquisition",
+      "source_url": "https://www.biggerpockets.com/forums/432/topics/922556-underwriting-excel-template",
+      "source_excerpt": "Rob Beardsley (https://lonestarcapgroup.ac-page.com/model-giveaway)",
+      "confidence": 0.8
+    },
+    {
+      "statement": "Multi-year, recurring BiggerPockets/Reddit threads (2018-2026) asking 'does anyone have an underwriting template' show durable, unmet DIY-investor demand.",
+      "kind": "inference",
+      "topic": "customer",
+      "source_url": "https://www.reddit.com/r/CommercialRealEstate/comments/1f7ziml/multifamily_underwriting_excel_spreadsheet_tips",
+      "source_excerpt": "I'm wondering if anyone would share their spreadsheet they use for underwriting. I'm just learning and want to build my own.",
+      "confidence": 0.75
+    },
+    {
+      "statement": "A 2026 Reddit reply to a template request tells the asker to 'build your own' from free models (AdventuresCRE, BasicMultifamilyModel, LoneStar Cap, WSO), not buy one.",
+      "kind": "fact",
+      "topic": "customer",
+      "source_url": "https://www.reddit.com/r/CommercialRealEstate/comments/1msqkrs/does_anyone_have_an_underwriting_template_they",
+      "source_excerpt": "Build your own by using parts of models online from AdventuresCRE, BasicMultifamilyModel, LoneStar Cap, BOE Model Wall Street Oasis.",
+      "confidence": 0.8
+    },
+    {
+      "statement": "An attorney/pro member on BiggerPockets recommends Adventures in CRE's free templates in direct response to a request for an Excel underwriting spreadsheet.",
+      "kind": "fact",
+      "topic": "acquisition",
+      "source_url": "https://www.biggerpockets.com/forums/32/topics/1068607-excel-spreadsheet-for-underwriting-multifamily-properties",
+      "source_excerpt": "I like Adventures in CRE, lots of free MF templates",
+      "confidence": 0.85
+    },
+    {
+      "statement": "One experienced investor still uses the free BiggerPockets calculator PDF output even on $5M+ deals when presenting to banks, valuing simplicity over sophistication.",
+      "kind": "fact",
+      "topic": "sales",
+      "source_url": "https://www.biggerpockets.com/forums/32/topics/1068607-excel-spreadsheet-for-underwriting-multifamily-properties",
+      "source_excerpt": "I still use the BP calculator for initial underwriting even on +$5M deals and that's what I send to the bank",
+      "confidence": 0.75
+    },
+    {
+      "statement": "BiggerPockets sells branded investment calculators (Rental, BRRRR, Fix-and-Flip, etc.) via a paid Pro/Business membership with 7-day trial, pitched as 'no spreadsheet required.'",
+      "kind": "fact",
+      "topic": "acquisition",
+      "source_url": "https://www.biggerpockets.com/investment-calculators",
+      "source_excerpt": "BiggerPockets' calculators help you crunch the numbers on a deal in minutes—no spreadsheet required. Start 7 day free trial",
+      "confidence": 0.9
+    },
+    {
+      "statement": "DealCheck markets itself against static spreadsheets directly ('Say goodbye to spreadsheets'), competing on speed/comps/data-pull rather than price.",
+      "kind": "fact",
+      "topic": "competition",
+      "source_url": "https://dealcheck.io/features",
+      "source_excerpt": "Say goodbye to spreadsheets. DealCheck is the only property analysis software you'll ever need.",
+      "confidence": 0.85
+    },
+    {
+      "statement": "Tactica RES gives away a free Multifamily Proforma Excel template as a lead magnet before selling its paid tools ('not ready to commit... check out our Free...Template').",
+      "kind": "fact",
+      "topic": "acquisition",
+      "source_url": "https://www.tacticares.com/blog-feed/multifamily-redevelopment-proforma-excel-template",
+      "source_excerpt": "If you are looking for a new financial model but are not ready to commit, I recommend checking out our Free Multifamily Underwriting Template.",
+      "confidence": 0.85
+    },
+    {
+      "statement": "A digital-product marketing blog claims real estate is one of Etsy's highest-value spreadsheet niches with an above-average price point.",
+      "kind": "estimate",
+      "topic": "economics",
+      "source_url": "https://plr.plannerforall.com/realtor-spreadsheets-to-sell-on-etsy",
+      "source_excerpt": "Real estate is one of the highest-value niches in the spreadsheet category...average price point for real estate spreadsheets on Etsy is significantly higher",
+      "confidence": 0.4
+    },
+    {
+      "statement": "A real-estate content site estimates 'professional' downloadable multifamily underwriting spreadsheets sell for $100-$500 per license.",
+      "kind": "estimate",
+      "topic": "economics",
+      "source_url": "https://www.kdsdevelopment.net/articles/multifamily-underwriting-spreadsheet-model-analyze-apartment-buildings",
+      "source_excerpt": "you download a professional model for $100–$500 and you're underwriting deals within hours",
+      "confidence": 0.4
+    },
+    {
+      "statement": "The CRE underwriting template category spans a wide price ladder: $0-$30 DIY/Etsy-low, $29-$119 Etsy mid, and $250-$1,000+ boutique/course-bundled.",
+      "kind": "inference",
+      "topic": "offer",
+      "source_url": "https://www.adventuresincre.com/product/all-in-one-model",
+      "source_excerpt": "similar real estate DCF models sell for $300 – $1,000+ per license",
+      "confidence": 0.6
+    },
+    {
+      "statement": "CSSI (Dustan's employer) publishes its own free public 'Cost Segregation Calculator' online as a lead-gen tool ahead of its paid engineering studies.",
+      "kind": "fact",
+      "topic": "competition",
+      "source_url": "https://cssiservices.com/cost-segregation-calculator",
+      "source_excerpt": "Cost Segregation Savings Calculator...Simply enter your property information below to receive an estimate of potential tax savings.",
+      "confidence": 0.9
+    },
+    {
+      "statement": "CSSI's calculator page explicitly discloses the estimate 'does not constitute an actual cost segregation study' or tax advice, a disclaimer pattern any DIY cost-seg tab would need.",
+      "kind": "fact",
+      "topic": "legal",
+      "source_url": "https://cssiservices.com/services/cost-segregation",
+      "source_excerpt": "The calculator assumes current tax laws and does not constitute tax advice.",
+      "confidence": 0.9
+    },
+    {
+      "statement": "CSSI's paid cost-segregation studies generally start 'from $2,500 and up' per commercial property.",
+      "kind": "fact",
+      "topic": "economics",
+      "source_url": "https://cssiservices.com/service/cost-segregation",
+      "source_excerpt": "For most commercial properties, the fee generally ranges from $2,500 and up.",
+      "confidence": 0.85
+    },
+    {
+      "statement": "A cost-seg/depreciation tab in Dustan's template would functionally duplicate CSSI's own free calculator, raising an employer-conflict question even though it targets a different sales channel.",
+      "kind": "inference",
+      "topic": "competition",
+      "source_url": "https://cssiservices.com/cost-segregation-calculator",
+      "source_excerpt": "Our Cost Segregation Calculator helps commercial property owners understand the potential tax benefits of accelerated depreciation.",
+      "confidence": 0.55
+    },
+    {
+      "statement": "A cost-seg tab that outputs a specific dollar tax-savings figure risks reading as unlicensed tax advice, the same reason CSSI's own calculator disclaims 'not tax advice.'",
+      "kind": "inference",
+      "topic": "legal",
+      "source_url": "https://cssiservices.com/cost-segregation-study-nuances",
+      "source_excerpt": "A legitimate cost segregation study isn't just a spreadsheet exercise. It requires a physical inspection of the property...",
+      "confidence": 0.6
+    },
+    {
+      "statement": "CSSI's own content frames spreadsheet-only cost-seg estimates as a 'DIY Trap' lacking the required engineering/physical inspection, undercutting a spreadsheet-only cost-seg selling point.",
+      "kind": "fact",
+      "topic": "offer",
+      "source_url": "https://cssiservices.com/cost-segregation-study-nuances",
+      "source_excerpt": "Here's what a DIY approach typically misses: Engineering analysis. A legitimate cost segregation study isn't just a spreadsheet exercise.",
+      "confidence": 0.85
+    },
+    {
+      "statement": "A rough cost-seg 'should I get a real study' screener tab is more defensible than a full tax-savings calculator, and could double as a referral-fee funnel back to CSSI.",
+      "kind": "inference",
+      "topic": "offer",
+      "source_url": "https://cssiservices.com/cost-segregation-study-nuances",
+      "source_excerpt": "Tax software and online calculators have made self-service feel approachable. And for simple tax situations, they often are.",
+      "confidence": 0.5
+    },
+    {
+      "statement": "Dustan's 60 brokers + 56 CPAs are professional intermediaries, not end-buyers of a $29-$119 DIY spreadsheet; converting them likely needs a co-branded/referral angle, not direct sale.",
+      "kind": "inference",
+      "topic": "acquisition",
+      "source_url": "session:factory.claims (existing scout claim on referral_contacts, extended here)",
+      "source_excerpt": "public.referral_contacts holds 212 contacts (60 brokers, 56 CPAs); the only owned list with real reach today.",
+      "confidence": 0.6
+    },
+    {
+      "statement": "Competitors bundle the spreadsheet with training video, a Word template, or a paid course (SDA, Synthesis, A.CRE), meaning a bare Etsy spreadsheet is the market's commodity/low-differentiation tier.",
+      "kind": "inference",
+      "topic": "sales",
+      "source_url": "https://www.syndicateddealanalyzer.com/",
+      "source_excerpt": "37 game-changing training videos...Bonus: high-impact Deal Package Word Template",
+      "confidence": 0.65
+    },
+    {
+      "statement": "Building a competitive NOI/cap-rate/DSCR/IRR/sensitivity Excel model from scratch is a multi-day-to-multi-week effort for a CRE-literate builder, given competitor scope.",
+      "kind": "estimate",
+      "topic": "fulfillment",
+      "source_url": "https://www.adventuresincre.com/all-in-one-underwriting-model-for-real-estate-development-and-acquisition",
+      "source_excerpt": "a robust Excel alternative to ARGUS DCF...advanced modules for various property types, financing structures, and underwriting assumptions",
+      "confidence": 0.45
+    },
+    {
+      "statement": "Michael Blank sells the SDA as one entry product inside a larger mentoring/investor-club ecosystem — the spreadsheet funnels into syndication coaching.",
+      "kind": "fact",
+      "topic": "history",
+      "source_url": "https://themichaelblank.com/podcasts/session345-3",
+      "source_excerpt": "Learn More About Michael's Mentoring Program...Buy Michael's Syndicated Deal Analyzer...Join the Nighthawk Equity Investor Club",
+      "confidence": 0.8
+    },
+    {
+      "statement": "The smallest viable spreadsheet needs NOI/cap-rate/DSCR/cash-on-cash tabs, Excel+Sheets compatibility, and some walkthrough, since every named competitor offers all three.",
+      "kind": "inference",
+      "topic": "offer",
+      "source_url": "https://www.syndicateddealanalyzer.com/",
+      "source_excerpt": "Excel/Google Sheets file for seamless integration...Transparent and customizable formulas",
+      "confidence": 0.7
+    },
+    {
+      "statement": "SEO blog posts ('Multifamily Underwriting Spreadsheet...Guide') rank for buyer search terms, showing organic content, not paid ads, is the current discovery channel.",
+      "kind": "fact",
+      "topic": "acquisition",
+      "source_url": "https://www.kdsdevelopment.net/articles/multifamily-underwriting-spreadsheet-model-analyze-apartment-buildings",
+      "source_excerpt": "Multifamily Underwriting Spreadsheet: Model & Analyze Apartment Buildings...Master multifamily underwriting with our complete spreadsheet guide",
+      "confidence": 0.55
+    },
+    {
+      "statement": "A comparable multi-niche Etsy shop (ShopRShop) shows ~97.3k sales across 471 listings, implying a single finance-template listing likely sells tens-to-low-hundreds/year, not thousands.",
+      "kind": "estimate",
+      "topic": "economics",
+      "source_url": "https://www.etsy.com/shop/ShopRShop",
+      "source_excerpt": "97.3k Sales, 4.8 (7.2k) Rating, 4 years on Etsy...All (471)",
+      "confidence": 0.3
+    },
+    {
+      "statement": "Named competitor products use trademarked/branded process names (SDA's '10 Minute Offer,' Tactica's branded proforma line) that a close visual/structural copy could infringe.",
+      "kind": "inference",
+      "topic": "legal",
+      "source_url": "https://themichaelblank.com/syndicated-deal-analyzer",
+      "source_excerpt": "Analyze Deals and Make Offers in Just 10 Minutes...3 Steps to the 10 Minute Offer",
+      "confidence": 0.4
+    }
+  ],
+  "blocks": {
+    "customer": {
+      "segments": "Self-taught DIY multifamily/CRE investors who ask forums for a template rather than build one [15,16]; professional intermediaries (brokers/CPAs) who are not end-buyers themselves [33]",
+      "unmet_demand_signal": "Recurring 2018-2026 forum threads show durable but price-sensitive demand that defaults to free/DIY first [15,16]"
+    },
+    "offer": {
+      "price_ladder": "Free DIY/A.CRE pay-what-you-can [3,5,24]; $29-$119 Etsy/Gumroad mid-tier; $249-$497 course-bundled boutique tools [6,7,12]; $300-$1,000+ anchor for full DCF models [3,24]",
+      "bundling_pattern": "Winners bundle video training, a Word/case-study asset, and a refund guarantee, not just the spreadsheet [7,34]",
+      "smallest_viable_version": "See top-level field; minimum viable = core tabs + Excel/Sheets + a walkthrough [38]",
+      "cost_seg_tab": "Legitimate only as a rough screener/lead funnel, not a tax-savings calculator, per CSSI's own DIY-trap messaging [29,30,31]"
+    },
+    "acquisition": {
+      "channels_observed": "Organic SEO content and forum word-of-mouth dominate; no evidence of paid-ad-driven CRE template sales [17,20,38]",
+      "owned_list_mismatch": "Broker/CPA contact list is an intermediary channel needing a referral/co-brand angle, not a direct Etsy-style funnel [33]"
+    },
+    "sales": {
+      "conversion_pattern": "Buyers often settle for the free/simple option (BiggerPockets PDF) even on large deals, suggesting credibility and speed beat sophistication [18]",
+      "commodity_risk": "A bare spreadsheet without video/course bundling sits in the market's low-differentiation tier [34]"
+    },
+    "fulfillment": {
+      "build_effort": "Multi-day-to-multi-week build effort for a CRE-literate builder to match named competitors' scope [35]",
+      "support_boundary": "Winners scope support to formulas/updates only, explicitly excluding deal-specific or tax advice [9,10,11]"
+    },
+    "economics": {
+      "revenue_model_of_leaders": "Free-template leaders (A.CRE, Tactica, Lone Star) monetize via a paid course/service/capital-raising funnel, not the template itself [4,20,21]",
+      "cssi_paid_study_anchor": "CSSI's own paid studies run $2,500+ per property, dwarfing spreadsheet revenue and reframing a cost-seg tab as a lead funnel [27]",
+      "volume_caution": "Etsy per-listing volume for a niche finance template is plausibly tens-to-low-hundreds of sales/year based on a comparable multi-niche shop's spread [40]"
+    },
+    "history": {
+      "acre_origin": "A.CRE started as two grad students' free knowledge-sharing side project, monetized years later via a paid course [1,2]",
+      "sda_origin": "SDA is one entry product inside Michael Blank's broader syndication-education/mentoring business [36]"
+    }
+  },
+  "smallest_viable_version": "A single Excel/Google Sheets workbook with NOI, cap rate, DSCR, cash-on-cash, and IRR tabs plus a basic sensitivity table, sold once for roughly $29-$79 with a short walkthrough (video or PDF) but no course bundle, formula support only, and no tax-advice-bearing cost-seg output. Given how many free, well-marketed substitutes already exist (A.CRE, Lone Star, BiggerPockets, Tactica), the realistic smallest viable business is a low-volume, SEO/forum-discovered side product rather than a scalable income stream, unless paired with a differentiator like a broker/CPA referral funnel that Dustan already has and competitors do not.",
+  "disagreements": [
+    "Existing scout claims price two Etsy listings at $119 and ~$100 (SGD 99.63) while this research finds broader category anchors of $0 (A.CRE, Lone Star) and $249-$497 (SDA, Synthesis) — the $29-$119 Etsy band sits in the middle of a much wider ladder, not the market norm.",
+    "SDA's headline stats ('$1.5B purchased,' '41,014 units,' '1,000+ users') are the seller's own unverified marketing claims, not third-party-audited figures, so they should be treated as a ceiling/aspirational proxy, not a hard fact."
+  ],
+  "not_public": [
+    "Actual unit sales or revenue for any named Etsy/Gumroad CRE underwriting listing (Etsy does not disclose per-listing sales counts publicly).",
+    "Pinterest follower count and engagement for Dustan's own account.",
+    "Conversion rate or revenue Adventures in CRE, Lone Star Capital, or Tactica derive from their free-model funnels into paid courses/services.",
+    "Whether CSSI has any internal policy restricting employee side-businesses that touch cost segregation or depreciation content."
+  ]
+}
