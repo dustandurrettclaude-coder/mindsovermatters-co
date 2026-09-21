@@ -64,21 +64,26 @@ C. STRUCTURAL — ends the parity chase
       "Meeting of the Minds" update-evaluation skill (ruling 20) becomes the most important
       skill in the box. Version it and test it against a stale buyer install.
 
-D. RETIRE /close AS A RITUAL (after B2's automatic capture is PROVEN, not before)
-  The command goes optional; its seven jobs relocate:
-    1 session record / memos / skills_used   -> automatic (Claude Code: Stop/SessionEnd hook;
-                                                chat surfaces: write-as-you-go + reaper)
-    2 mark closed / heartbeat / lock / ptr   -> reap-abandoned-sessions (:15 hourly) becomes
-                                                the path, not the fallback
-    3 handoff emit                           -> disappears; session-init C4 retrieval pulls context
-    4 pending-confirmations tick list        -> dashboard + chat Done/Not-yet (ruling C-R1)
-    5 wrap (lessons)                         -> nightly Dream lane that PROPOSES lessons
-    6 reconcile                              -> cron
-    7 governor / self-verify                 -> receipt check, success AND failure (Lane M shape)
-  Rule: run both paths in parallel, measure what automatic missed vs a deliberate /close,
-  retire the ritual when the measured gap is zero. Keep /close as an optional "harvest now".
-  Caveat: Cowork/claude.ai have no hooks (memo: Cowork cannot read the installed skills
-  tree) — score memory per surface, not one number.
+D. /close STAYS — AUTOMATIC CAPTURE GOES UNDERNEATH IT (floor and ceiling)
+  Evidence from the scorecard: claude-mem is memory 9 / session 4 (automatic capture, no
+  routine). MOM is memory 6 / session 9 (routine, no automatic capture). They are different
+  things. Replacing /close with automation trades toward claude-mem's profile. Do not.
+  - FLOOR = automatic capture. Its ONLY job is killing "forgot to close, lost the session".
+      session record / memos / skills_used -> written as you go (Claude Code: Stop/SessionEnd
+      hook; chat surfaces: incremental writes + reap-abandoned-sessions as the path)
+      mark closed / heartbeat / lock / ptr  -> the reaper, not the user
+  - CEILING = /close, unchanged in purpose. It PROMOTES the automatic record into
+      understanding: wrap (lessons with the user present), curated memory, the handoff
+      carrying intent and next action, the pending-confirmations tick moment, the
+      governor/self-verify honesty checkpoint. None of these are automatable without losing
+      what earns the session-routine 9.
+  - What changes in /close: only the fear. It stops being mandatory-or-lose-everything.
+    Lite becomes near-instant because the record already exists and close just promotes it.
+  - Analogue: Perplexity threads auto-save (floor); Pages is the deliberate act that makes
+    a durable artifact (ceiling). Same shape.
+  - Product line: "It remembers everything on its own. When you close, it understands the
+    session." Moves memory AND session, instead of trading one for the other.
+  - Caveat still holds: Cowork/claude.ai have no hooks — score the floor per surface.
 
 E. EXPLICITLY DEFERRED — do not start, do not delete
   E1. spec-capability-shelf.md v0.3 (retrieval-over-residence for Dustan's own 86 skills).
