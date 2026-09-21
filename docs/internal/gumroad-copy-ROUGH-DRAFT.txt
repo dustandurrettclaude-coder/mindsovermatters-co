@@ -1,0 +1,175 @@
+MINDS OVER MATTERS — GUMROAD COPY
+STATUS: ROUGH DRAFT. NOT FINAL. Do not post.
+Drafted 2026-09-21 against v4.0 as planned. Revisit when the cut is verified and the
+claims ledger is regenerated. Everything in [brackets] is unverified or undecided.
+
+GATES BEFORE POSTING
+  1. v4.0 claims ledger (regenerated; do not reuse rows 39/84 as worded in cut #1)
+  2. Brand Rules one-page (not read by the drafting session)
+  3. ship-gate internal-vocabulary scan (no brain / dream / lane / spinoff / close)
+  4. Refund policy decided
+  5. Parallel-agents claim qualified by surface (Claude Code + Cowork; not web chat)
+  6. Dashboard kickoff claim confirmed against the cut (rulings B-R4, C-R4)
+
+=====================================================================
+PUNCH LINE
+=====================================================================
+
+  Mind over chatter.
+
+=====================================================================
+SUMMARY (Gumroad short description)
+=====================================================================
+
+Minds Over Matters gives Claude a working memory of your actual work — then
+consolidates it: every open item gets checked against real evidence, what's proven
+gets closed, what's unfinished gets carried forward, and what's resolved gets cleared.
+It plans from what it already knows instead of from a blank page, executes with proof
+of done, and keeps everything on your mind on one dashboard you can review in a glance —
+with the line that starts your next session already waiting. Out of chat, never out of
+mind.
+
+=====================================================================
+ONE-LINER (bio / social / top of page)
+=====================================================================
+
+It remembers your work, consolidates it, plans from it, proves it's done, and keeps it
+all on one board — so nothing on your mind is ever out of sight.
+
+Alt: Never lose your mind. Or your place.
+
+=====================================================================
+POSITIONING STATEMENT
+=====================================================================
+
+Minds Over Matters is a working practice for people who run real work through Claude.
+It remembers what you were doing across every chat, organizes it into goals, parked work
+and the steps only you can take, plans from what it already knows instead of from zero,
+executes with saved workflows and parallel agents, and puts all of it on one dashboard —
+built from your own database — where you can review everything in a glance, pick up
+exactly where you left off, and nothing counts as done until it's proved.
+
+=====================================================================
+FULL PAGE — draft 2
+=====================================================================
+
+MINDS OVER MATTERS
+Mind over chatter.
+Remember · Organize · Plan · Execute · See it all · Prove
+
+You've had this happen. You spend an hour with Claude working something out. Tomorrow
+you open a new chat and it's gone — or it "remembers" a few facts about you but has no
+idea what was open, what you'd parked, or what you promised to do yourself. So you
+re-explain. Again.
+
+Claude's memory is real, and it's good at what it does: it remembers things about you.
+What it doesn't do is run your work. It never holds a goal open until it's finished. It
+never hands your next conversation a brief. It never shows you everything in one place
+so you can see, in ten seconds, where you actually stand.
+
+That's what Minds Over Matters does.
+
+IT REMEMBERS YOUR WORK.
+Not just facts about you — the work itself. Every session opens with your open goals and
+last decisions already loaded. Close it and it writes the record, pulls out the lessons,
+and leaves a brief for next time. No chat ever starts from zero. Keep it in mind.
+Literally.
+
+IT CONSOLIDATES IT.
+Every open item gets checked against real evidence — a query, a file that should exist,
+a box only you can tick. What's proven gets closed. What's unfinished gets carried into
+your next session. What was abandoned gets parked with its own finish line. What's
+resolved gets cleared — never deleted, so nothing is ever lost, just settled. Never lose
+your mind. Or your place.
+
+IT ORGANIZES IT.
+Goals in one place, sorted by the areas you actually work in. Too big for today? Park it
+— it comes back when you're ready. The steps only you can take — a click, an upload, a
+decision — go on a tracker Claude keeps showing you until they're genuinely done.
+
+IT PLANS FROM WHAT IT ALREADY KNOWS.
+Because the memory is there, planning starts from your real situation, not a blank page.
+Scope a task before you build it. Refine a plan until the holes are gone. Workflows
+you've run before come back as an offer when a session looks like one — never forced on
+you.
+
+IT EXECUTES WITH MORE THAN ONE PAIR OF HANDS.
+Fan a big job out to parallel agents that each come back with conclusions, not
+transcripts. The right model gets picked for each piece of work — heavy thinking where
+it matters, cheap and fast where it doesn't.
+[qualify by surface — see gate 5]
+
+YOU CAN SEE ALL OF IT — AND START FROM IT.
+One dashboard, built straight from your own database, shows everything in the mind:
+every goal, every parked thread, every step waiting on you, every saved workflow, every
+skill in plain English. Open it in the morning and review the whole board in a glance.
+Then pick up where you left off — the dashboard hands you the line that starts your next
+session with full context, so continuity is a click, not a memory test. A state of mind
+you can actually see.
+[confirm kickoff-from-dashboard — see gate 6]
+
+AND "DONE" MEANS SOMETHING.
+Every goal carries a check, and it closes when the check passes — not when Claude says
+so. You'll never find out three weeks later that "done" meant "I wrote a paragraph about
+it." Peace of mind, with receipts.
+
+IT'S YOURS.
+The whole record lives in a free database account you own. Export it in one command, any
+time. No vendor is holding your work.
+
+WHY THIS AND NOT SOMETHING FREE
+Plenty of free tools give Claude a better memory, and some are excellent. Remembering is
+the easy part. None of them consolidate the work, plan from it, run it with parallel
+agents, put the whole picture on one board you can review in seconds, or hold a goal
+open until it's proved. That's the difference between a chat that feels productive and
+work that actually gets finished.
+
+WHAT'S INCLUDED
+  - [N] skills that install into your existing Claude — the goal board, session routine,
+    parked work, the tracker, parallel agents, saved workflows, backup, audit and repair
+  - The dashboard
+  - A [28-page] Owner's Handbook and a step-by-step Setup Guide
+  - [Free updates for the 4.x line]
+
+HONEST ABOUT SETUP
+This isn't a one-click install. You'll create a free database account and install the
+skills — the Setup Guide walks you through every step, and you don't need to write code.
+Plan on [X minutes]. If that's more than you want, this isn't for you yet, and that's
+fine.
+
+WHO IT'S FOR
+People who use Claude for real work, most days, and are tired of managing it in their
+head. Not developers — though developers are welcome. If you've ever lost a thread
+between chats, this was built for you.
+
+$79, once. Works with the Claude plan you already have.
+[Free Core tier — if live at posting]
+[Refund policy — undecided; do not post without one]
+
+Minds Over Matters is independent and not affiliated with, endorsed by, or sponsored by
+Anthropic.
+
+=====================================================================
+PUN BANK (one per line, never two)
+=====================================================================
+  Mind over chatter.                          — headline
+  Never lose your mind. Or your place.        — consolidation / parked work
+  Peace of mind, with receipts.               — proof
+  Out of chat, never out of mind.             — closer
+  Keep it in mind. Literally.                 — memory
+  Mind the gap between chats.                 — session routine
+  A state of mind you can actually see.       — dashboard
+  It minds your business.                     — practice / alt opener
+  Everything on your mind, in one mind.       — dashboard / alt opener
+  Great minds finish alike.                   — proof, cheeky
+  Change your mind — it'll keep up.           — updates
+
+=====================================================================
+CLAIMS DISCIPLINE (rule 3)
+=====================================================================
+  - No sales, users, testimonials, "trusted by". Track record is unproven.
+  - No "no setup" / "no technical steps". Setup scored 6 on the plan.
+  - "Consolidates" = checks, closes, carries, clears. NOT "auto-merges memory".
+  - "Clears" / "resolves", never "removes" / "deletes". Nothing hard-deletes.
+  - Free-tool comparison names the category, not products.
+  - "Remembers your work", not "remembers everything".
