@@ -1,0 +1,126 @@
+HANDOFF — post-v4.0 improvement plan for Minds Over Matters
+From: evaluation session 2026-09-21 (Perplexity + Poe teardown vs. the current system)
+To: the writer/orchestrator chat running the v4.0 parity release
+
+RULE 0 — TIMING. Nothing below starts before v4.0 cut #2 is verified clean and Dustan has
+approved it. Do NOT interrupt the cut. Read this now, queue it, act after ship. Evaluate each
+item against the parity plan and fold accepted ones into the workflow as v4.1 / v4.2 lanes.
+
+SOURCES TO READ FIRST (all measured, not guessed)
+- Scorecard: https://claude.ai/artifact/TKuNypBcDaez8cmewMox1i (18 Sep 2026)
+- Branch claude/perplexity-poe-evaluation-gef5ni in dustandurrettclaude-coder/mindsovermatters-co,
+  PR #2 (DO NOT MERGE — repo publishes to mindsovermatters.co):
+    docs/internal/perplexity-poe-evaluation.md   (the teardown + measured baseline)
+    docs/internal/spec-capability-shelf.md       (v0.3, DEFERRED — see section E)
+- Live spec: 1 BRAIN/Specs & Setup/2026-09-15-brain-graph-dream/plan.md v0.6 (Phase 1 active)
+- Parity spec: 1 BRAIN/Specs & Setup/2026-09-18-mom-parity-release/plan.md
+- Prior shelving decision: 1 BRAIN/Specs & Setup/SPEC-consistent-system-plan-2026-09-06.md
+
+SCORECARD MATH (its own weights, its own numbers)
+  MOM v4.0 planned 7.3 | Claude memory+Projects 7.1 | ChatGPT 7.0 | Notion 6.4 |
+  MOM today v3.9.2 6.4 | claude-mem 5.9 | Spec Kit 5.1 | Second Brain kit 5.0 | Mem0 4.7
+  v4.0 leads by 0.25. Ceiling if the three weak 15-weight lines reach 9: ~8.35.
+  With track record and price later: ~8.6-8.8.
+  Already maxed, do not spend hours here: goals 10, session 9, ownership 9.
+
+A. POSITIONING (copy, not code — can happen before ship)
+  A1. Stop pitching "memory". Memory is commoditised (free on every Claude/ChatGPT tier;
+      claude-mem ~94k stars). Pitch the PRACTICE: goals with proved done, session routine
+      and handoff, parked work, your own data. The scorecard's "where you beat them" cards
+      already say this; the description should match them.
+
+B. SCORECARD-MOVING WORK, ranked by weighted points (all post-v4.0)
+  B1. SETUP 6 -> 9 (+0.45). Largest, most controllable.
+      - No buyer-created database. No hand-installed skills. Deploy by address (Poe model:
+        a capability is live because something points at it, not because a file was carried
+        to a settings page).
+      - Fix the install-breaking gaps the 18 Sep parity reports found first (skills calling
+        tables the product never creates; lane-lock functions; policy_proposals table).
+      - MEASURE setup time on a clean account. Unmeasured = capped at 5 by the evidence ladder.
+  B2. MEMORY 7 -> 9 (+0.30). Order matters:
+      - FIRST automatic capture with no discipline required (claude-mem's edge). Today the
+        buyer must run /close; forget once and they conclude memory does not work.
+      - SECOND retrieval: pgvector (vector_installed is currently false) + Perplexity's
+        funnel — lexical and embedding scorers in parallel, fused, then a reranker; questions
+        decomposed into sub-queries.
+  B3. NO-TERMINAL 7 -> 9 (+0.30). No terminal anywhere in the happy path. Buyer-made
+      capabilities from a form (base model + instructions + attached knowledge), not a file.
+      Move work from chat into the dashboard.
+  B4. PRICE 6 -> 8 (+0.20). Free Core after the clean-install test (already ruled). Neutralises
+      the free competitors; $79 keeps margin.
+  B5. TRACK RECORD 4 -> 7/8 (+0.30-0.40). Not engineerable. Ship, get users, support channel,
+      refund policy (undecided — decide it). Only lever is starting the clock sooner.
+  B6. THE GATE: ruling 27's timed clean install by a real second person. It is the UNLOCK,
+      not the last step — only it lets setup/no-terminal score above 5. Run it early, more
+      than once; trust the tester's number where it is lower.
+  B7. Re-score by ADDING a row "v4.0 shipped (measured)" beside "v4.0 (planned)". Never
+      edit the planned row to the target scenario. Never re-score on intent.
+
+C. STRUCTURAL — ends the parity chase
+  C1. Deploy-by-address (B1) is also what stops "bring the product to parity with my system"
+      recurring every six weeks. Once the thing at the address IS the product, there is no
+      parity release. Treat B1 as the highest-leverage item in this handoff for that reason.
+  C2. Update path for buyers: you cannot hand-install a fix into 100 machines. The
+      "Meeting of the Minds" update-evaluation skill (ruling 20) becomes the most important
+      skill in the box. Version it and test it against a stale buyer install.
+
+D. RETIRE /close AS A RITUAL (after B2's automatic capture is PROVEN, not before)
+  The command goes optional; its seven jobs relocate:
+    1 session record / memos / skills_used   -> automatic (Claude Code: Stop/SessionEnd hook;
+                                                chat surfaces: write-as-you-go + reaper)
+    2 mark closed / heartbeat / lock / ptr   -> reap-abandoned-sessions (:15 hourly) becomes
+                                                the path, not the fallback
+    3 handoff emit                           -> disappears; session-init C4 retrieval pulls context
+    4 pending-confirmations tick list        -> dashboard + chat Done/Not-yet (ruling C-R1)
+    5 wrap (lessons)                         -> nightly Dream lane that PROPOSES lessons
+    6 reconcile                              -> cron
+    7 governor / self-verify                 -> receipt check, success AND failure (Lane M shape)
+  Rule: run both paths in parallel, measure what automatic missed vs a deliberate /close,
+  retire the ritual when the measured gap is zero. Keep /close as an optional "harvest now".
+  Caveat: Cowork/claude.ai have no hooks (memo: Cowork cannot read the installed skills
+  tree) — score memory per surface, not one number.
+
+E. EXPLICITLY DEFERRED — do not start, do not delete
+  E1. spec-capability-shelf.md v0.3 (retrieval-over-residence for Dustan's own 86 skills).
+      Queue behind: (a) brain-graph-dream Phase 1 done_when returning true (two legs open:
+      dashboard_last_publish, connector_toggles 1 of 3); (b) reconciliation against the
+      consistent-system shelving decision ("SHELF 7 -> 35 installed"); (c) /spec-refine to
+      zero must-fix. Its own §9.5 says it is compatible but subordinate and not next.
+      Open decision only Dustan can make: policy 60 vs Tier S (a shelved procedure has no
+      install step).
+  E2. Effort tiers, per-claim entailment verdicts, dependency call caps, decision council,
+      publish-research-as-content. Sound engineering; none moves a scorecard line. v5+.
+
+F. DUSTAN'S OWN INSTANCE (separate from the product; unchanged by shipping v4.0)
+  Measured 2026-09-21 on project ompxlqmszgutlldtivph, 175 sessions since 2026-07-05:
+  - skill_registry 86 rows, install_confirmed true on 45. BUT 20 of the 41 "uninstalled" are
+    proven used (recall 31x, brain-changelog 23x, cp 19x, mark-done 18x...) — the FLAG is
+    wrong, not the skills. Fix the flags; delete nothing. 21 rows have zero uses in 175
+    sessions — review list, Dustan's call, no deletion without his yes.
+  - Version drift: recall 1.12.4 registered / 1.5 installed; mark-done 1.14.2 / 1.10;
+    brain-changelog 1.11 / 1.4; install-verify 1.1 / 1.0; token-footprint-audit 1.1 / 1.0.
+    ~30 installed rows say installed_version='unversioned'.
+  - sessions.skills_used: 525 of 532 recorded uses are meta/system skills, 7 are revenue
+    skills (caveat: only skill-mediated work is recorded). Recommendation: moratorium on new
+    meta-skills until v4.0 ships; add a cost line (spawns, tokens, wall-clock, shipped items)
+    to /close from public.delegations (61 rows, avg 167k tokens / 832 s per spawn).
+  - model_routing: 16 rows, 9 are retired n8n lanes, only 3 carry avg_tokens.
+  - Do not touch skill_registry while the current system-updating workflow is writing it.
+
+G. RULES FOR THE RECEIVING CHAT
+  - Evidence sets the ceiling (scorecard rubric). No score above 5 without proof; above 9
+    only from a stranger's clean install.
+  - Never modify the live scorecard or dashboard through the bridge; deliver edited HTML as
+    a file for Dustan to drop over the source (rule 6).
+  - Delete nothing without asking (rule 1). Every manual step Dustan must take gets a
+    pending_confirmations row surfaced the same turn (rule 8).
+  - Always recommend with ELI10. .txt + fenced block, never .md alone.
+  - The n8n MCP server failed to connect (404) in the evaluation session; nothing above
+    depends on it, but B1's "machines" (deterministic skills as code) will need a home —
+    Supabase edge functions are the fallback.
+
+WHAT TO RETURN
+  One numbered list: for each item in A-D, ACCEPT / DEFER / REJECT with one line of why, the
+  lane it folds into, and the weighted scorecard points it is expected to move. Then a
+  Done/Not-yet for Dustan on: positioning copy (A1), the free-Core trigger (B4), the refund
+  policy (B5), and the policy-60 ruling (E1).
