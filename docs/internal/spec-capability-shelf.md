@@ -1,16 +1,17 @@
 # Spec: Capability Shelf + Uniform Agent Envelope
 
-**Version:** 0.2 (refined)
+**Version:** 0.3 (refined against the live brain-graph-dream spec)
 **Date:** 2026-09-21
 **Status:** planning artifact. No implementation. Nothing in here has been executed.
 **Not for publication** — this repo publishes to mindsovermatters.co.
 
-**Changes from v0.1:** renamed the router (name collision with the existing `dispatch`
-skill); added the `skills_used` recording requirement that was a silent-failure chain;
-replaced the duplicate memory query with a call into `session-init`'s existing retrieval;
-added tier authority for `reconcile`; resolved the `dream_m()` node-kind question; added a
-cancellation contract; added a session-level budget ceiling; added §9, the Agent OS
-mapping. Policy 60 remains unresolved and is flagged as a decision, not silently patched.
+**Changes from v0.2:** §9 rewritten against the actual text of
+`1 BRAIN/Specs & Setup/2026-09-15-brain-graph-dream/plan.md` (v0.6), read 2026-09-21,
+replacing the generic "Agent OS" guess. Four consequences folded back into the spec body:
+the proposal channel is now `dream_proposals` rather than an invented one (§3.2, §4.2);
+`delegations` records failures and cancellations, not just returns (§3.4); `procedures`
+inherits the service_role-only RLS rule and the counts-only dashboard read (§2.3, §5); DDL
+sequences explicitly behind Phase 1 (§6). Policy 60 remains unresolved.
 
 ---
 
@@ -90,6 +91,19 @@ create table public.procedures (
 );
 ```
 
+```sql
+alter table public.procedures enable row level security;
+create policy service_role_only on public.procedures
+  for all to service_role using (true) with check (true);
+```
+
+> **v0.3 fix — RLS.** v0.2 omitted this. `procedures.body` holds full skill text, the same
+> secrecy class as `dream_proposals.proposal`, which the live spec protects absolutely:
+> *never a row policy on dream_proposals — RLS restricts rows, not columns or aggregates,
+> so any such policy hands anon the full jsonb of every row it matches.* `procedures` gets
+> the same treatment: service_role only, and any dashboard read goes through a SECURITY
+> DEFINER view returning counts, never bodies.
+
 `skill_registry` stays the source of truth for versioning and install state. No column is
 dropped anywhere in this spec.
 
@@ -129,7 +143,7 @@ rather than optional.
     { "claim": "...", "evidence": "file:line | table.column | url",
       "verdict": "supported | unsupported | not_found" }
   ],
-  "memory_writes": [ ],             // PROPOSED rows — the agent does not write them
+  "proposals": [ ],                 // public.dream_proposals rows (§4.2) — agent never applies
   "cost": { "tokens": 0, "tool_uses": 0, "duration_ms": 0 },
   "unknowns": [ ]
 }
@@ -157,7 +171,10 @@ carry measurements today; the envelope makes every spawn contribute one.
 
 ### 3.4 Recording — two writes, both mandatory
 
-1. **`public.delegations`** — one row per spawn on return. Already that table's purpose.
+1. **`public.delegations`** — one row per spawn, written on **return, failure, or
+   cancellation alike**. Modelled on Lane M, which catches its own exception and still
+   writes both receipts: a run that produced nothing must still be countable, or the cost
+   record silently under-reports exactly the spawns worth studying.
 2. **`public.sessions.skills_used`** — `shelf` appends the procedure name on every shelved
    invocation.
 
@@ -198,19 +215,35 @@ Agents do not query the brain. The parent assembles a **memory packet**.
 Rationale for packets over access: 61 spawns × free query access is how an approval loop
 happens, and an agent that queries freely cannot be held to a token budget.
 
-### 4.2 Write — propose, never apply
+### 4.2 Write — propose into the channel that already exists
 
-`grants` defaults to empty. Agents return `memory_writes` as **proposals**; the main thread
-applies them.
+`grants` defaults to empty. Agents never apply a change.
 
-> **v0.2 fix — permissions.** v0.1 had `write_scope: "none"`, a binary. That is not a
-> permission model. `grants` is an explicit capability list (e.g.
-> `["read:deploy_memory:cssi", "propose:spinoffs"]`). Empty by default; a grant is named or
-> it does not exist.
+> **v0.3 fix — do not invent a second proposal channel.** v0.2 returned `memory_writes[]`,
+> a new shape. `public.dream_proposals` already exists, is already wired to the dashboard's
+> Diff pane, and already carries the review lifecycle (`verdict`, `reviewed_by_session`,
+> `executed_at`, `execution_evidence`, plus the `dream_exec_needs_accept` constraint that
+> makes executing an unaccepted proposal impossible). Agents write **that** row shape:
+>
+> ```
+> lane · op (promote|update|delete|resolve|edge|feature) · ref_table · ref_id
+> base_sha256 (file targets only) · proposal {before, after, why, dependencies[]}
+> created_by
+> ```
+>
+> A second channel would mean a second review surface, a second diff renderer, and a second
+> place for a verdict to be lost.
 
-This is not a new principle — it is the rule already written on `public.dream_proposals`:
-*the dream proposes, Claude disposes; no lane changes a status, merges a row, or deletes
-anything.* The envelope extends that existing rule to all agents.
+> **v0.3 fix — permissions.** v0.1 had `write_scope: "none"`, a binary. `grants` is an
+> explicit capability list (e.g. `["read:deploy_memory:cssi", "propose:spinoffs"]`). Empty
+> by default; a grant is named or it does not exist.
+
+Rationale for packets over query access (§4.1): 61 spawns × free query access is how an
+approval loop happens, and an agent that queries freely cannot be held to a token budget.
+
+This is the house principle, quoted from the spec's §0: **THE DREAM PROPOSES, CLAUDE
+DISPOSES** — no background pass changes a goal status, merges a row, or deletes anything.
+The envelope extends it from the two lanes to every model-backed agent.
 
 `brain_edges` stays derived and rebuildable by `public.dream_m()`. No agent writes edges.
 
@@ -241,6 +274,11 @@ Gains, once the columns exist:
 2. **Cost per capability** — join `delegations` → `model_routing.task_type` → catalog name.
 3. **Last actually used** — from `skills_used`, surfacing the 21 never-used without an audit.
 
+**Two house rules this inherits.** (1) *Buttons never write* — every dashboard control
+copies a one-line instruction for Claude Code to run; no pane added here gets a write path.
+(2) The dashboard is delivered **as a file to drop over the source**, never through
+`update_artifact` on the bridge.
+
 `skill-packager` gains one responsibility: set `tier` and, for Tier S, write
 `procedures.body` alongside the existing catalog upsert.
 
@@ -261,6 +299,11 @@ No phase deletes anything. Each phase is independently abandonable.
   change or fix some of these findings.
 - **Phase 1 — Columns.** Add `tier`, `body_ref`, create `procedures`. Classify all 84
   catalog rows on paper. **No behaviour change.**
+  **DDL ordering is not negotiable.** Ruling P2 fixes the order: verified backup first,
+  then the already-planned DDL. brain-graph-dream Phase 1 has two `done_when` legs still
+  false. Its own sequencing note records that writing a clause before its table exists
+  raises 42P01 rather than returning false — the failure mode is real and already cost
+  them a round. This spec's DDL queues **after** Phase 1 closes, never beside it.
 - **Phase 2 — Shadow.** `shelf` matches every user turn against `skill_catalog.triggers`
   and logs what it *would* route beside what actually fired. Changes nothing.
   **Gate: poor match accuracy over ~20 sessions ⇒ stop and abandon §2.**
@@ -297,58 +340,85 @@ No phase deletes anything. Each phase is independently abandonable.
 
 ---
 
-## 9. Fit with the Agent OS idea
+## 9. Fit with brain-graph-dream (the real spec)
 
-> **ASSUMPTION, FLAGGED.** "Agent OS" appears nowhere in the brain — no match across 542
-> memos, 189 spinoffs, 61 policies, or 23 dream proposals. This section is written against
-> the generic reading: *a persistent operating layer that runs agents as managed processes
-> with scheduling, permissions, shared memory, and a package/capability system.* If your
-> idea differs, this section is the part to correct first.
+> **v0.3.** v0.2 guessed at "Agent OS". The actual system is
+> `1 BRAIN/Specs & Setup/2026-09-15-brain-graph-dream/plan.md` **v0.6**, read in full on
+> 2026-09-21, whose parent is **multi-model-brain v0.3**
+> (`1 BRAIN/Specs & Setup/2026-09-11-multi-model-brain/`, which holds the paste lane,
+> `ai_results` and the Studio tab). Phase 1 is live. This section is now an assessment, not
+> an analogy.
 
-### 9.1 The mapping is unusually clean
+### 9.1 What is already built
 
-| OS concept | This spec |
-|---|---|
-| Process | an agent spawn |
-| Process control block | the §3.1 envelope |
-| Syscall boundary | §4.1/§4.2 — agents request, the parent acts |
-| Scheduler / priority | `model_routing` + §3.3 tiers |
-| Memory protection | memory packets; no direct brain access |
-| Capabilities | §4.2 `grants` |
-| Filesystem | `skill_catalog` (index) + `procedures` (bodies) |
-| Loader / exec | `shelf` |
-| Package manager | `skill-packager` |
-| init / shutdown | `session-init` / `close` |
-| Audit log | `delegations` |
-| Advisory locks | `active_sessions` (60-min TTL) — already built |
-| Signals / kill | §3.5 cancellation |
+**Dream Mode** is the user-facing name for the whole loop: *Lane M notices, Lane S
+proposes, Dustan rules in the Dreams tab, Claude Code applies the ruling in a session.*
 
-The envelope is a process model. That is why it fits: an OS is mostly a uniform contract
-for running untrusted things with bounded resources, which is precisely §3.
+- **Lane M** (Phase 1, live): pg_cron `dream-m` at `20 3 * * *`, pure SQL
+  (`public.dream_m(trigger)`), deliberately off the hour-15 slot that
+  `reap-abandoned-sessions` occupies. Derives edges, flags exact duplicates and 60-day
+  stale `context_%` memos as proposals. Writes **only** `brain_edges`, `dream_proposals`,
+  `system_cache`.
+- **Lane S** (Phase 2): pg_cron Sunday `45 3 * * 0` → pg_net → Edge Function `dream-s` →
+  **Gemini**. Reads Lane M's flags plus a 2-hop Neo4j neighbourhood; writes proposals only.
+- **Dreams tab**: Readiness, Inbox, Diff, Graph. Buttons never write — they copy
+  `dream verdict <proposal_id> accepted|rejected|deferred`.
+- Six curation ops: promote, update, delete, resolve, edge, feature. `delete` means
+  `status='superseded'` or a file into `DELETE/` with a MANIFEST row — **never a hard
+  delete, by any lane or by Claude.**
 
-### 9.2 Three gaps this spec does not close
+### 9.2 Four things this spec must change to fit — all folded into v0.3 above
 
-1. **No IPC.** Agents cannot talk to each other; they return to the parent and nothing else.
-   For fan-out work that is fine, but an OS without IPC forces every exchange through the
-   parent's context — the exact bottleneck the shelf is meant to relieve. **Poe already
-   solved this**: a server bot may call up to 10 other bots per message, with dependencies
-   declared up front. That cap is the design — bounded, declared, non-recursive. Your
-   `skill_registry.depends_on` column already exists and is unenforced; it is the natural
-   place for declared dependencies.
-2. **No preemption or quotas across concurrent sessions.** `active_sessions` gives advisory
-   locking, but two sessions can each open a full token ceiling. A real OS arbitrates.
-3. **No scheduler for unattended work.** `wake-timer-scheduler` and Routines exist;
-   `loops` has 0 rows. Perplexity's Background Assistants are the working counterpart. The
-   machinery is present and unused — an OS with a cron that nothing is registered in.
+1. **Lane M is not an agent under the envelope.** It is a scheduled SQL function with no
+   parent session and no model. §3 governs **model-backed spawns only**. Without that line,
+   the two specs contradict each other on who may write `dream_proposals` directly.
+2. **`dream_proposals` is the proposal channel.** Folded into §3.2 and §4.2.
+3. **`procedures` inherits service_role-only RLS and a counts-only dashboard read.** Folded
+   into §2.3 and §5.
+4. **Receipts on failure, not just return.** Folded into §3.4.
 
-### 9.3 Verdict
+### 9.3 What their design does better than v0.2 — adopt it
 
-This spec is a **kernel, not an OS**: process model, memory protection, capabilities,
-audit, loader. Gaps 1–3 are the difference, and each is additive — none requires
-re-opening §2 or §3.
+**The readiness gate beats per-spawn budgets.** Lane S *exits with a receipt and no model
+call* unless `dream_readiness.score` ≥ threshold, or the run was started by hand — so a
+quiet week costs zero Gemini tokens. My §3.3 caps what a run may spend; their gate decides
+whether the run happens at all. That is the stronger control, and §3.6's session ceiling
+should gain the same shape: a spawn with nothing to work on should be refused, not
+budgeted.
 
-**Sequencing that follows:** the shelf is the filesystem, and a filesystem comes before
-IPC and before a scheduler. If the Agent OS idea is real, this spec is a reasonable first
-layer rather than a detour — *provided* the Phase 2 gate passes. If shelving proves
-unreliable there, the OS framing does not rescue it; it just inherits the same broken
-routing at a larger scale.
+Their honesty discipline is also worth copying verbatim: the readiness weights and the
+threshold of 60 are labelled **"unmeasured guesses"** in the spec itself, stored in the
+receipt so they can be tuned, and scheduled for calibration after 14 nightly readings. My
+§3.3 tier budgets are exactly the same kind of guess and should carry the same label.
+
+### 9.4 Where this leaves the Perplexity and Poe comparison
+
+Two of the earlier recommendations are weaker than I presented them:
+
+- **"Model Council needs a cross-provider gateway like Poe."** Lane S already crosses
+  providers — pg_cron → pg_net → Edge Function → Gemini, with keys in Supabase Vault. The
+  pattern exists and is specified; a council would extend it, not introduce it.
+- **"The empty `loops` table is a failure signal."** Already ruled on:
+  *KEEP loops, loop-scout, skill-scout, reflect, insights — non-use is not evidence of
+  failure.* Withdrawn.
+
+One comparison survives intact, and it is the one this spec rests on: capability held in
+**residence** does not scale, and `skill_catalog`'s 84 rows are already the index that
+would let it be held behind **retrieval** instead.
+
+### 9.5 Verdict
+
+The capability shelf is **compatible but subordinate**. It shares the proposal channel, the
+propose-never-apply principle, the no-hard-delete rule, the buttons-never-write rule and
+the RLS posture. It introduces no competing surface.
+
+It is also **not next**. `SPEC-consistent-system-plan-2026-09-06.md` already contains
+"SHELF 7 deliberately-invoked skills → 35 installed" — a shelving decision reached at the
+house bar of /spec-refine v2.3, three rounds, zero must-fix. This spec has had one
+refinement pass, by its own author, and has not met that bar. Ruling D2 set the precedent
+directly: *Dream Phase 2 now = NO, revisit after Phase 1 runs two weeks.* Phase 1 still has
+two `done_when` legs open.
+
+**Therefore: reconcile §2 against the consistent-system shelving decision first, take this
+through /spec-refine to zero must-fix second, and land nothing until Phase 1's composed
+boolean returns true.**
