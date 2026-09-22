@@ -1,0 +1,205 @@
+HANDOFF — post-v4.0 improvement plan for Minds Over Matters
+From: evaluation session 2026-09-21 (Perplexity + Poe teardown vs. the current system)
+To: the writer/orchestrator chat running the v4.0 parity release
+
+RULE 0 — TIMING. Nothing below starts before v4.0 cut #2 is verified clean and Dustan has
+approved it. Do NOT interrupt the cut. Read this now, queue it, act after ship. Evaluate each
+item against the parity plan and fold accepted ones into the workflow as v4.1 / v4.2 lanes.
+
+SOURCES TO READ FIRST (all measured, not guessed)
+- Scorecard: https://claude.ai/artifact/TKuNypBcDaez8cmewMox1i (18 Sep 2026)
+- Branch claude/perplexity-poe-evaluation-gef5ni in dustandurrettclaude-coder/mindsovermatters-co,
+  PR #2 (DO NOT MERGE — repo publishes to mindsovermatters.co):
+    docs/internal/perplexity-poe-evaluation.md   (the teardown + measured baseline)
+    docs/internal/spec-capability-shelf.md       (v0.3, DEFERRED — see section E)
+- Live spec: 1 BRAIN/Specs & Setup/2026-09-15-brain-graph-dream/plan.md v0.6 (Phase 1 active)
+- Parity spec: 1 BRAIN/Specs & Setup/2026-09-18-mom-parity-release/plan.md
+- Prior shelving decision: 1 BRAIN/Specs & Setup/SPEC-consistent-system-plan-2026-09-06.md
+
+SCORECARD MATH (its own weights, its own numbers)
+  MOM v4.0 planned 7.3 | Claude memory+Projects 7.1 | ChatGPT 7.0 | Notion 6.4 |
+  MOM today v3.9.2 6.4 | claude-mem 5.9 | Spec Kit 5.1 | Second Brain kit 5.0 | Mem0 4.7
+  v4.0 leads by 0.25. Ceiling if the three weak 15-weight lines reach 9: ~8.35.
+  With track record and price later: ~8.6-8.8.
+  Already maxed, do not spend hours here: goals 10, session 9, ownership 9.
+
+A. POSITIONING (copy, not code — can happen before ship)
+  A1. Stop pitching "memory". Memory is commoditised (free on every Claude/ChatGPT tier;
+      claude-mem ~94k stars). Pitch the PRACTICE: goals with proved done, session routine
+      and handoff, parked work, your own data. The scorecard's "where you beat them" cards
+      already say this; the description should match them.
+
+B. SCORECARD-MOVING WORK, ranked by weighted points (all post-v4.0)
+  B1. SETUP 6 -> 9 (+0.45). Largest, most controllable.
+      - No buyer-created database. No hand-installed skills. Deploy by address (Poe model:
+        a capability is live because something points at it, not because a file was carried
+        to a settings page).
+      - Fix the install-breaking gaps the 18 Sep parity reports found first (skills calling
+        tables the product never creates; lane-lock functions; policy_proposals table).
+      - MEASURE setup time on a clean account. Unmeasured = capped at 5 by the evidence ladder.
+  B2. MEMORY 7 -> 9 (+0.30). Order matters:
+      - FIRST automatic capture with no discipline required (claude-mem's edge). Today the
+        buyer must run /close; forget once and they conclude memory does not work.
+      - SECOND retrieval: pgvector (vector_installed is currently false) + Perplexity's
+        funnel — lexical and embedding scorers in parallel, fused, then a reranker; questions
+        decomposed into sub-queries.
+  B3. NO-TERMINAL 7 -> 9 (+0.30). No terminal anywhere in the happy path. Buyer-made
+      capabilities from a form (base model + instructions + attached knowledge), not a file.
+      Move work from chat into the dashboard.
+  B4. PRICE 6 -> 8 (+0.20). Free Core after the clean-install test (already ruled). Neutralises
+      the free competitors; $79 keeps margin.
+  B5. TRACK RECORD 4 -> 7/8 (+0.30-0.40). Not engineerable. Ship, get users, support channel,
+      refund policy (undecided — decide it). Only lever is starting the clock sooner.
+  B6. THE GATE: ruling 27's timed clean install by a real second person. It is the UNLOCK,
+      not the last step — only it lets setup/no-terminal score above 5. Run it early, more
+      than once; trust the tester's number where it is lower.
+  B7. Re-score by ADDING a row "v4.0 shipped (measured)" beside "v4.0 (planned)". Never
+      edit the planned row to the target scenario. Never re-score on intent.
+
+C. STRUCTURAL — ends the parity chase
+  C1. Deploy-by-address (B1) is also what stops "bring the product to parity with my system"
+      recurring every six weeks. Once the thing at the address IS the product, there is no
+      parity release. Treat B1 as the highest-leverage item in this handoff for that reason.
+  C2. Update path for buyers: you cannot hand-install a fix into 100 machines. The
+      "Meeting of the Minds" update-evaluation skill (ruling 20) becomes the most important
+      skill in the box. Version it and test it against a stale buyer install.
+
+D. /close STAYS — AUTOMATIC CAPTURE GOES UNDERNEATH IT (floor and ceiling)
+  Evidence from the scorecard: claude-mem is memory 9 / session 4 (automatic capture, no
+  routine). MOM is memory 6 / session 9 (routine, no automatic capture). They are different
+  things. Replacing /close with automation trades toward claude-mem's profile. Do not.
+  - FLOOR = automatic capture. Its ONLY job is killing "forgot to close, lost the session".
+      session record / memos / skills_used -> written as you go (Claude Code: Stop/SessionEnd
+      hook; chat surfaces: incremental writes + reap-abandoned-sessions as the path)
+      mark closed / heartbeat / lock / ptr  -> the reaper, not the user
+  - CEILING = /close, unchanged in purpose. It PROMOTES the automatic record into
+      understanding: wrap (lessons with the user present), curated memory, the handoff
+      carrying intent and next action, the pending-confirmations tick moment, the
+      governor/self-verify honesty checkpoint. None of these are automatable without losing
+      what earns the session-routine 9.
+  - What changes in /close: only the fear. It stops being mandatory-or-lose-everything.
+    Lite becomes near-instant because the record already exists and close just promotes it.
+  - Analogue: Perplexity threads auto-save (floor); Pages is the deliberate act that makes
+    a durable artifact (ceiling). Same shape.
+  - Product line: "It remembers everything on its own. When you close, it understands the
+    session." Moves memory AND session, instead of trading one for the other.
+  - Caveat still holds: Cowork/claude.ai have no hooks — score the floor per surface.
+
+E. EXPLICITLY DEFERRED — do not start, do not delete
+  E1. spec-capability-shelf.md v0.3 (retrieval-over-residence for Dustan's own 86 skills).
+      Queue behind: (a) brain-graph-dream Phase 1 done_when returning true (two legs open:
+      dashboard_last_publish, connector_toggles 1 of 3); (b) reconciliation against the
+      consistent-system shelving decision ("SHELF 7 -> 35 installed"); (c) /spec-refine to
+      zero must-fix. Its own §9.5 says it is compatible but subordinate and not next.
+      Open decision only Dustan can make: policy 60 vs Tier S (a shelved procedure has no
+      install step).
+  E2. Effort tiers, per-claim entailment verdicts, dependency call caps, decision council,
+      publish-research-as-content. Sound engineering; none moves a scorecard line. v5+.
+
+F. DUSTAN'S OWN INSTANCE (separate from the product; unchanged by shipping v4.0)
+  Measured 2026-09-21 on project ompxlqmszgutlldtivph, 175 sessions since 2026-07-05:
+  - skill_registry 86 rows, install_confirmed true on 45. BUT 20 of the 41 "uninstalled" are
+    proven used (recall 31x, brain-changelog 23x, cp 19x, mark-done 18x...) — the FLAG is
+    wrong, not the skills. Fix the flags; delete nothing. 21 rows have zero uses in 175
+    sessions — review list, Dustan's call, no deletion without his yes.
+  - Version drift: recall 1.12.4 registered / 1.5 installed; mark-done 1.14.2 / 1.10;
+    brain-changelog 1.11 / 1.4; install-verify 1.1 / 1.0; token-footprint-audit 1.1 / 1.0.
+    ~30 installed rows say installed_version='unversioned'.
+  - sessions.skills_used: 525 of 532 recorded uses are meta/system skills, 7 are revenue
+    skills (caveat: only skill-mediated work is recorded). Recommendation: moratorium on new
+    meta-skills until v4.0 ships; add a cost line (spawns, tokens, wall-clock, shipped items)
+    to /close from public.delegations (61 rows, avg 167k tokens / 832 s per spawn).
+  - model_routing: 16 rows, 9 are retired n8n lanes, only 3 carry avg_tokens.
+  - Do not touch skill_registry while the current system-updating workflow is writing it.
+
+G. RULES FOR THE RECEIVING CHAT
+  - Evidence sets the ceiling (scorecard rubric). No score above 5 without proof; above 9
+    only from a stranger's clean install.
+  - Never modify the live scorecard or dashboard through the bridge; deliver edited HTML as
+    a file for Dustan to drop over the source (rule 6).
+  - Delete nothing without asking (rule 1). Every manual step Dustan must take gets a
+    pending_confirmations row surfaced the same turn (rule 8).
+  - Always recommend with ELI10. .txt + fenced block, never .md alone.
+  - The n8n MCP server failed to connect (404) in the evaluation session; nothing above
+    depends on it, but B1's "machines" (deterministic skills as code) will need a home —
+    Supabase edge functions are the fallback.
+
+WHAT TO RETURN
+  One numbered list: for each item in A-D, ACCEPT / DEFER / REJECT with one line of why, the
+  lane it folds into, and the weighted scorecard points it is expected to move. Then a
+  Done/Not-yet for Dustan on: positioning copy (A1), the free-Core trigger (B4), the refund
+  policy (B5), and the policy-60 ruling (E1).
+
+H. PRICING + BEGINNER-COURSE STRATEGY (Dustan, 2026-09-22) — evaluate, do not act before H4
+  H1. Category claim: MOM is done-for-you + done-with-you (a running system plus the
+      course), not a how-to course. Comps from the how-to shelf ($24.99 Sundog; $59.99
+      Claude Code for Designers on Gumroad; Anthropic Academy / Frontend Masters /
+      Vanderbilt all FREE) undersell it. The free landscape is exactly why the course must
+      be a BONUS, never a standalone: it would lose to Anthropic's own free course.
+  H2. Price path: $97 at launch (system + course; comps-justified; matches the July "path
+      to $97"). $129 becomes the STANDARD price the moment the clean-install recording and
+      first reviews exist — earned by H1, gated by evidence. Never below $49. $129+ as a
+      Pro tier only when it carries the recurring layer (community, updates, support).
+  H3. Make the hours visible on the page, all true numbers: [N] skills; close alone is
+      187 KB of tested instruction; nine-check ship-gate; two specs at zero must-fix; 175
+      sessions 5 Jul – 20 Sep. A populated-dashboard screenshot/GIF. A "what you skip"
+      list (goal schema, session routine, handoff format, proof mechanism, dashboard,
+      backup). Line: "A how-to course ends with knowledge. This ends with a system running."
+      Sell "where you'll start" (11 weeks in on day one), never "where you'll stay".
+  H4. GATE: a real second person tests the finished build. Dustan relies heavily on that
+      feedback. Sales, price and copy all wait on it. Record the test; it is the install
+      module of the course (see H5) and the evidence for setup > 5.
+      RULED 2026-09-22: setup is being fixed in the build; a named tester is lined up;
+      Dustan may also self-test on a second computer under a different account. Evidence
+      ladder: the self-test scores at most 7-8 (independent check); only the stranger's
+      unaided install scores 9-10. Do both; score from the stranger's number.
+  H5. Course format, highest perceived value for least work, in order: (1) copy-paste
+      prompt pack; (2) 15-25 page quick-start (largely a re-cut of the Setup Guide);
+      (3) 5-8 short unedited screen recordings; (4) one durable "how to think about AI"
+      module in Dustan's voice. Capstone = MOM installed, first session opened, first goal
+      closed with proof. Skip a produced multi-hour video course. Frame as "Claude for real
+      work" with a module each on Code and Cowork so UI churn costs a module, not a course.
+  H6. Free Core split: quick-start guide FREE (funnel); full course = paid bonus (lift).
+  H7. REFUND — decided by platform fact, 2026-09-22: Gumroad replaces any "no refunds"
+      setting with a 30-day money-back guarantee; 7+ days stands. Chargebacks bypass any
+      policy; >1% disputes forces refunds account-wide, >3% pauses payouts. Fees (~10% +
+      $0.50 + card) are not returned on refund. RECOMMENDATION: 14 days, conditional —
+      "if you can't get it installed and running within 14 days, full refund." Ties the
+      guarantee to the setup risk; matches the H4 bar. Not 7 (too short for a
+      non-developer's install attempt), not 30 (Gumroad's default; shorter reads as
+      confidence). Dustan's concern (the zip is not returnable) is real and small: what a
+      refunder loses is updates, support and community — the recurring layer.
+  H8. Lines: "Learn Claude. Then put it to work." / "The course gets you started. The
+      system keeps you going." Draft copy lives in docs/internal/gumroad-copy-ROUGH-DRAFT.txt.
+
+WHAT TO RETURN FOR H
+  ACCEPT / DEFER / REJECT per H1-H8 with one line why. One Done/Not-yet for Dustan on the
+  refund window (H7) and the launch price (H2).
+
+I. LAUNCH SEQUENCE — starts the day H4 passes (Dustan, 2026-09-22: "market as soon as ready")
+  Constraints already in force: organic only, no paid ads anywhere; Marketing Bible / Brand
+  Rules one-page is frozen and governs copy; channel priority Etsy -> Pinterest -> content
+  site; X @MindsOverMatters and Pinterest are the organic surfaces; Gumroad listing is
+  currently to be unpublished (#400) and relisted on the v4.0 cut, not patched.
+  I1. Day 0 — tester passes. Record it (H4). Re-score: add the "v4.0 shipped (measured)"
+      row (B7). Regenerate the claims ledger; finalize copy from the ledger and the Brand
+      Rules (docs/internal/gumroad-copy-ROUGH-DRAFT.txt is the draft, gates listed at top).
+  I2. Relist on Gumroad at $97 (H2) with the 14-day conditional refund (H7), course bonus
+      attached (H5), quick-start free (H6). The listing replaces #400's unpublished one.
+  I3. First content = the recorded clean install, cut to 5-10 minutes. It is the install
+      module, the proof for setup, and the first YouTube/X post, from one recording.
+  I4. Organic push through existing machinery: market-run for link-drop targets (queue in
+      the brain, Dustan knocks them down one tab at a time); xpost / social-batch for the
+      X cadence (both registered, zero uses to date — first real use). Pinterest per the
+      channel priority. Every piece of content ends with the listing.
+  I5. Weeks 1-4 — collect: install time per buyer, refund reasons, first reviews, support
+      questions. These feed the setup score, the FAQ, and the course's weakest module.
+  I6. Price lift to $129 (H2) when I3 is public AND the first reviews exist. Not before.
+  I7. Membership / community layer (recurring) is v4.1+, after I5 shows what buyers ask
+      for. Do not build it ahead of the questions.
+  Do not: paid ads; a produced video course; a marketplace; new meta-skills. Nothing in
+  I requires a build — it requires the cut, the test, and Dustan's hours.
+
+WHAT TO RETURN FOR I
+  Confirm I1-I7 as the post-test order or propose a different one, with one line why.
+  Flag anything in I that the Marketing Bible forbids.

@@ -1,0 +1,91 @@
+HANDOFF — token-use changes, measured from the brain 2026-09-21/22
+To: the writer/orchestrator chat running the v4.0 parity release
+From: evaluation session (Perplexity/Poe teardown; delegations analysis)
+
+RULE 0 — TIMING. Evaluate now, act after v4.0 cut #2 is approved. Items marked (config) are
+prompt/config edits with no skill-file change and may land the day the cut is approved.
+Items marked (rewrite) touch a skill file and need two verifier rounds. Nothing here is a
+new skill; a moratorium on new meta-skills stands until v4.0 ships.
+
+MEASURED BASIS (public.delegations, 61 rows since 2026-09-14; four sessions)
+  session 20260916-180922  34 agents  6.50M tokens  191k/agent  55.5 reads/agent
+                            (code-implementation, copy, research, verification)
+  session 20260915-122045  16 agents  1.46M tokens  122k/agent  23.0 reads  (verification only)
+  session 20260918-235032  10 agents  1.45M tokens  145k/agent  34.5 reads  (verification only)
+  session 20260914-180006   1 agent   0.12M tokens  124k/agent  24.0 reads  (verification)
+  - One session is 68% of all subagent spend.
+  - Verification-only sessions: 26 agents, 2.9M tokens. Verification is at least a third of
+    the total and likely near half once the writer session's verifiers are counted.
+  - Largest wave = highest per-agent cost and most reads. CONFOUNDED with task mix
+    (code-implementation route averages 254k); directional, not proven. n=4 sessions.
+  - Route averages on file: verification-factcheck 117k (n=14), code-implementation 254k
+    (n=7), verification-mechanical 123k (n=3). Thirteen of sixteen model_routing rows have
+    no avg_tokens yet.
+  Always-on tax (2026-08-06 audit): 82 skills, 53,496 description chars, ~13.4k tokens per
+  message. Lifecycle bodies when invoked: close 187,746 B (~47k tok), reconcile 54.9 KB,
+  wrap 49.9 KB (version blocks since moved out by C1). memory.md 29.9 KB / 131 lines,
+  shrink to 32 lines designed 09-12, not applied. Brain reads (session-init C4: 5 goals +
+  5 memos) are bounded and negligible.
+
+RANKED CHANGES — by measured spend, then by effort
+
+  A. SUBAGENTS (two-thirds of the bill)
+  A1 (config) Scope every verifier to a claim list. Hand it {claim, evidence_locator}
+     rows and require {verdict: supported|unsupported|not_found} per row. Stop "check this
+     work" prompts that trigger a full re-read (23-55 reads per verifier today). Ties to
+     TO-9 (verifier budget, ruled YES 09-14). Expected: the largest single reduction.
+  A2 (config) Fan-out default <=5 in /deploy unless the streams are provably independent
+     (different files, different sources, no shared reading). Keep 15 as a ceiling, not a
+     default. Applies to the one session shape that produced 68% of spend.
+  A3 (config) Hard token ceiling per spawn, passed in the prompt from
+     model_routing.avg_tokens where measured; "stop at N tool calls, return partial with
+     unknowns". Extend TO-9 from verifiers to every route.
+  A4 (config) Memory packet, not query access. Parent pre-assembles the 5+5 an agent
+     needs; the agent does not query the brain. Fewer tool calls, bounded context, and the
+     same fix that prevents approval loops.
+  A5 (config) Cheap gear first. Route search-locate and bulk-file-read-summarize to
+     haiku/Explore (rows exist, avg_tokens null = unused). A 40k Explore before a 170k
+     general-purpose whenever the deliverable is a location or a summary.
+  A6 (record) Every spawn writes a delegations row on return, failure, or cancellation, so
+     avg_tokens fills for all 16 routes and this list can be re-ranked in a month.
+
+  B. LIFECYCLE (~47k per close; ~73k for Full)
+  B1 (config) Lite close by default. Full is the exception for multi-step sessions. Once
+     reconcile runs on cron, Full only needs wrap.
+  B2 (rewrite, v4.1) Progressive disclosure inside close: a lean core (~150 lines) plus
+     references/ files loaded only on the branch that needs them (handoff format,
+     self-verify, governor, overflow rules). Two verifier rounds; this is the most
+     important skill in the box.
+  B3 (planned) TO-1 lifecycle diet as already ruled.
+
+  C. ALWAYS-ON (~13.4k per message)
+  C1 (planned) Shelve to 35 installed per SPEC-consistent-system-plan-2026-09-06; the 08-06
+     plan priced this at ~6,900 tokens per message saved.
+  C2 (rewrite, careful) Descriptions route; they do not document. Cut each to trigger
+     phrases + one line; move "do NOT trigger for X" lists into the body. Target ~300 chars
+     avg. With C1: ~2.6k tokens/msg, down from 13.4k. Trim one skill at a time and watch
+     for misfires; the exclusions exist because collisions happened.
+  C3 (planned) Apply the memory.md shrink (131 -> 32 lines; per-line table exists).
+
+  D. HABIT (no build)
+  D1 Close sooner, reopen cheaper. Two 40-turn sessions cost far less than one 80-turn
+     session; the memory system is what makes that free. See the close-advisor note.
+  D2 Context-growth close advisor (Claude Code only): statusline shows
+     context_window.used_percentage; a PreCompact hook fires a one-line "recommend /close
+     Lite now, reopen with handoff" nudge. Hooks cannot read the percentage (open issues
+     anthropics/claude-code #27969, #34340), so the statusline is the monitor and
+     PreCompact is the trigger. Cowork/claude.ai have no hooks: heuristic only (turn count,
+     presence of a context summary), put in close's context gate.
+
+  E. DO NOT DO
+  - No new meta-skill for any of this. Every item above is a prompt, a config, a planned
+    edit, or a habit.
+  - Do not cut descriptions in bulk. Do not remove "do NOT trigger" clauses without a
+    misfire check.
+  - Do not treat n=4 sessions as a forecast. Re-run the delegations query in 30 days.
+
+WHAT TO RETURN
+  For A1-A6, B1-B3, C1-C3, D1-D2: ACCEPT / DEFER / REJECT, one line why, the lane it folds
+  into, and whether it lands before or after v4.1. Then one Done/Not-yet for Dustan on
+  the fan-out default (A2) and the Lite-by-default close (B1), since both change how his
+  sessions feel day to day.
