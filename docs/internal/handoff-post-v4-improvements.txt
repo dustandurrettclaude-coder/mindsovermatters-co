@@ -129,3 +129,45 @@ WHAT TO RETURN
   lane it folds into, and the weighted scorecard points it is expected to move. Then a
   Done/Not-yet for Dustan on: positioning copy (A1), the free-Core trigger (B4), the refund
   policy (B5), and the policy-60 ruling (E1).
+
+H. PRICING + BEGINNER-COURSE STRATEGY (Dustan, 2026-09-22) — evaluate, do not act before H4
+  H1. Category claim: MOM is done-for-you + done-with-you (a running system plus the
+      course), not a how-to course. Comps from the how-to shelf ($24.99 Sundog; $59.99
+      Claude Code for Designers on Gumroad; Anthropic Academy / Frontend Masters /
+      Vanderbilt all FREE) undersell it. The free landscape is exactly why the course must
+      be a BONUS, never a standalone: it would lose to Anthropic's own free course.
+  H2. Price path: $97 at launch (system + course; comps-justified; matches the July "path
+      to $97"). $129 becomes the STANDARD price the moment the clean-install recording and
+      first reviews exist — earned by H1, gated by evidence. Never below $49. $129+ as a
+      Pro tier only when it carries the recurring layer (community, updates, support).
+  H3. Make the hours visible on the page, all true numbers: [N] skills; close alone is
+      187 KB of tested instruction; nine-check ship-gate; two specs at zero must-fix; 175
+      sessions 5 Jul – 20 Sep. A populated-dashboard screenshot/GIF. A "what you skip"
+      list (goal schema, session routine, handoff format, proof mechanism, dashboard,
+      backup). Line: "A how-to course ends with knowledge. This ends with a system running."
+      Sell "where you'll start" (11 weeks in on day one), never "where you'll stay".
+  H4. GATE: a real second person tests the finished build. Dustan relies heavily on that
+      feedback. Sales, price and copy all wait on it. Record the test; it is the install
+      module of the course (see H5) and the evidence for setup > 5.
+  H5. Course format, highest perceived value for least work, in order: (1) copy-paste
+      prompt pack; (2) 15-25 page quick-start (largely a re-cut of the Setup Guide);
+      (3) 5-8 short unedited screen recordings; (4) one durable "how to think about AI"
+      module in Dustan's voice. Capstone = MOM installed, first session opened, first goal
+      closed with proof. Skip a produced multi-hour video course. Frame as "Claude for real
+      work" with a module each on Code and Cowork so UI churn costs a module, not a course.
+  H6. Free Core split: quick-start guide FREE (funnel); full course = paid bonus (lift).
+  H7. REFUND — decided by platform fact, 2026-09-22: Gumroad replaces any "no refunds"
+      setting with a 30-day money-back guarantee; 7+ days stands. Chargebacks bypass any
+      policy; >1% disputes forces refunds account-wide, >3% pauses payouts. Fees (~10% +
+      $0.50 + card) are not returned on refund. RECOMMENDATION: 14 days, conditional —
+      "if you can't get it installed and running within 14 days, full refund." Ties the
+      guarantee to the setup risk; matches the H4 bar. Not 7 (too short for a
+      non-developer's install attempt), not 30 (Gumroad's default; shorter reads as
+      confidence). Dustan's concern (the zip is not returnable) is real and small: what a
+      refunder loses is updates, support and community — the recurring layer.
+  H8. Lines: "Learn Claude. Then put it to work." / "The course gets you started. The
+      system keeps you going." Draft copy lives in docs/internal/gumroad-copy-ROUGH-DRAFT.txt.
+
+WHAT TO RETURN FOR H
+  ACCEPT / DEFER / REJECT per H1-H8 with one line why. One Done/Not-yet for Dustan on the
+  refund window (H7) and the launch price (H2).
