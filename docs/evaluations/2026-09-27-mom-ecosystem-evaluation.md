@@ -1,4 +1,4 @@
-# Minds Over Matters — long-term business model and ecosystem evaluation
+# Minds Over Matters: long-term business model and ecosystem evaluation
 
 Date: 2026-09-27. Evaluation only. Nothing in the live system, the brain, or the product bundle was changed.
 
@@ -8,7 +8,7 @@ How to read this: Part 1 is the verdict. Part 2 is the verified inventory of wha
 
 ---
 
-## Part 1 — Verdict in one page
+## Part 1: Verdict in one page
 
 1. **The private product is the business. The network is a possible second act, not a co-launch.** Nothing has sold yet (the Gumroad `sales` webhook table has 0 rows; the only MOM listing is "not currently for sale"; the site is a noindex "coming soon" page). The network thesis cannot be tested on zero retained users, and building any of it now would delay the only test that matters: do strangers install, come back, and pay.
 
@@ -26,7 +26,7 @@ How to read this: Part 1 is the verdict. Part 2 is the verified inventory of wha
 
 ---
 
-## Part 2 — What exists today (verified 2026-09-27)
+## Part 2: What exists today (verified 2026-09-27)
 
 Sources: the live brain (read-only SQL), your published decision artifacts (2026-08-27 to 2026-09-26), the `mom-build` repository, the Gumroad listing, and mindsovermatters.co.
 
@@ -82,7 +82,7 @@ Weekly sessions over the last 13 weeks ranged from 8 to 36. Top skills by sessio
 
 ---
 
-## Part 3 — The proposal mapped onto what exists
+## Part 3: The proposal mapped onto what exists
 
 ### 3.1 Already exists (do not rebuild)
 
@@ -126,7 +126,7 @@ Weekly sessions over the last 13 weeks ranged from 8 to 36. Top skills by sessio
 
 ---
 
-## Part 4 — Your 25 questions
+## Part 4: Your 25 questions
 
 **1. Differentiated vs available elsewhere.**
 Not differentiated: cross-session memory (Claude and ChatGPT ship it free; claude-mem ~94k GitHub stars, Mem0 ~66k, per your 2026-09-18 scorecard), dashboards (Notion), skill directories (Anthropic's in-app directory; third-party indexes list ~7,000 to ~24,000 Claude skills), template libraries (n8n ~12,000 workflows, Zapier 100,000+), prompt markets (PromptBase 330,000+ prompts), paid communities (Skool, Whop, Circle), gig markets (Upwork, Fiverr, Contra). Differentiated: (a) `done_when` completion proven by a check; (b) functional verification of shared AI workflows (MCP Registry, Smithery, Glama, Docker Verified Publisher all verify identity or namespace, not behavior); (c) attribution preserved through remixes (a documented dispute in a popular Claude templates repo shows curators re-publishing without original credit; over 60% of Hugging Face models carry no documented parentage); (d) selection before work plus vetted supply in jobs (no GitHub-native bounty tool implements it; Algora and Boss.dev pay whichever pull request merges first); (e) a user-owned Postgres record that works across Claude desktop, Claude Code, and Chrome. Anthropic's own roadmap moved fast this year: memory free for every claude.ai user since March 2026, Cowork included in Pro since January 2026 and merged into the main chat interface from September 2026, Windows support since April. Each of those was once part of MOM's pitch and became a free platform feature within months, and native memory in every assistant (ChatGPT free since June 2025, Gemini personal context, Microsoft 365 Copilot memory GA January 2026) is vendor-locked with no cross-tool export, which is the one gap the owned-Postgres record fills. The independent "personal AI" field is crowded and mostly open source (OpenClaw 250,000+ GitHub stars in about 60 days on a bring-your-own-key model; mem0 65,000+ stars and $24M raised; AnythingLLM ~62,700; Khoj ~36,000, with its paid cloud sunset in 2026; Letta ~24,700; Zep ~27,000), all of it memory-and-agent plumbing, none of it proof-of-done. The cautionary tale for vendor-hosted personal memory is Rewind/Limitless: acquired by Meta and shut down on 2025-12-19. That is the strongest argument for your "your own database" stance, and it is a marketing line, not just an architecture choice.
@@ -205,11 +205,11 @@ Keep the decided $79 year-one price; do not churn that decision again (policy #7
 
 ---
 
-## Part 5 — Staged roadmap
+## Part 5: Staged roadmap
 
 Each stage lists: objective, build, do not build, hypothesis, success criteria, cost and complexity, major risks, go/no-go.
 
-### Stage 1 — Finish now (v4.1 through its seven gates)
+### Stage 1: Finish now (v4.1 through its seven gates)
 
 1. **Objective:** a sellable, verified core on a live listing and a live site.
 2. **Build:** nothing new. Close the seven gates on the board (brother's timed install; unpublish the old one-time listing; annual listing with one live checkout; upload v4.1; deploy `site/` with `llms.txt`; sitemaps; key backup) and hostile round 2. Write the renewal sentence so that it can later mean "updates plus network" without contradicting the ledger.
@@ -220,7 +220,7 @@ Each stage lists: objective, build, do not build, hypothesis, success criteria, 
 7. **Risks:** round 2 forces cut 1c; a pricing sentence triggers policy #73; time drawn to Pearls Library.
 8. **Go/no-go:** all seven gates ticked and the install measured → Stage 2. Install fails → fix setup before anything else; do not proceed on the strength of your own use.
 
-### Stage 2 — Prove it with yourself (on the shipped bundle, not the workshop)
+### Stage 2: Prove it with yourself (on the shipped bundle, not the workshop)
 
 1. **Objective:** show that MOM Core alone, not your 86-skill workshop, sustains daily work; and build the phone view you want for yourself.
 2. **Build:** (a) run the shipped v4.1 bundle on a clean brain (`mom-buyer-test`, woken) as your daily driver for 30 days, workshop skills off; (b) PWA v0: dashboard HTML moved to mindsovermatters.co/app with supabase-js, Supabase Auth (magic link), RLS policies by `auth.uid()`, installable on Android; (c) handoff: Android share sheet to Claude and the Claude Code deep link.
@@ -231,7 +231,7 @@ Each stage lists: objective, build, do not build, hypothesis, success criteria, 
 7. **Risks:** discovering the core is too thin (which means the product is the workshop and the cut was wrong; better to learn now); auth or RLS mistakes (policy #38); scope creep into features.
 8. **Go/no-go:** defects ≤ 3 and no workshop dependence → Stage 3. Otherwise re-cut the core.
 
-### Stage 3 — First outside users (5 to 10, already the queued goal)
+### Stage 3: First outside users (5 to 10, already the queued goal)
 
 1. **Objective:** learn install friction and whether strangers come back.
 2. **Build:** onboarding fixes only; a private founding channel that costs nothing (GitHub Discussions in a private repo, or a small Discord); opt-in usage pings (weekly self-report is acceptable).
@@ -242,7 +242,7 @@ Each stage lists: objective, build, do not build, hypothesis, success criteria, 
 7. **Risks:** silent churn; each Claude release breaking a skill; you fixing everyone's setup by hand.
 8. **Go/no-go:** 3 of 10 retained at day 30 → Stage 4. Fewer → fix the product, not the plan.
 
-### Stage 4 — First revenue
+### Stage 4: First revenue
 
 1. **Objective:** strangers pay $79 for proof-of-done and an owned record.
 2. **Build:** nothing new in product. Marketing per the existing plan: X, r/ClaudeAI, Show HN, Product Hunt one shot after video 1, creator outreach loop, and outcome content from you and the validation users.
@@ -253,7 +253,7 @@ Each stage lists: objective, build, do not build, hypothesis, success criteria, 
 7. **Risks:** sales without activation; a platform feature launch; price objections; the marketing budget of time crowding out fixes.
 8. **Go/no-go:** ≥ 25 paid and ≥ 40% activation → Stage 5. Sales but low activation → fix onboarding first. Fewer than 10 sales → revisit ICP and pitch; do not build the network.
 
-### Stage 5 — Seed Meeting of the Minds
+### Stage 5: Seed Meeting of the Minds
 
 1. **Objective:** a living, verified, attributed library that paying users pull from and push to.
 2. **Build:** (a) public GitHub registry repo, one folder per item with a manifest (id, kind, author, license, version, parent, origin, changelog, acceptance test, provenance); (b) contributions as pull requests through `mom-gate` plus an automated injection/exfiltration scan; (c) "MOM Verified" = gate pass plus a clean-install run by a named verifier, recorded; (d) a MOM-owned Supabase index (read-only anon, RLS, optional pgvector) and a `/find` skill that queries it from inside the user's Claude; (e) GitHub Discussions for talk; (f) membership = the renewal (updates plus registry plus discussions); (g) seed ~50 items from your `ship` and `generalize` skills, policies, and loops, plus imports with provenance.
@@ -264,7 +264,7 @@ Each stage lists: objective, build, do not build, hypothesis, success criteria, 
 7. **Risks:** empty-room effect; a malicious contribution; you as the sole verifier; drift back to building features instead of reviewing contributions.
 8. **Go/no-go:** contribution metrics hit → Stage 6. Otherwise keep the registry as a free asset and stop here; that is a fine outcome.
 
-### Stage 6 — Jobs and marketplace experiments (no infrastructure)
+### Stage 6: Jobs and marketplace experiments (no infrastructure)
 
 1. **Objective:** money moves between members without MOM being a party.
 2. **Build:** (a) MOM-builds-MOM bounties: you post a spec with `done_when`, fixed price, sealed claims, one selected claimer, delivery by pull request through the gate, manual payout; (b) paid registry items sold through creators' own merchant-of-record links, MOM at 0%; (c) a "help wanted" board in Discussions with MOM taking no part in payment.
@@ -275,7 +275,7 @@ Each stage lists: objective, build, do not build, hypothesis, success criteria, 
 7. **Risks:** contribution quality; tax forms; a contributor disputing attribution or payment; scam-adjacent perception if "earn with AI" becomes the headline.
 8. **Go/no-go:** ≥ $2,000 manual GMV and ≥ 5 members asking for a real jobs flow → design Stage 7 jobs with rails. Otherwise keep bounties only.
 
-### Stage 7 — Network expansion (only if 5 and 6 pass)
+### Stage 7: Network expansion (only if 5 and 6 pass)
 
 1. **Objective:** network revenue (membership plus fees) that pays for itself and could exceed license revenue.
 2. **Build:** hosted brain option for non-technical users (Supabase Pro, multi-tenant RLS, DPA, GDPR posture); Play Store listing via Trusted Web Activity and the iOS shortcut; a real marketplace on existing rails (Whop, or Stripe Connect with the platform filing 1099-K); reputation computed from verified installs and completed jobs; lineage graph UI; community projects with revenue splits agreed before work; a paid verifier program; "improvement available" notifications from telemetry; community-built MOM features as the standard process.
@@ -288,7 +288,7 @@ Each stage lists: objective, build, do not build, hypothesis, success criteria, 
 
 ---
 
-## Part 6 — Buckets
+## Part 6: Buckets
 
 ### KEEP (strongest parts of the idea)
 
@@ -359,7 +359,7 @@ Each stage lists: objective, build, do not build, hypothesis, success criteria, 
 
 ---
 
-## Part 7 — Evidence appendix
+## Part 7: Evidence appendix
 
 ### 7.1 Facts taken from your own system (verified this session)
 
