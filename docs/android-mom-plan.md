@@ -34,8 +34,8 @@ Shared by choice.**
 | Persistence in the page | None on purpose (manifest item [13]: no localStorage). All preferences live in `public.system_cache` key `dashboard_prefs` (v, layout, theme, accent, density, tabs, hidden, labels, home, whidden, title, domOrder, domLabels). |
 | Backend access | `window.cowork.callMcpTool('mcp__…__execute_sql', {project_id, query})` — raw SQL text sent to the Supabase MCP `execute_sql` tool, which runs as DB role **`postgres`** (`rolbypassrls = true`, measured 2026-09-17 and noted in the file). The page holds **no** anon, publishable, or service-role key. |
 | Parser | `parse()` strips the MCP `<untrusted-data-…>` wrapper and `JSON.parse`s the array ([11]); `sql()` surfaces the real Postgres error; `wfail()` toasts every rejected write ([24]); a `-- cb:<nonce>` comment defeats the bridge's query cache ([20]). |
-| Read surface | 11 tables: system_cache (8 queries), deploy_memory (7), dream_proposals (3), domains (2), system_flags, spinoffs, skill_catalog (the Skills tab reads only the catalog, never skill_registry), quick_actions, pending_confirmations, loops, brain_edges. |
-| Write surface | 15 statements: 4 INSERTs (deploy_memory ×3 — add goal, quick capture, and an `audit` row written after every status or domain change; system_cache prefs upsert) and 11 UPDATEs (deploy_memory status + domain, spinoffs status, loops is_active ×7, system_flags system_paused). Goal rows are stamped `agent='dashboard'`. Every armed write is one confirm-click (`arm()`); deletes are soft (`status='deleted'`, [17]). |
+| Read surface | 19 SELECT statements over 11 tables: system_cache, deploy_memory, dream_proposals, domains, system_flags, spinoffs, skill_catalog (the Skills tab reads only the catalog, never skill_registry), quick_actions, pending_confirmations, loops, brain_edges. Boot runs 13 of them (14 with the Dream tables); every write triggers a full reload of 10–13 queries. The v3.3 and v3.4 files send the identical SQL set. |
+| Write surface | 13 distinct statements at 14 call sites across 5 tables (4 INSERT lines: add goal, quick capture, an `audit` row after every status or domain change, the prefs upsert; 11 UPDATE lines: goal status + domain, spinoff status, loop status/is_active, `system_paused`). Goal rows are stamped `agent='dashboard'`. Status writes are one confirm-click (`arm()`); quick capture posts on Enter with no confirm; deletes are soft (`status='deleted'`, [17]); there are zero DELETE statements. |
 | Chat hand-off | `sendToChat(text)` → `window.cowork.sendPrompt(text)` (opens a Cowork chat with the prompt) → fallback `copyText` (clipboard) → fallback copy modal. **Pick up writes nothing to the DB** ([19], [22]); the "picked" state is in-memory only. |
 | Desktop-only bridge calls | `window.cowork.runScheduledTask(ref)` for quick actions of kind=task ([8]); `window.cowork.sendPrompt`. |
 
@@ -109,6 +109,14 @@ tested on the phone and in CI, not here.
 | Data layer (`q`, `sql`, `parse`, cache-bust) | **No** | Cowork-bridge specific. Replaced by a `DataSource` adapter over supabase-js (auth session + RPC/policies). |
 | `sendToChat` (Cowork `sendPrompt`), `runScheduledTask` | **No** | Replaced by clipboard + an "Open Claude" intent; task-kind quick actions stay desktop-only (shown disabled with a note). |
 | Pointer-drag reordering, Ctrl+K palette, Alt+arrows, 1–9 keys | **Partly** | Drag becomes up/down buttons in Customize; palette becomes a search field; keys dropped. |
+
+*Measured at 390×844 in headless Chromium with a stub bridge (inventory pass):* the quick-capture row overflows the
+page by 68 px once a domain name reaches ~21 characters (6 px at 360 px even with short names); header plus
+health strip consume 261 px before content; tap targets are 22–32 px tall (44 px is the floor for a phone);
+tabs, domain chips and drawer rows set `touch-action:none`, so a swipe starting on them will not scroll; copying
+uses the deprecated `execCommand('copy')`; there is no in-page refresh; 45+ inline `onclick` handlers paste raw
+record ids into markup (a strict content-security policy would block them). None of this is a blocker; all of
+it is the phone layer's to-do list (§2.5).
 
 ---
 
@@ -211,6 +219,12 @@ spent v3.9.2 closing; RPCs keep the writable surface to seven named operations.
   as a full-height sheet; every confirm stays the desktop's two-tap `arm()` pattern.
 - Home widgets stack single column in the saved order; Customize drawer keeps hide/show/reorder with buttons.
 - Theme, accent, density come from the same `dashboard_prefs` row, so the phone inherits Dustan's look.
+- Phone-layer fixes from the measurements above: quick capture moves into a sheet (no overflow), the health
+  strip collapses to one line with a tap-to-expand, every control gets a 44 px minimum target, `touch-action`
+  is lifted from scrollable rows, inline handlers become delegated listeners (CSP-safe), copy goes through the
+  Capacitor Clipboard plugin, and pull-to-refresh replaces the missing in-page refresh. After a write the phone
+  re-reads only the affected tab instead of the desktop's full 10–13-query reload (an optional `mom_home()` RPC
+  can later return the boot set in one round trip).
 
 ### 2.6 Distribution path
 
@@ -230,7 +244,7 @@ spent v3.9.2 closing; RPCs keep the writable surface to seven named operations.
 | No personal Supabase ids in logic | Project URL and publishable key are runtime config (CI secret for the personal build; a Connect screen later). The desktop file's `P='<brain-project-ref>'` constant is *not* copied. |
 | No privileged credentials in the APK | Only the publishable key (public by design) plus the user's own session. Service-role never leaves the server; verified per build by a shell scan of the APK contents. |
 | No local paths | None needed on a phone; the Cowork-era constants (`C:/Users/…`, MCP tool id) are dropped with the bridge. |
-| User config separated from code | `config/` + secure storage + the prefs row; nothing user-specific under `www/`. |
+| User config separated from code | `config/` + secure storage + the prefs row; nothing user-specific under `www/`. The values the inventory found baked into the desktop file all become configuration or data: project id, MCP tool id, the product title, the hidden `business` domain, the `'mom'` overview key (a real domain slug `mom` would clash), `agent='dashboard'` (the phone stamps `mobile`), the 15 Skills buckets (they name CSSI and MOM marketing, i.e. one person's vocabulary — the catalog's own `bucket` column is the source of truth), and `memory.md` inside the clean-up prompts. "Dustan" occurs only in comments; no emails or session ids are in the file. |
 | Different users, only their own MOM | Per-project isolation now; `authenticated`-only API; no cross-project client. |
 | Private vs shared | Two clients, two projects, one explicit publish action, an import lint rule. |
 | Modular for Jobs/Marketplace/Community/Discovery/licensing | A module registry with flag-gated stubs; the brain API is versioned. |
@@ -332,13 +346,61 @@ If you say yes to 1–10, the next action is Phase 0 in a fresh chat with this d
   renders every other tab.
 - **One-writer rule**: the phone is a second concurrent writer, like the desktop already is (memo 311 records
   the dashboard writing mid-session). RPCs stamp `agent='mobile'` so `/close` and `reconcile` can see them.
+- **Seen along the way, not touched (desktop is off-limits here):** in v3.4 (and v3.3) the goal card's
+  *Reassign domain* cannot complete — the `arm()` confirm step replaces the dropdown's content, deleting its
+  options, so no SQL is ever sent (measured by the inventory pass). The page's meta description still mentions
+  Accept/Keep/Defer Dream buttons that v3.3 removed. Both are Dustan's calls on the desktop file; the phone build
+  will implement Reassign correctly from the start.
 - **Estimates** are session counts, not hours; they assume the API lands without a second migration round.
 
 ---
 
 ## Appendix A — Dashboard inventory (per-function reuse list)
 
-*(filled from the independent inventory pass; see `INVENTORY.md` in the PR when attached)*
+Condensed from the independent inventory pass over the v3.4 staged file (full report with line numbers:
+`evidence/INVENTORY.md`; it also loaded the file unchanged in headless Chromium at 390×844 with a stub bridge).
+
+**Stack.** Plain HTML, CSS and JavaScript; no libraries, no build step; inline JS 133,899 bytes; one external
+resource (Google Fonts: Bricolage Grotesque, IBM Plex Sans, and IBM Plex Mono, which is downloaded but never
+used). Nothing is stored in the browser. No `prompt()` / `confirm()` / `alert()`.
+
+**Data access.** `q()` → `window.cowork.callMcpTool(TOOL, {project_id: P, query})`; `parse()` unwraps the MCP
+result; `sql()` throws the real Postgres message; `wfail()` toasts rejected writes; a reload nonce is added to
+every read except the drill-in query. 19 reads, 13 distinct writes (5 tables), one scheduled-task launch
+(`runQA` → `window.cowork.runScheduledTask`, Goals boards only), one chat hand-off (`sendToChat`).
+
+**Navigation.** `TABS_DEF` (7 tabs, 3 groups, Home pinned), `HOME_DEF` (7 widgets), `PREFS_DEFAULTS`, rail /
+top-tabs layouts, More overflow, Customize drawer, Jump palette, keyboard shortcuts, Goals domain chips
+(pinned MOM overview + active domains + on-deck shelf; movable and renamable in v3.4).
+
+**Pick-up prompt templates (verbatim; the phone reuses them unchanged):**
+
+- Goal: `Resume this brain task and pull its full context first — query public.deploy_memory for goal_id='<id>'
+  (goal_meta, task, and summary rows) to load prior work, then continue from the current next action with me.
+  Task: "<title>" [<id>] · Domain: <label> · Current next action: <next_action or 'none set'>.`
+- Saved item: `Resume this saved-for-later item and pull its context first — read public.spinoffs where
+  spinoff_id='<id>' for the full prompt, status, and skills, then continue it with me. Saved item #<n>: "<title>"
+  [<id>] · Status: <status> Deferred prompt: <prompt or 'none recorded'>`
+- Loop: `Start a session from this saved loop — read public.loops where loop_id='<id>' for its full skill_list
+  and scope, then walk me through running it. Loop: "<title>" [<id>] · Scope: <scope> Skill sequence: <skills>`
+
+**Terminology to keep verbatim.** Tabs *Home · Goals · Saved for Later · Parked · Loops · Skills · Dreams*;
+groups *Work · Later · System*; widgets *Needs your click · Top item per domain · Inbox · Ready to claim · Brain
+health · Quick actions · Dream readiness*; header *🧠 Minds Over Matters*; quick-capture placeholder *"Quick
+capture — what's on your mind?"* with button *Queue*; card actions *💬 Pick up*, *Done*, *Park*, *Unpark*,
+*Activate*, *🗑 Delete* (soft); priority pills *P1 / P2 / P3*; badges *#N* (DB-assigned, the number `/close`
+prints); empties *"inbox zero"*, *"nothing waiting on you"*, *"nothing claimable right now"*; toasts such as
+*"⚠ write REJECTED by the database — nothing was saved."*; footer *⏸ Pause automation / ▶ Resume automation*.
+
+**Reuse classes (from the inventory's assessment):**
+
+| Class | Functions | Phone build |
+|---|---|---|
+| A. Pure (no DOM, no I/O) | the v3.4 goal-tab block (`domOrderClean`, `orderDomains`, `goalChips`, `domMove`, …), `pinFirst`, `lit`, `daysAgo`, `byStatus`, `skMatch`, `skSubtreeNames`, `jparse`, `isUuid`, `parse`, the prompt builders, the static registries (`TABS_DEF`, `HOME_DEF`, `PREFS_DEFAULTS`, bucket tables), `mergePrefs`, `skGraph`, `dreamHealth`, the rollup maths (duplicated in two places today) | Shared unchanged in `mom-core`. |
+| B. HTML-string renderers | `esc`, `attrEsc`, `clampy`, `pri`, `tabBtn`, `card`, `loopCard`, `spinoffCard`, `memosBlock`, `skillRow`, `renderBucketsView`, `skTreeNode`, `renderPipelinesView`, the six `dream*` panes, `homeWidget` | Reused in the WebView; inline `onclick` strings converted to delegated listeners. |
+| C. Bridge-coupled | `q`, `sql`, all loaders (`loadAll`, `loadPrefs`, `savePrefs`, `drill`, `loadDreams`, `loadHome`), all writers (`setStatus`, `setDomain`, `addGoal`, `capture`, `audit`, `verifyPromote`, `toggleLoop`, `delLoop`, `setSpin`, `togglePause`), `sendToChat`, `runQA` | Replaced by the `DataSource` adapter (supabase-js + RPC), clipboard + intent hand-off; task-kind quick actions shown as desktop-only. |
+| D. Stateful UI glue | `render*`, `applyAttrs`, `toggleTheme`, `setMainTab`, `setDom`, `homeGoDom`, `arm`, `toast`, `wfail`, `copyText`, `showCopyModal`, `dreamCopy`, `togglePickup`, menus/drawer/palette | Works as-is in the WebView; `copyText` swaps to the Clipboard plugin. |
+| E. Desktop-only | `onKey`, `moveFocusedTab`, palette key handling, F2/double-click rename entry points, `makeSortable`, `makeWidgetSortable` | Dropped or replaced with buttons (rename via a sheet, reorder via up/down). |
 
 ## Appendix B — Buyer-edition access model (brain-setup)
 
