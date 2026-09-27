@@ -30,12 +30,12 @@ Shared by choice.**
 |---|---|
 | Location (live) | `C:/Users/ddurr/Claude/Artifacts/brain-dashboard/index.html` (Cowork artifact; `system_cache.dashboard_last_publish`) |
 | Sources on disk / Drive | `1 BRAIN/Specs & Setup/2026-09-21-dashboard-v3-redesign/dashboard-v3-phase3/index.html` (v3.3, sha256 `ed7f1c22…`, 174,342 B, 2,238 lines) and `…/dashboard-v3.4-goal-tabs/index.html` (v3.4 staged, Drive copy sha256 `177a0c55…`, 197,735 B, 2,547 lines; a revision newer than its PATCH-NOTES, which describe `580d477b…`) |
-| Framework | None. Vanilla HTML + CSS + one inline `<script>` (~131 K chars of JS). No bundler, no npm, no build step, no external JS libraries. |
+| Framework | None. Vanilla HTML + CSS + one inline `<script>` (~131 K chars of JS). No bundler, no npm, no build step, no external JS. The only external asset is one Google Fonts stylesheet (Bricolage Grotesque for display, IBM Plex Sans for body; mono is the system stack) — the app must bundle those font files so the look survives offline. |
 | Persistence in the page | None on purpose (manifest item [13]: no localStorage). All preferences live in `public.system_cache` key `dashboard_prefs` (v, layout, theme, accent, density, tabs, hidden, labels, home, whidden, title, domOrder, domLabels). |
 | Backend access | `window.cowork.callMcpTool('mcp__…__execute_sql', {project_id, query})` — raw SQL text sent to the Supabase MCP `execute_sql` tool, which runs as DB role **`postgres`** (`rolbypassrls = true`, measured 2026-09-17 and noted in the file). The page holds **no** anon, publishable, or service-role key. |
 | Parser | `parse()` strips the MCP `<untrusted-data-…>` wrapper and `JSON.parse`s the array ([11]); `sql()` surfaces the real Postgres error; `wfail()` toasts every rejected write ([24]); a `-- cb:<nonce>` comment defeats the bridge's query cache ([20]). |
 | Read surface | 12 tables: system_cache (8 queries), deploy_memory (7), dream_proposals (3), domains (2), system_flags, spinoffs, skill_registry, skill_catalog, quick_actions, pending_confirmations, loops, brain_edges. |
-| Write surface | 15 statements: 4 INSERTs (deploy_memory ×3 — quick capture / add goal / …, system_cache prefs upsert) and 11 UPDATEs (deploy_memory status + domain, spinoffs status, loops is_active ×7, system_flags system_paused). Every armed write is one confirm-click (`arm()`); deletes are soft (`status='deleted'`, [17]). |
+| Write surface | 15 statements: 4 INSERTs (deploy_memory ×3 — add goal, quick capture, and an `audit` row written after every status or domain change; system_cache prefs upsert) and 11 UPDATEs (deploy_memory status + domain, spinoffs status, loops is_active ×7, system_flags system_paused). Goal rows are stamped `agent='dashboard'`. Every armed write is one confirm-click (`arm()`); deletes are soft (`status='deleted'`, [17]). |
 | Chat hand-off | `sendToChat(text)` → `window.cowork.sendPrompt(text)` (opens a Cowork chat with the prompt) → fallback `copyText` (clipboard) → fallback copy modal. **Pick up writes nothing to the DB** ([19], [22]); the "picked" state is in-memory only. |
 | Desktop-only bridge calls | `window.cowork.runScheduledTask(ref)` for quick actions of kind=task ([8]); `window.cowork.sendPrompt`. |
 
@@ -156,8 +156,9 @@ approval (one-writer rule), and later packaged into `brain-setup` so buyer brain
 2. **Write RPCs** (SECURITY DEFINER, EXECUTE granted to `authenticated` only, revoked from public/anon), one per
    desktop write, same guards as the buyer ceiling: `mom_capture(text, domain)`, `mom_set_goal_status(goal_id,
    status)` (done/parked/active/deleted only), `mom_move_goal(goal_id, domain)`, `mom_set_spinoff_status`,
-   `mom_set_loop_active`, `mom_set_paused(bool)`, `mom_save_prefs(jsonb)`. All stamp `agent='mobile'`, none can
-   touch `done_when`/`done_when_kind`/`value` free-form (manifest [12] and buyer ruling A1 carried over).
+   `mom_set_loop_active`, `mom_set_paused(bool)`, `mom_save_prefs(jsonb)`. All stamp `agent='mobile'`, write the
+   same `audit` row the desktop writes after a status or domain change, and none can touch
+   `done_when`/`done_when_kind`/`value` free-form (manifest [12] and buyer ruling A1 carried over).
 3. **Pick-up RPCs** — the one new behaviour the phone adds: `mom_pick_up(kind, id)` sets `lease_owner =
    'mobile:<user>'` and `lease_expires_at = now() + 2h` on the goal / spinoff (both tables already carry lease
    columns; reconcile already honours leases), returns the pick-up prompt text built server-side from the same
@@ -321,9 +322,9 @@ If you say yes to 1–10, the next action is Phase 0 in a fresh chat with this d
   max, `pearls-library` is the other).
 - **WebView drag/gesture code**: the desktop's pointer-drag reorder is replaced by buttons; the v3.4 patch
   notes already record pointer-capture edge cases.
-- **Skills tab** reads `skill_registry` and `skill_catalog`; the desktop file also references a table named
-  `skills_registry` (to be checked in the inventory) — any such probe is guarded by `to_regclass` and must stay
-  guarded on the phone.
+- **Guarded probes**: the Dreams tab probes its tables with `to_regclass()` before querying (a missing table once
+  took the whole board down for weeks, [29]); the phone keeps the same guard so a brain without Dream Mode still
+  renders every other tab.
 - **One-writer rule**: the phone is a second concurrent writer, like the desktop already is (memo 311 records
   the dashboard writing mid-session). RPCs stamp `agent='mobile'` so `/close` and `reconcile` can see them.
 - **Estimates** are session counts, not hours; they assume the API lands without a second migration round.
