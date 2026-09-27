@@ -28,7 +28,7 @@ Shared by choice.**
 
 | Fact | Measured value |
 |---|---|
-| Location (live) | `C:/Users/ddurr/Claude/Artifacts/brain-dashboard/index.html` (Cowork artifact; `system_cache.dashboard_last_publish`) |
+| Location (live) | `<PC>/Claude/Artifacts/brain-dashboard/index.html` (path scrubbed; this repo is public) (Cowork artifact; `system_cache.dashboard_last_publish`) |
 | Sources on disk / Drive | `1 BRAIN/Specs & Setup/2026-09-21-dashboard-v3-redesign/dashboard-v3-phase3/index.html` (v3.3, sha256 `ed7f1c22…`, 174,342 B, 2,238 lines) and `…/dashboard-v3.4-goal-tabs/index.html` (v3.4 staged, Drive copy sha256 `177a0c55…`, 197,735 B, 2,547 lines; a revision newer than its PATCH-NOTES, which describe `580d477b…`) |
 | Framework | None. Vanilla HTML + CSS + one inline `<script>` (~131 K chars of JS). No bundler, no npm, no build step, no external JS. The only external asset is one Google Fonts stylesheet requesting three families (Bricolage Grotesque for display, IBM Plex Sans for body, IBM Plex Mono; the `--mono` token itself falls back to the system monospace stack) — the app must bundle those font files so the look survives offline. |
 | Persistence in the page | None on purpose (manifest item [13]: no localStorage). All preferences live in `public.system_cache` key `dashboard_prefs` (v, layout, theme, accent, density, tabs, hidden, labels, home, whidden, title, domOrder, domLabels). |
@@ -60,19 +60,24 @@ observed from here. The plan treats **v3.4 staged** as the design reference; if 
 ### 1.2 The buyer edition already has the shape a phone needs
 
 The Minds Over Matters product ships `dashboard-template.html` plus the `brain-setup` provisioner skill
-(read from the shipped `brain-setup.skill`, 274 KB). *Measured:* each buyer provisions **their own Supabase
-project** (single tenant); the buyer dashboard reads through the **publishable key** under a "column ceiling"
-(anon has no table-level write; a fixed set of column grants — capture INSERT and status UPDATE — and
-`done_when` / `done_when_kind` are never anon-writable, proven on `mom-buyer-test` 2026-09-24); **Supabase Auth
-is not used** (0 `auth.uid` references); licensing is a signed key checked by `verify-license.cjs` and stored by
-step 1d-LICENSE. Details in Appendix B. This matters because the phone cannot use the Cowork bridge: the buyer
-edition proves the same board can be driven through PostgREST with a public key and a tight server-side ceiling.
+(read from the shipped `brain-setup.skill`, 274 KB; independent extraction in Appendix B). *Measured:* each
+buyer provisions **their own Supabase project** (single tenant; "DEDICATED projects only" in step 1e is about
+whether that one project is shared with the buyer's other apps, not about buyer-to-buyer isolation); the buyer
+dashboard **embeds the publishable key in the static HTML** and reads/writes the project's REST API from the
+browser (`Promise.all` reads, a `capture()` POST, PATCH-style status updates); **Supabase Auth is not used** (zero
+`auth.users` / `auth.uid()` references; all 20 policies name `anon` or `service_role`); anon holds SELECT on nine
+tables, INSERT on six `deploy_memory` columns and column-level UPDATE on six tables — **15 column grants in all,
+no DELETE anywhere** — and nothing on the other nine core tables; `done_when` / `done_when_kind` are unreachable
+*by privilege*, proven on `mom-buyer-test` 2026-09-24. Licensing is an offline Ed25519-signed key checked by
+`verify-license.cjs` (no device binding) and stored in `system_cache`. This matters because the phone cannot
+use the Cowork bridge: the buyer edition proves the same board can be driven through the REST API with a public
+key and a tight server-side ceiling — the phone adds a signed-in identity on top of that pattern.
 
 ### 1.3 The live brain today (security posture, measured 2026-09-27)
 
 | Item | Measured |
 |---|---|
-| Project | `ompxlqmszgutlldtivph`, us-east-1, Postgres 17.6, ACTIVE_HEALTHY. Free tier: two active projects max (`pearls-library` active, `mom-buyer-test` paused). |
+| Project | `<brain-project-ref>` (ref scrubbed; this repo is public), us-east-1, Postgres 17.6, ACTIVE_HEALTHY. Free tier: two active projects max (`pearls-library` active, `mom-buyer-test` paused). |
 | RLS | Enabled on every public table. |
 | Policies | 17 total. Role **anon**: `deploy_memory` SELECT where key='goal_meta'; `deploy_memory` INSERT only (key='goal_meta', status='queued-unreviewed', agent='desktop'); `domains` SELECT; `system_flags` SELECT. Everything else is `service_role_only` or has **no policy at all** (= denied). Role **authenticated: zero policies anywhere.** |
 | Grants | anon and authenticated still hold the Supabase default table-level SELECT/INSERT/UPDATE/DELETE on every public table (TRUNCATE was revoked 2026-09-17); RLS is what actually blocks them. |
@@ -222,7 +227,7 @@ spent v3.9.2 closing; RPCs keep the writable surface to seven named operations.
 | Requirement | How the plan meets it |
 |---|---|
 | No hard-coded personal identity | Auth session decides who; no user id, email, or name in code. |
-| No personal Supabase ids in logic | Project URL and publishable key are runtime config (CI secret for the personal build; a Connect screen later). The desktop file's `P='ompxlqmszgutlldtivph'` constant is *not* copied. |
+| No personal Supabase ids in logic | Project URL and publishable key are runtime config (CI secret for the personal build; a Connect screen later). The desktop file's `P='<brain-project-ref>'` constant is *not* copied. |
 | No privileged credentials in the APK | Only the publishable key (public by design) plus the user's own session. Service-role never leaves the server; verified per build by a shell scan of the APK contents. |
 | No local paths | None needed on a phone; the Cowork-era constants (`C:/Users/…`, MCP tool id) are dropped with the bridge. |
 | User config separated from code | `config/` + secure storage + the prefs row; nothing user-specific under `www/`. |
@@ -337,4 +342,42 @@ If you say yes to 1–10, the next action is Phase 0 in a fresh chat with this d
 
 ## Appendix B — Buyer-edition access model (brain-setup)
 
-*(filled from the independent provisioner pass; see `ACCESS-MODEL.md` in the PR when attached)*
+Extracted by an independent pass over the shipped `brain-setup/SKILL.md` (every claim cited by line in
+`evidence/ACCESS-MODEL.md`). Corrections to the brief that commissioned it: 20 real `CREATE POLICY` statements
+(not 24) and 19 executable `GRANT`/`REVOKE` statements (not 72); the larger numbers were grep hits on prose.
+
+**Tables provisioned (20):** 18 unconditional — sessions, deploy_memory, system_cache, spinoffs, loops,
+skill_registry, domains, active_sessions, run_plans, pending_confirmations, policies, scripts, model_routing,
+system_locks, policy_proposals, system_flags, skill_catalog, brain_meta — plus brain_edges and dream_proposals
+when Dream Mode is switched on; `spinoffs_numbered` is a security-invoker view (the `row_number()` badge).
+
+**The anon ceiling (what the buyer dashboard may do with the publishable key):**
+
+| Table | anon may read | anon may write (column-level) |
+|---|---|---|
+| deploy_memory | yes | INSERT goal_id, agent, key, status, domain, value; UPDATE status |
+| loops | yes | UPDATE status, is_active |
+| spinoffs | yes | UPDATE status |
+| skill_registry | yes | UPDATE install_confirmed, installed_at |
+| pending_confirmations | yes | UPDATE status, confirmed_at |
+| system_flags | yes | UPDATE value (row-scoped to `system_paused`) |
+| domains, system_cache (5 keys), skill_catalog | yes | nothing |
+| sessions, active_sessions, run_plans, policies, scripts, model_routing, brain_meta, system_locks, policy_proposals, brain_edges, dream_proposals | no | nothing |
+
+No DELETE, TRUNCATE, TRIGGER or REFERENCES for anon anywhere. `done_when`, `done_when_kind`, `run_done_when`,
+`run_done_when_kind` are outside every grant because the shipped reality-check executes them as SQL or shell.
+Sequences are revoked from anon; trigger and lane functions are revoked from PUBLIC/anon/authenticated.
+
+**Identity:** none. Eleven of the sixteen anon policies are bare `USING (true)`; the key is static in the HTML;
+there is no per-user or per-device scoping. That is exactly the gap the phone plan closes with Supabase Auth and
+`authenticated`-only access (§2.2–2.3), and it is why the personal build must never fall back to "anon + wide
+policies".
+
+**Contrast with Dustan's live brain (§1.3):** his brain has only the four anon policies (goal_meta read,
+capture insert, domains, system_flags); the buyer ceiling above is *wider* than his own anon surface. The MOM
+Brain API proposed here is designed so the same migration can be packaged into `brain-setup` later, giving
+buyer brains and Dustan's brain one identical, versioned contract for any client.
+
+**Seen along the way (not this plan's scope):** the verifier notes that `verify-license.cjs` carries a header
+saying it is staged for v4.1 and must not enter the sealed v4.0 bundle, while the paired `SKILL.md` presents the
+same check as a live v4.0 Step 0 — worth a look by whoever owns the product cut.
