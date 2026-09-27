@@ -1,7 +1,7 @@
 # Independent verification: dashboard v3.3 (A) vs v3.4 (B)
 
-A = /tmp/claude-0/-home-user-mindsovermatters-co/5d11479c-c65e-5dec-a00b-17eb9b1a8f35/scratchpad/dash/index-v3.3-live.html
-B = /tmp/claude-0/-home-user-mindsovermatters-co/5d11479c-c65e-5dec-a00b-17eb9b1a8f35/scratchpad/dash/index-v3.4-staged.html
+A = <scratch>/dash/index-v3.3-live.html
+B = <scratch>/dash/index-v3.4-staged.html
 
 Method: read-only. All commands run against the files as they exist on disk; no edits made.
 

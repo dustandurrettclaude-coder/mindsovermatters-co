@@ -4,8 +4,10 @@ Status: **PROPOSAL, awaiting Dustan's approval. Nothing below has been built. No
 desktop-dashboard change has been made.**
 Brain goal: `2026-09-27-android-mom-app` (deploy_memory id 756, domain infra, status queued, gate = plan approval).
 Written 2026-09-27 by session 20260927-161451 (Claude Code, cloud). Every fact marked *measured* was read from
-the live brain, the dashboard source files, or this container during the session; anything marked *assumed* or
-*unverified* is labelled as such.
+the live brain, the dashboard source files, or this container during the session, and then re-checked by
+independent verifier passes: `evidence/VERIFY-backend.md` (11 of 11 claims confirmed) and
+`evidence/VERIFY-dashboard.md` (9 of 12 confirmed; the 3 corrections are already folded into this text).
+Anything marked *assumed* or *unverified* is labelled as such.
 
 ---
 
@@ -30,7 +32,7 @@ Shared by choice.**
 |---|---|
 | Location (live) | `<PC>/Claude/Artifacts/brain-dashboard/index.html` (path scrubbed; this repo is public) (Cowork artifact; `system_cache.dashboard_last_publish`) |
 | Sources on disk / Drive | `1 BRAIN/Specs & Setup/2026-09-21-dashboard-v3-redesign/dashboard-v3-phase3/index.html` (v3.3, sha256 `ed7f1c22…`, 174,342 B, 2,238 lines) and `…/dashboard-v3.4-goal-tabs/index.html` (v3.4 staged, Drive copy sha256 `177a0c55…`, 197,735 B, 2,547 lines; a revision newer than its PATCH-NOTES, which describe `580d477b…`) |
-| Framework | None. Vanilla HTML + CSS + one inline `<script>` (~131 K chars of JS). No bundler, no npm, no build step, no external JS. The only external asset is one Google Fonts stylesheet requesting three families (Bricolage Grotesque for display, IBM Plex Sans for body, IBM Plex Mono; the `--mono` token itself falls back to the system monospace stack) — the app must bundle those font files so the look survives offline. |
+| Framework | None. Vanilla HTML + CSS + one inline `<script>` (133,899 bytes of JS). No bundler, no npm, no build step, no external JS. The only external asset is one Google Fonts stylesheet requesting three families (Bricolage Grotesque for display, IBM Plex Sans for body, IBM Plex Mono; the `--mono` token itself falls back to the system monospace stack) — the app must bundle those font files so the look survives offline. |
 | Persistence in the page | None on purpose (manifest item [13]: no localStorage). All preferences live in `public.system_cache` key `dashboard_prefs` (v, layout, theme, accent, density, tabs, hidden, labels, home, whidden, title, domOrder, domLabels). |
 | Backend access | `window.cowork.callMcpTool('mcp__…__execute_sql', {project_id, query})` — raw SQL text sent to the Supabase MCP `execute_sql` tool, which runs as DB role **`postgres`** (`rolbypassrls = true`, measured 2026-09-17 and noted in the file). The page holds **no** anon, publishable, or service-role key. |
 | Parser | `parse()` strips the MCP `<untrusted-data-…>` wrapper and `JSON.parse`s the array ([11]); `sql()` surfaces the real Postgres error; `wfail()` toasts every rejected write ([24]); a `-- cb:<nonce>` comment defeats the bridge's query cache ([20]). |
@@ -83,8 +85,8 @@ key and a tight server-side ceiling — the phone adds a signed-in identity on t
 | Grants | anon and authenticated still hold the Supabase default table-level SELECT/INSERT/UPDATE/DELETE on every public table (TRUNCATE was revoked 2026-09-17); RLS is what actually blocks them. |
 | Supabase Auth | `auth.users` = 0 rows. Never used. |
 | Keys | A legacy anon JWT and a modern `sb_publishable_…` key both exist and are enabled (values deliberately not written here). |
-| Extensions / functions | pg_cron, pg_net (in public — advisor WARN); one Edge Function `keepalive`; six `factory.*` functions with mutable search_path (WARN). |
-| Advisors | 60 tables "RLS enabled, no policy" (INFO — correct for a postgres-only brain). |
+| Extensions / functions | pg_cron (in pg_catalog) and pg_net (installed in public — advisor WARN); one Edge Function `keepalive`; six `factory.*` functions with mutable search_path (WARN). |
+| Advisors | 60 tables "RLS enabled, no policy" across the public and factory schemas (42 of the 57 public tables; INFO — correct for a postgres-only brain). |
 
 Consequence: **with the keys that exist, a phone can today read goal_meta and domains and quick-capture a goal,
 and nothing else.** It cannot read pending confirmations, spinoffs, loops, prefs, skills, dreams, or health, and
@@ -93,8 +95,8 @@ it cannot change a status. A mobile access layer must be added on the server bef
 ### 1.4 This build environment
 
 *Measured:* Java 21, Gradle 8.14.3, Node 22 present; **no Android SDK**, and the egress policy returns 403 for
-`dl.google.com` (SDK downloads) and for `*.supabase.co` (PostgREST). Maven Central, Google Maven, npm and GitHub
-are reachable. So: APKs are built by **GitHub Actions** (Ubuntu runners ship the Android SDK), not in this
+`dl.google.com` (SDK downloads) and for `*.supabase.co` (PostgREST). Maven Central (with occasional 429 rate-limit responses, so builds need retries or a cache), Google Maven,
+npm and GitHub are reachable. So: APKs are built by **GitHub Actions** (Ubuntu runners ship the Android SDK), not in this
 container; the database is reached from here only through the Supabase MCP connector; the app's REST path is
 tested on the phone and in CI, not here.
 
@@ -133,8 +135,8 @@ Android APK "Minds Over Matters" (applicationId co.mindsovermatters.mom)
     │   ├── data/                DataSource interface
     │   │   ├── supabase.js      supabase-js: Auth session + RPC + RLS-scoped selects     ← mobile
     │   │   └── cowork.js        (parity adapter around the existing sql()/parse(); future desktop use)
-    │   └── modules/             feature registry: my-mom (built) · meeting-of-the-minds · jobs · marketplace ·
-    │                            discovery · profile · verified  (stubs behind flags; NOT built now)
+    │   └── modules/             feature registry: my-mom (Phase 1) · community (Meeting of the Minds) · jobs ·
+    │                            marketplace · discovery · profile · verified  (stubs behind flags; NOT built now)
     ├── native/                  Capacitor plugins: Clipboard, App/Browser (open claude.ai/new?q=…),
     │                            SecureStorage (auth session), Preferences (device-only conveniences)
     └── config/                  runtime config, never code: { brain:{url, publishableKey}, community:null }
@@ -152,7 +154,7 @@ Why a WebView shell and not a native rewrite: the entire desktop UI is HTML/CSS/
 only path that satisfies "same visual language, same controls" *and* "not two independent implementations" is to
 run that code on the phone. Capacitor packages web assets inside the APK (no hosting), gives native clipboard /
 intents / secure storage through plugins, and is a standard, Play-Store-accepted way to ship. A Kotlin/Compose
-rewrite would duplicate ~130 K chars of logic and drift immediately. (Flutter / React Native have the same
+rewrite would duplicate 133,899 bytes of logic and drift immediately. (Flutter / React Native have the same
 duplication problem.) The cost is WebView performance and feel, which is acceptable for a card-and-list board.
 
 ### 2.2 The server-side contract: "MOM Brain API v1" (proposed, not applied)
@@ -180,6 +182,8 @@ approval (one-writer rule), and later packaged into `brain-setup` so buyer brain
    phone" whenever it chooses to read the lease columns.
 4. `mom_api_version()` → `'1.0'` so a client can refuse to run against a brain that lacks the API.
 5. No new tables. No change to existing policies, grants, triggers, or the anon ceiling.
+6. Naming: every object the migration creates carries the `mom_` prefix — functions `mom_*`, policies
+   `mom_mobile_<table>_<cmd>` — so the API can be listed, verified and dropped as one unit.
 
 Alternative considered (D4): direct table writes through wide `authenticated` UPDATE policies. Rejected because
 every write would then need column-level guards re-proven on each table, exactly the hole the buyer edition
@@ -266,9 +270,11 @@ Evidence kinds follow the brain's convention: **sql** (a query Claude runs), **s
   through the Supabase connector.
 - Dustan: create his Auth user (Supabase dashboard → Authentication → Users → Add user), disable sign-ups,
   add the CI secrets (URL, publishable key). Each is a `pending_confirmations` row.
-- **done_when:** sql — `select mom_api_version()` = '1.0' AND `select count(*) from pg_policies where policyname
-  like 'mom_mobile_%'` ≥ 12 AND `select count(*) from auth.users` = 1; shell — CI produces `app-debug.apk`;
-  manual — Dustan signs in on the debug APK and Home loads his real brain.
+- **done_when:** sql (three checks, each must return true) —
+  `select public.mom_api_version() = '1.0';`
+  `select count(*) >= 11 from pg_policies where schemaname='public' and policyname like 'mom_mobile_%';`
+  `select count(*) = 1 from auth.users;`
+  shell — CI produces `app-debug.apk`; manual — Dustan signs in on the debug APK and Home loads his real brain.
 
 ### Phase 1 — Personal MOM v1 (the MVP; ~3–4 sessions)
 - Every tab reads live: Home (7 widgets, same numbers as `/close`), Goals (rollup, domain chips, boards,
@@ -278,8 +284,10 @@ Evidence kinds follow the brain's convention: **sql** (a query Claude runs), **s
   toggles, pause, prefs; all via RPC, all two-tap confirmed, all failures toasted.
 - Pick up: lease + clipboard + Open Claude; picked state shown from the lease, not memory.
 - Theme / accent / density from prefs; phone layout per §2.5; signed release APK sideloaded.
-- **done_when:** sql — `select count(*) from public.deploy_memory where lease_owner like 'mobile:%'` ≥ 1 and a
-  goal_meta row with `agent='mobile'` exists; manual — the full loop (§2.4) observed once end-to-end by Dustan;
+- **done_when:** sql (both must return true) —
+  `select count(*) >= 1 from public.deploy_memory where lease_owner like 'mobile:%';`
+  `select exists (select 1 from public.deploy_memory where key='goal_meta' and agent='mobile');`
+  manual — the full loop (§2.4) observed once end-to-end by Dustan;
   verifier — parity table over manifest items [1]–[42], each marked ported / desktop-only / deferred, zero
   "unknown".
 
@@ -289,7 +297,8 @@ Evidence kinds follow the brain's convention: **sql** (a query Claude runs), **s
   and splash in brand colours, crash-free error screens, versioning.
 - **done_when:** manual — a change made by Claude on the desktop appears on the phone within 10 s without a
   manual refresh; shell — `unzip -l app-release.apk` + `strings` scan finds no `service_role`, no JWT with
-  role service_role, no personal email or path; verifier — round clean.
+  role service_role, no personal email or path; verifier — a fresh subagent repeats the propagation test on a
+  second device or emulator and re-runs the APK scan with zero findings.
 
 ### Phase 3 — Convergence and commercial readiness (~2–3 sessions)
 - Extract `mom-core` (tokens, registries, prompts, render functions) so the desktop can adopt it when Dustan
@@ -320,13 +329,14 @@ client slot are the only things built for them now.
    SMTP, pending elsewhere) or keep no auth (rejected: the publishable key alone would expose the brain).
 6. **Pick up on the phone writes a lease** (`lease_owner`, `lease_expires_at`) (recommended). Alternative: no
    write, desktop parity only (then "Supabase updates" in the loop is false).
-7. **GitHub Actions builds the signed APK; sideload first, Play later** (recommended).
+7. **GitHub Actions builds the signed APK; sideload first, Play later** (recommended). Alternative: build locally
+   on Dustan's PC with Android Studio (works, but every build then depends on one machine).
 8. **Phase 1 refresh = foreground + pull-to-refresh; Realtime in Phase 2** (recommended). Alternative: Realtime
    from day one.
 9. **Fork the desktop file now, converge into `mom-core` in Phase 3** (recommended). Alternative: refactor the
    desktop first (touches the live dashboard before the phone exists).
 10. **Open Claude = clipboard always + `https://claude.ai/new?q=` intent** (recommended); verified on the device
-    in Phase 1.
+    in Phase 1. Alternative: clipboard only, with a plain "open Claude" button that just launches the app.
 
 If you say yes to 1–10, the next action is Phase 0 in a fresh chat with this document as the kickoff.
 
@@ -349,7 +359,8 @@ If you say yes to 1–10, the next action is Phase 0 in a fresh chat with this d
 - **Seen along the way, not touched (desktop is off-limits here):** in v3.4 (and v3.3) the goal card's
   *Reassign domain* cannot complete — the `arm()` confirm step replaces the dropdown's content, deleting its
   options, so no SQL is ever sent (measured by the inventory pass). The page's meta description still mentions
-  Accept/Keep/Defer Dream buttons that v3.3 removed. Both are Dustan's calls on the desktop file; the phone build
+  Accept/Keep/Defer Dream buttons that no longer exist (the v3.4 patch notes record v3.3 replacing them with one
+  Review button). Both are Dustan's calls on the desktop file; the phone build
   will implement Reassign correctly from the start.
 - **Estimates** are session counts, not hours; they assume the API lands without a second migration round.
 

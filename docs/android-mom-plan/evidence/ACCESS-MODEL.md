@@ -1,8 +1,8 @@
 # Minds Over Matters — Database Access Model (as provisioned by brain-setup)
 
 Source files (line numbers below refer to these, by filename):
-- `SKILL.md` — `/tmp/claude-0/-home-user-mindsovermatters-co/5d11479c-c65e-5dec-a00b-17eb9b1a8f35/scratchpad/brain-setup/brain-setup/SKILL.md` (3434 lines)
-- `verify-license.cjs` — `/tmp/claude-0/-home-user-mindsovermatters-co/5d11479c-c65e-5dec-a00b-17eb9b1a8f35/scratchpad/brain-setup/brain-setup/verify-license.cjs` (131 lines)
+- `SKILL.md` — `<scratch>/brain-setup/brain-setup/SKILL.md` (3434 lines)
+- `verify-license.cjs` — `<scratch>/brain-setup/brain-setup/verify-license.cjs` (131 lines)
 
 `dashboard-template.html` itself is **not** among the files I was given, and is not present in the skill folder — `SKILL.md:3395` says it "sits at the top of the unzipped Minds Over Matters download... NOT inside the installed skill." Everything below about what the dashboard does is drawn from `SKILL.md`'s own commentary about that file, not from reading its code.
 
