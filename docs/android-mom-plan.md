@@ -30,11 +30,11 @@ Shared by choice.**
 |---|---|
 | Location (live) | `C:/Users/ddurr/Claude/Artifacts/brain-dashboard/index.html` (Cowork artifact; `system_cache.dashboard_last_publish`) |
 | Sources on disk / Drive | `1 BRAIN/Specs & Setup/2026-09-21-dashboard-v3-redesign/dashboard-v3-phase3/index.html` (v3.3, sha256 `ed7f1c22…`, 174,342 B, 2,238 lines) and `…/dashboard-v3.4-goal-tabs/index.html` (v3.4 staged, Drive copy sha256 `177a0c55…`, 197,735 B, 2,547 lines; a revision newer than its PATCH-NOTES, which describe `580d477b…`) |
-| Framework | None. Vanilla HTML + CSS + one inline `<script>` (~131 K chars of JS). No bundler, no npm, no build step, no external JS. The only external asset is one Google Fonts stylesheet (Bricolage Grotesque for display, IBM Plex Sans for body; mono is the system stack) — the app must bundle those font files so the look survives offline. |
+| Framework | None. Vanilla HTML + CSS + one inline `<script>` (~131 K chars of JS). No bundler, no npm, no build step, no external JS. The only external asset is one Google Fonts stylesheet requesting three families (Bricolage Grotesque for display, IBM Plex Sans for body, IBM Plex Mono; the `--mono` token itself falls back to the system monospace stack) — the app must bundle those font files so the look survives offline. |
 | Persistence in the page | None on purpose (manifest item [13]: no localStorage). All preferences live in `public.system_cache` key `dashboard_prefs` (v, layout, theme, accent, density, tabs, hidden, labels, home, whidden, title, domOrder, domLabels). |
 | Backend access | `window.cowork.callMcpTool('mcp__…__execute_sql', {project_id, query})` — raw SQL text sent to the Supabase MCP `execute_sql` tool, which runs as DB role **`postgres`** (`rolbypassrls = true`, measured 2026-09-17 and noted in the file). The page holds **no** anon, publishable, or service-role key. |
 | Parser | `parse()` strips the MCP `<untrusted-data-…>` wrapper and `JSON.parse`s the array ([11]); `sql()` surfaces the real Postgres error; `wfail()` toasts every rejected write ([24]); a `-- cb:<nonce>` comment defeats the bridge's query cache ([20]). |
-| Read surface | 12 tables: system_cache (8 queries), deploy_memory (7), dream_proposals (3), domains (2), system_flags, spinoffs, skill_registry, skill_catalog, quick_actions, pending_confirmations, loops, brain_edges. |
+| Read surface | 11 tables: system_cache (8 queries), deploy_memory (7), dream_proposals (3), domains (2), system_flags, spinoffs, skill_catalog (the Skills tab reads only the catalog, never skill_registry), quick_actions, pending_confirmations, loops, brain_edges. |
 | Write surface | 15 statements: 4 INSERTs (deploy_memory ×3 — add goal, quick capture, and an `audit` row written after every status or domain change; system_cache prefs upsert) and 11 UPDATEs (deploy_memory status + domain, spinoffs status, loops is_active ×7, system_flags system_paused). Goal rows are stamped `agent='dashboard'`. Every armed write is one confirm-click (`arm()`); deletes are soft (`status='deleted'`, [17]). |
 | Chat hand-off | `sendToChat(text)` → `window.cowork.sendPrompt(text)` (opens a Cowork chat with the prompt) → fallback `copyText` (clipboard) → fallback copy modal. **Pick up writes nothing to the DB** ([19], [22]); the "picked" state is in-memory only. |
 | Desktop-only bridge calls | `window.cowork.runScheduledTask(ref)` for quick actions of kind=task ([8]); `window.cowork.sendPrompt`. |
@@ -49,7 +49,7 @@ active `public.domains` row, dormant domains on an "on deck" shelf; v3.4 makes c
 
 Design tokens in the shipped file (light): ground `#F6F3F9`, panel `#FFFFFF`, ink `#1E1530`, muted `#6F6784`,
 line `#E4DEEC`, accent `#6366f1` on deep `#2C1A47`, good `#2E7D4F`, warn `#A8720F`, bad `#B3372B`, info
-`#2F5FA8`; a full dark override; one phone breakpoint at `max-width:640px` that only collapses the rail to icons.
+`#2F5FA8`, plus their soft variants, spacing/density tokens and the three font stacks; a full dark override; one phone breakpoint at `max-width:640px` that only collapses the rail to icons.
 (The full token, font, terminology and function inventory is in §1.5 / Appendix A.)
 
 **Open fact (D1 below):** v3.4's PATCH-NOTES (written 2026-09-26) record that the live artifact file hashed to
@@ -149,10 +149,10 @@ acts as role `authenticated`, which today has no rights at all. Proposed additio
 migration file (`sql/0001_mom_brain_api.sql`), applied by Claude Code through the Supabase connector only after
 approval (one-writer rule), and later packaged into `brain-setup` so buyer brains get the identical API:
 
-1. **Read policies for `authenticated`** on exactly the tables the dashboard reads: deploy_memory, domains,
+1. **Read policies for `authenticated`** on exactly the 11 tables the dashboard reads: deploy_memory, domains,
    spinoffs, loops, pending_confirmations, system_cache (keys `brain_meta`, `dashboard_prefs`, `dream_*`),
-   system_flags, skill_registry, skill_catalog, quick_actions, dream_proposals (aggregates + inbox rows, per the
-   Dreams-tab rules), brain_edges (counts). Single-user project, so the policy is "signed in", not `owner_id`.
+   system_flags, skill_catalog, quick_actions, dream_proposals (aggregates + inbox rows, per the Dreams-tab
+   rules), brain_edges (counts). Single-user project, so the policy is "signed in", not `owner_id`.
 2. **Write RPCs** (SECURITY DEFINER, EXECUTE granted to `authenticated` only, revoked from public/anon), one per
    desktop write, same guards as the buyer ceiling: `mom_capture(text, domain)`, `mom_set_goal_status(goal_id,
    status)` (done/parked/active/deleted only), `mom_move_goal(goal_id, domain)`, `mom_set_spinoff_status`,
