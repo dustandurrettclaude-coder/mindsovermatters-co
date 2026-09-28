@@ -4,8 +4,10 @@ This log records what was built for the six recommended actions in
 `2026-09-27-kj-second-brain-vs-mom.md` (§6), where the deliverables live, how they were verified, and
 what remains for Dustan. The build is a set of drop-in files. Nothing in Minds Over Matters was
 modified by this branch: not the live brain, not the installed personal skills, not the product kit
-source. This repository is public, so the product files themselves are not committed here; they live
-in the private workspace mirror (Google Drive, `Minds Over Matters/_drafts/kj-actions-2026-09-28/`).
+source. This repository is public, so the product files themselves are not committed here. The entry
+files (index, Cowork prompts, audit, paste block, listing copy, keyed appendix) sit in the private
+workspace mirror (Google Drive, `Minds Over Matters/_drafts/kj-actions-2026-09-28/`); the full tree
+(81 files) is delivered as a zip through the session with a sha256 manifest, to be extracted there.
 
 ## The licensing assumption
 
@@ -61,7 +63,7 @@ next-action save used a delete-and-insert that dropped the goal row's other colu
 merging update), and the Dashboard Guide page shipped with a script error that disabled its tabs and
 copy button.
 
-## Deliverables (private workspace mirror)
+## Deliverables (private workspace mirror; full tree in the zip)
 
 | Folder | Contents |
 |---|---|
@@ -91,7 +93,13 @@ of absence).
   install prompt in the HTML guide was confirmed identical to the prompt file, and all 59 Handbook and
   Setup Guide passages were found on their stated pages.
 - **Mechanical checks** (diffs reproduce every patched file byte for byte, license and step-count
-  greps, SQL parsing, frontmatter, byte counts): [[V1 RESULT]]
+  greps, SQL parsing, frontmatter, byte counts): content confirmed on every count (all 19 kit files and
+  3 personal skills reproduce byte for byte; 116 of 116 reported figures match; 282 SQL units parse).
+  Three claims failed on method or wording, not substance: the diff headers carried absolute paths,
+  so plain `patch -p1` could not locate files (every diff was regenerated with portable headers and
+  re-proven with `patch -p1` and `git apply`); the license grep counted the patch-notes entry that
+  describes the removal and the unchanged v4.1 history; and two skill descriptions changed, both
+  keeping their exact trigger lists so the routing table is unchanged.
 
 ## Order of landing (the one hard condition)
 
