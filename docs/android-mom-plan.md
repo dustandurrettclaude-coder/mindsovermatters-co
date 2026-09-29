@@ -1,8 +1,9 @@
 # Native Android MOM app — inspection findings and phased plan
 
-Status: **PROPOSAL, awaiting Dustan's approval. Nothing below has been built. No schema, grant, or
-desktop-dashboard change has been made.**
-Brain goal: `2026-09-27-android-mom-app` (deploy_memory id 756, domain infra, status queued, gate = plan approval).
+Status: **APPROVED by Dustan on 2026-09-29 00:17 UTC (ruling in §7); Phase 0 in progress.** The desktop
+dashboard is untouched. The MOM Brain API migration is written and reviewed; it is applied to the brain only on
+Dustan's explicit "apply" (see §7). The app lives in the private repo `mom-app`.
+Brain goal: `2026-09-27-android-mom-app` (deploy_memory id 756, domain infra, status active).
 Written 2026-09-27 by session 20260927-161451 (Claude Code, cloud). Every fact marked *measured* was read from
 the live brain, the dashboard source files, or this container during the session, and then re-checked by
 independent verifier passes: `evidence/VERIFY-backend.md` (11 of 11 claims confirmed) and
@@ -164,22 +165,26 @@ acts as role `authenticated`, which today has no rights at all. Proposed additio
 migration file (`sql/0001_mom_brain_api.sql`), applied by Claude Code through the Supabase connector only after
 approval (one-writer rule), and later packaged into `brain-setup` so buyer brains get the identical API:
 
-1. **Read policies for `authenticated`** on exactly the 11 tables the dashboard reads: deploy_memory, domains,
-   spinoffs, loops, pending_confirmations, system_cache (keys `brain_meta`, `dashboard_prefs`, `dream_*`),
-   system_flags, skill_catalog, quick_actions, dream_proposals (aggregates + inbox rows, per the Dreams-tab
-   rules), brain_edges (counts). Single-user project, so the policy is "signed in", not `owner_id`.
+1. **Reads: `mom_read(q text)`** (amendment A1, §7). The desktop's 19 read statements use correlated
+   subqueries, window functions, `to_regclass()` probes and aggregates that PostgREST cannot express, so the
+   phone sends the *same SQL text* to one function. `mom_read` accepts exactly one statement that starts with
+   SELECT or WITH, switches the transaction to read-only, then runs it as the NOLOGIN role `mom_reader`, which
+   can SELECT only the 11 tables the dashboard reads: deploy_memory, domains, spinoffs, loops,
+   pending_confirmations, system_cache (keys `brain_meta`, `current_session_id`, `dashboard_prefs`,
+   `dashboard_last_publish`, `dream_*` only), system_flags, skill_catalog, quick_actions, dream_proposals,
+   brain_edges. RLS stays on; the 11 `mom_mobile_<table>_read` policies are `TO mom_reader`. Single-user
+   project, so the gate is "signed in" (`auth.uid()`), not `owner_id`.
 2. **Write RPCs** (SECURITY DEFINER, EXECUTE granted to `authenticated` only, revoked from public/anon), one per
-   desktop write, same guards as the buyer ceiling: `mom_capture(text, domain)`, `mom_set_goal_status(goal_id,
-   status)` (done/parked/active/deleted only), `mom_move_goal(goal_id, domain)`, `mom_set_spinoff_status`,
-   `mom_set_loop_active`, `mom_set_paused(bool)`, `mom_save_prefs(jsonb)`. All stamp `agent='mobile'`, write the
+   desktop write, same guards as the buyer ceiling: `mom_capture(title, domain, next_action, priority,
+   status queued|active)`, `mom_set_goal_status(goal_id, status)` (active/parked/done/deleted only),
+   `mom_move_goal(goal_id, domain)`, `mom_set_spinoff_status(id, ready|parked|deleted)`,
+   `mom_loop_action(id, promote|resume|park|delete)` (statement-for-statement the desktop's three loop
+   functions; amendment A2), `mom_set_paused(bool)`, `mom_save_prefs(jsonb)`. All stamp `agent='mobile'`, write the
    same `audit` row the desktop writes after a status or domain change, and none can touch
    `done_when`/`done_when_kind`/`value` free-form (manifest [12] and buyer ruling A1 carried over).
-3. **Pick-up RPCs** — the one new behaviour the phone adds: `mom_pick_up(kind, id)` sets `lease_owner =
-   'mobile:<user>'` and `lease_expires_at = now() + 2h` on the goal / spinoff (both tables already carry lease
-   columns; reconcile already honours leases), returns the pick-up prompt text built server-side from the same
-   template as the desktop; `mom_release(kind, id)` clears it. The desktop keeps writing nothing on Pick up
-   (unchanged); the phone's lease is what makes "Supabase updates" true and lets the desktop show "picked up on
-   phone" whenever it chooses to read the lease columns.
+3. ~~Pick-up RPCs~~ **Dropped: Dustan chose the alternative on decision 6 (B, 2026-09-29).** Pick up on the
+   phone writes nothing, exactly like the desktop: the prompt goes to the clipboard and Claude opens with it
+   prefilled. No lease column is touched by the phone.
 4. `mom_api_version()` → `'1.0'` so a client can refuse to run against a brain that lacks the API.
 5. No new tables. No change to existing policies, grants, triggers, or the anon ceiling.
 6. Naming: every object the migration creates carries the `mom_` prefix — functions `mom_*`, policies
@@ -205,14 +210,14 @@ spent v3.9.2 closing; RPCs keep the writable surface to seven named operations.
 ### 2.4 The pick-up loop on the phone
 
 1. Find the card (Home widgets, Goals board, Saved for Later, Loops) — same names, same badges.
-2. Tap **💬 Pick up** → `mom_pick_up` (lease) → prompt text returned → written to the clipboard (Capacitor
-   Clipboard) → toast "Prompt copied — paste into Claude".
+2. Tap **💬 Pick up** → the same prompt text the desktop builds → written to the clipboard (Capacitor
+   Clipboard) → toast "Prompt copied — opening Claude…" (decision 6 = B: no database write).
 3. **Open Claude** button: fires `https://claude.ai/new?q=<prompt>` (*measured:* the web app prefills the
    prompt from `q`; *unverified:* whether the Claude Android app claims that link — if it does not, the link
    opens Claude in the browser, and the clipboard path still works. Verified on the device in Phase 1).
 4. Claude works; brain rows change (next_action, status, memos).
 5. Phone refreshes on foreground / pull-to-refresh (Phase 1) and by Supabase Realtime on `deploy_memory`
-   (Phase 2), showing the new state and clearing the lease when the goal moves.
+   (Phase 2), showing the new state.
 
 ### 2.5 Phone layout (same MOM, rearranged)
 
@@ -232,8 +237,11 @@ spent v3.9.2 closing; RPCs keep the writable surface to seven named operations.
 
 ### 2.6 Distribution path
 
+- Phase 0: GitHub Actions builds `mom-debug.apk` on every push to `main` and publishes it as the `debug-latest`
+  pre-release (one stable download link). A stable debug keystore lives only as a CI secret
+  (`MOM_DEBUG_KEYSTORE_B64`) so each build installs over the previous one.
 - Phase 1–2: GitHub Actions builds a **signed release APK** on every tag; Dustan downloads and sideloads
-  ("install unknown apps"). Signing keystore is created by Dustan once and stored only as CI secrets.
+  ("install unknown apps"). The release keystore is created once and stored only as CI secrets.
 - Later: the same Gradle project produces an AAB for Play internal testing → production. Kept true from day one:
   reverse-domain applicationId, `versionCode` discipline, current target SDK, no cleartext traffic, no secrets
   in assets, third-party licences listed. (A Play developer account costs money — never bought without asking.)
@@ -265,16 +273,20 @@ Evidence kinds follow the brain's convention: **sql** (a query Claude runs), **s
 
 ### Phase 0 — Foundations (after approval; ~2 sessions)
 - New repo `mom-app` (D2) with the Capacitor project, `www/` seeded from dashboard v3.4, CI workflow building a
-  debug APK, secret-scan job.
+  debug APK, secret-scan job. (The GitHub App this session runs under cannot create repositories, so Dustan
+  creates the empty private repo and grants the app access: row 441.)
 - `sql/0001_mom_brain_api.sql` written, adversarially reviewed by a fresh verifier, then applied to the brain
   through the Supabase connector.
 - Dustan: create his Auth user (Supabase dashboard → Authentication → Users → Add user), disable sign-ups,
-  add the CI secrets (URL, publishable key). Each is a `pending_confirmations` row.
+  add the CI secrets (`MOM_SUPABASE_URL`, `MOM_SUPABASE_KEY`, optional `MOM_DEBUG_KEYSTORE_B64`), install and
+  sign in. Rows 437–440 in `pending_confirmations`.
 - **done_when:** sql (three checks, each must return true) —
   `select public.mom_api_version() = '1.0';`
   `select count(*) >= 11 from pg_policies where schemaname='public' and policyname like 'mom_mobile_%';`
   `select count(*) = 1 from auth.users;`
-  shell — CI produces `app-debug.apk`; manual — Dustan signs in on the debug APK and Home loads his real brain.
+  shell — `node scripts/check.mjs` and `node scripts/smoke.mjs` pass (the smoke test boots the app in headless
+  Chromium at phone size against a mocked brain, signs in, loads Home, performs a write and a Pick up), and CI
+  produces `mom-debug.apk`; manual — Dustan signs in on the debug APK and Home loads his real brain.
 
 ### Phase 1 — Personal MOM v1 (the MVP; ~3–4 sessions)
 - Every tab reads live: Home (7 widgets, same numbers as `/close`), Goals (rollup, domain chips, boards,
@@ -282,10 +294,9 @@ Evidence kinds follow the brain's convention: **sql** (a query Claude runs), **s
   panes; review buttons copy the same `dream review` line).
 - Writes: quick capture, done / park / unpark / activate / soft-delete, move domain, spinoff status, loop
   toggles, pause, prefs; all via RPC, all two-tap confirmed, all failures toasted.
-- Pick up: lease + clipboard + Open Claude; picked state shown from the lease, not memory.
+- Pick up: clipboard + Open Claude (no lease, decision 6 = B); picked state is per-session memory, as on the desktop.
 - Theme / accent / density from prefs; phone layout per §2.5; signed release APK sideloaded.
-- **done_when:** sql (both must return true) —
-  `select count(*) >= 1 from public.deploy_memory where lease_owner like 'mobile:%';`
+- **done_when:** sql (must return true; the lease check is gone with decision 6 = B) —
   `select exists (select 1 from public.deploy_memory where key='goal_meta' and agent='mobile');`
   manual — the full loop (§2.4) observed once end-to-end by Dustan;
   verifier — parity table over manifest items [1]–[42], each marked ported / desktop-only / deferred, zero
@@ -340,6 +351,11 @@ client slot are the only things built for them now.
 
 If you say yes to 1–10, the next action is Phase 0 in a fresh chat with this document as the kickoff.
 
+**Ruling (2026-09-29 00:17 UTC, Dustan, via the seven-question widget summary pasted in chat):** 1 A · 2 A · 3
+(implementation default, Capacitor) · 4 (as amended, §7 A1–A2) · 5 A · **6 B, no lease** · 7 A · 8 A · 9
+(default) · 10 A. Decisions 3, 4 and 9 were not put to Dustan; they are implementation choices with no
+user-facing difference and were taken as recommended.
+
 ---
 
 ## 6. Risks and unknowns, stated plainly
@@ -363,6 +379,37 @@ If you say yes to 1–10, the next action is Phase 0 in a fresh chat with this d
   Review button). Both are Dustan's calls on the desktop file; the phone build
   will implement Reassign correctly from the start.
 - **Estimates** are session counts, not hours; they assume the API lands without a second migration round.
+
+---
+
+## 7. Ruling and amendments (2026-09-29)
+
+Approved as ruled above; Phase 0 started the same session. Amendments to the proposal, each with its reason:
+
+- **A1 — reads go through `mom_read`, not PostgREST policies for `authenticated`.** Reason in §2.2 item 1. A fresh
+  adversarial reviewer rebuilt the Supabase role graph on a throwaway Postgres, applied the migration and
+  attacked it: writes smuggled through `mom_read` fail with "cannot execute INSERT in a read-only transaction",
+  data-modifying CTEs are rejected by the wrapper, `auth.*` and the non-granted tables are denied, anon cannot
+  execute anything, and every write RPC matched the desktop statement it replaces. Verdict: apply as-is (one
+  parity nit, the raw-title slug, was folded in).
+- **A2 — `mom_loop_action(id, action)` replaces `mom_set_loop_active`.** The desktop's Verify & Promote,
+  Resume, Park and Delete are four different statement sequences; one boolean could not express them.
+- **A3 — no pick-up lease** (decision 6 = B). The phone's Pick up copies the prompt and opens Claude, nothing
+  more. The `lease_*` columns stay unused by the phone.
+- **A4 — Phase 0 secrets are two, plus one optional:** `MOM_SUPABASE_URL`, `MOM_SUPABASE_KEY` (publishable key,
+  public by design; CI refuses any secret key or non-anon token) and `MOM_DEBUG_KEYSTORE_B64`. The release
+  keystore moves to Phase 1. The app also accepts the URL and key on a first-run screen, saved on the device only
+  after the brain accepted a sign-in, so a wrong value can never lock the app.
+- **A5 — the repo is created by Dustan** (row 441): the GitHub App behind this session returned 403 on
+  repository creation. Everything is committed locally and pushes the moment the repo is reachable.
+- **A6 — one-writer rule.** Dustan's `mom-build` repository records the multi-model-brain rule that Claude
+  writes to Supabase only after a merged PR. The migration is therefore applied only on Dustan's explicit
+  "apply" (or, if he prefers, opened as a PR in `mom-build` and applied after his merge).
+
+Phase 0 state at the time of this amendment: migration written and reviewed (not applied); app forked,
+reviewed by a second fresh verifier (two must-fix items fixed: the APK scan tripped on supabase-js's own text,
+and the fork script carried the project ref as an anchor), smoke test green; CI workflow written; local commit
+ready; waiting on rows 441 (repo access) and the "apply" word.
 
 ---
 
