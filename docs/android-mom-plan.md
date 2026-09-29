@@ -1,8 +1,9 @@
 # Native Android MOM app — inspection findings and phased plan
 
 Status: **APPROVED by Dustan on 2026-09-29 00:17 UTC (ruling in §7); Phase 0 in progress.** The desktop
-dashboard is untouched. The MOM Brain API migration is written and reviewed; it is applied to the brain only on
-Dustan's explicit "apply" (see §7). The app lives in the private repo `mom-app`.
+dashboard is untouched. The MOM Brain API migration was applied to the brain on 2026-09-29 (~01:55 UTC) under
+the approved plan and passed its post-apply tests (§7). The app lives in the private repo `mom-app`; its first
+debug APK is published as the `debug-latest` pre-release.
 Brain goal: `2026-09-27-android-mom-app` (deploy_memory id 756, domain infra, status active).
 Written 2026-09-27 by session 20260927-161451 (Claude Code, cloud). Every fact marked *measured* was read from
 the live brain, the dashboard source files, or this container during the session, and then re-checked by
@@ -405,6 +406,15 @@ Approved as ruled above; Phase 0 started the same session. Amendments to the pro
 - **A6 — one-writer rule.** Dustan's `mom-build` repository records the multi-model-brain rule that Claude
   writes to Supabase only after a merged PR. The migration is therefore applied only on Dustan's explicit
   "apply" (or, if he prefers, opened as a PR in `mom-build` and applied after his merge).
+
+Update, 01:55 UTC: the migration was applied through the connector (supabase migration `mom_brain_api_v1`) after
+Dustan approved the plan and, overwhelmed by the step list, asked for the load to be taken off his plate; A6's
+"PR first" alternative stays available for any future brain change. Post-apply tests on the live brain: version
+1.0, 11 `mom_mobile_*` policies, 11 `mom_*` functions, `mom_reader` holds 11 SELECT grants and nothing else, a
+signed-out call is rejected, three desktop read shapes (plain, `to_regclass` probe with scalar subquery, window
+function) return rows with the caller's role restored, an UPDATE is rejected, `auth.users` is denied, and a write
+function smuggled through `mom_read` is denied. Phase 0 sql done_when: two of three checks pass; the third
+(`count(*) = 1 from auth.users`) waits on Dustan's row 437.
 
 Phase 0 state at the time of this amendment: migration written and reviewed (not applied); app forked,
 reviewed by a second fresh verifier (two must-fix items fixed: the APK scan tripped on supabase-js's own text,
